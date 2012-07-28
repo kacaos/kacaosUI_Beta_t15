@@ -83,7 +83,18 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.combattextmergeaoespamtime = "Zeit in Sekunden in der ein Flaechenzauber in eine Nachricht vereint wird"
 		TukuiConfigUILocalization.combattextdispel = "Informiert dich ueber deine Bannungen"
 		TukuiConfigUILocalization.combattextinterrupt = "Informiert dich ueber deine Unterbrechungen"
-		TukuiConfigUILocalization.combattextdirection = "Scrolling Direction('top'(goes down) or 'bottom'(goes up))" -- Needs review
+		TukuiConfigUILocalization.combattextdirection = "Scrolling Direction('top'(goes down) or 'bottom'(goes up))"
+		TukuiConfigUILocalization.classbar = "Klassenleisten"
+		TukuiConfigUILocalization.classbarwarlock = "Aktiviere Hexenmeister Klassenleiste"
+		TukuiConfigUILocalization.classbardeathknight = "Aktiviere Todesritter Klassenleiste"
+		TukuiConfigUILocalization.classbarpaladin = "Aktiviere Paladin Klasseinleiste"
+		TukuiConfigUILocalization.classbarshaman = "Aktiviere Shamanen Klassenleiste"
+		TukuiConfigUILocalization.classbarpriest = "Aktiviere Priester Klassenleiste"
+		TukuiConfigUILocalization.classbardruid = "Aktiviere Druiden Klassenleiste"
+		TukuiConfigUILocalization.classbarmonk = "Aktiviere Mönch Klassenleiste"
+		TukuiConfigUILocalization.classbarcombopoints = "Aktiviere Klassenleiste für Schurken und für Druiden(in Katzengestalt)"
+		TukuiConfigUILocalization.classbarheight = "Setze Höhe der Klassenleiste"
+		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste"
 	end
 end	
 
@@ -134,13 +145,13 @@ if T.client == "deDE" then
 	L.duffeduihelp_content9_line4 = "Tukz, Pat, Swordyy, Sinaris, Merith, Elv, Smelly, Saft, Ex, Sniffles, Gszus, JerichoHM und den allen Editoren die mir geholfen haben."
 
 	L.duffeduihelp_content4_title = "|cff1E90FFKlassenleisten|r"
-	L.duffeduihelp_content4_line1 = "Um die Klassenleisten zu skalieren musst du in:\n\nWoW/Interface/AddOns/kacaosUI_config/config.lua\n\ngehen. Dort findest du die einzelnen Leisten und kannst die Breite sowie H\195\182he einstellen."
+	L.duffeduihelp_content4_line1 = "Um die jeweiligen Klassenleisten nutzen zu können musst du in der ingameconfig zu dem punkt Klassenleisten gehen. Dort findest du die Optionen einzelne Klassenleisten ein- oder auszuschalten.\n\nEbenso findest du dort die Option die Klassenleisten zu skalieren. Es gibt dort ein Eingabefeld für die Höhe und eins für die Breite."
 	L.duffeduihelp_content4_line2 = ""
 	L.duffeduihelp_content4_line3 = "Verschieben kannst du die Leisten mit dem moveui Befehl :)"
 	L.duffeduihelp_content4_line4 = ""
 
 	L.duffeduihelp_content8_title = "|cff1E90FFFilger / xCT|r"
-	L.duffeduihelp_content8_line1 = "Hier geht es um die zwei eingeschlossenen AddOns Filger und xCT.\n\nFilger ist ein Buff/Debuff/CD tracker welchen ihr nach belieben einstellen k\195\182nnt. Diese Optionen findet ihr in der ingameconfig unter *Filger*.\nAu\195\159erdem k\195\182nnt ihr mit dem moveui Befehl die einzelnen Filgerbuffs/debuffs etc. verschieben.\n\nxCT ist ein ScrollingCombatText welchen ihr auch nach belieben in der ingameconfig unter *xCT* einstellen k\195\182nnt. Mit dem Befehl /xct k\195\182nnt ihr den configmodus anschalten um euch euren schaden etc. beliebig zu verschieben."
+	L.duffeduihelp_content8_line1 = "Hier geht es um die zwei eingeschlossenen AddOns Filger und xCT.\n\nFilger ist ein Buff/Debuff/CD tracker welchen ihr nach belieben einstellen k\195\182nnt. Diese Optionen findet ihr in der ingameconfig unter *Filger*.\nAu\195\159erdem k\195\182nnt ihr mit dem moveui Befehl die einzelnen Filgerbuffs/debuffs etc. verschieben.\n\nxCT ist ein ScrollingCombatText welchen ihr auch nach belieben in der ingameconfig unter *xCT* einstellen k\195\182nnt.\n\nMit dem Befehl /xct unluck könnt ihr den configmodus anschalten.\n\nMit /xct lock verschließt ihr die fenster wieder.\n\nEin weiterer Befehl ist /xct test damit führt ihr einen testmodus aus."
 	L.duffeduihelp_content8_line2 = ""
 	L.duffeduihelp_content8_line3 = ""
 	L.duffeduihelp_content8_line4 = ""
@@ -178,7 +189,7 @@ if T.client == "deDE" then
 	L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => \195\150ffnet dieses Panel\n|cff1E90FF/resetui|r => Setzt die Frameposition des gesamten UIs zur\195\188ck\n|cff1E90FF/install|r => Neuinstallation der gesamten UI"
 	L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Aktiviert die Bewegungsanker der UI-Elemente\n|cff1E90FF/kb|r => Keybindings setzen per mouseover\n|cff1E90FF/rl|r => L\195\164dt das UI neu"
 	L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => \195\150ffnet die ingame-Config"
-	L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => \195\150ffnet den Addonmanager"
+	L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => \195\150ffnet den Addonmanager\n\n|cff1E90FF/xct|r => Zeige xct Befehle im Chat.\n|cff1E90FF//xct unlock|r => Schalte den xct Configmodus an. Zum verschieben der Frames.\n|cff1E90FF/xct lock|r => Verschließe die Frames nach dem verschieben.\n|cff1E90FF/xct test|r => Aktiviere xct Testmodus."
 	
 	-- Combat text
 	L.COMBATTEXTKILLINGBLOW = "Todesstoss"

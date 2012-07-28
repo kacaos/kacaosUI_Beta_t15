@@ -33,8 +33,8 @@ else
 end
 
 --move bars
-TukuiBar1:ClearAllPoints()
-TukuiBar1:SetPoint("CENTER", UIParent, "CENTER", 82, -230)
+--TukuiBar1:ClearAllPoints()
+--TukuiBar1:SetPoint("CENTER", , "CENTER", 0, -230)
 TukuiBar5:ClearAllPoints()
 TukuiBar5:SetPoint("RIGHT", UIParent, -8, 20)
 TukuiBar3:ClearAllPoints()
@@ -123,9 +123,9 @@ button:SetParent(bar)
 button:SetFrameStrata("BACKGROUND")
 button:SetFrameLevel(15)
 if i == 1 then
-button:SetPoint("BOTTOMLEFT", T.buttonspacing, T.buttonspacing)
+button:SetPoint("BOTTOMLEFT", T.buttonspacing, 0)
 elseif i == 7 then
-button:SetPoint("BOTTOMLEFT", bar, T.buttonspacing, 30)
+button:SetPoint("BOTTOMLEFT", bar, T.buttonspacing, (T.buttonsize+T.buttonspacing))
 else
 local previous = _G["ActionButton"..i-1]
 button:SetPoint("LEFT", previous, "RIGHT", T.buttonspacing, 0)
@@ -242,7 +242,7 @@ end
 local mover = CreateFrame("Frame", "TukuiBar1Mover", UIParent)
 mover:Width(162)
 mover:Height(51)
-mover:Point("CENTER", UIParent, "CENTER", 0, -230)
+mover:Point("CENTER", UIParent, "CENTER", 0, -210)
 mover:SetTemplate("Transparent")
 mover:SetBackdropBorderColor(0,1,0)
 mover:SetClampedToScreen(true)
@@ -254,7 +254,7 @@ mover.Text:SetPoint("CENTER", TukuiBar1Mover, "CENTER", 0, 0)
 mover.Text:SetText(L.mover_bar1)
 tinsert(T.AllowFrameMoving, mover)
 TukuiBar1:ClearAllPoints()
-TukuiBar1:SetPoint("LEFT", mover, 0, 0)
+TukuiBar1:SetPoint("BOTTOMLEFT", mover, 0, 0)
 
 --bar 5 mover
 local mover = CreateFrame("Frame", "TukuiBar5Mover", UIParent)

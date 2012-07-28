@@ -75,6 +75,17 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.combattextdispel = "Tells you about your dispels"
 		TukuiConfigUILocalization.combattextinterrupt = "Tells you about your interrupts"
 		TukuiConfigUILocalization.combattextdirection = "Scrolling Direction('top'(goes down) or 'bottom'(goes up))"
+		TukuiConfigUILocalization.classbar = "Classbars"
+		TukuiConfigUILocalization.classbarwarlock = "Enable Warlock Classbars"
+		TukuiConfigUILocalization.classbardeathknight = "Enable Deathknight Classbars"
+		TukuiConfigUILocalization.classbarpaladin = "Enable Paladin Classbars"
+		TukuiConfigUILocalization.classbarshaman = "Enable Shaman Classbars"
+		TukuiConfigUILocalization.classbarpriest = "Enable Priest Classbars"
+		TukuiConfigUILocalization.classbardruid = "Enable Druid Classbars"
+		TukuiConfigUILocalization.classbarmonk = "Enable Monk Classbars"
+		TukuiConfigUILocalization.classbarcombopoints = "Enable combopoints for rogue and druid (in catform) "
+		TukuiConfigUILocalization.classbarheight = "Set Height of classbars"
+		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars"
 	end
 end	
 
@@ -125,13 +136,13 @@ if T.client == "enEN" then
     L.duffeduihelp_content9_line4 = "Tukz, Pat, Swordyy, Sinaris, Merith, Elv, Smelly, Saft, Ex, Sniffles, Gszus, JerichoHM"
    
     L.duffeduihelp_content4_title = "|cff1E90FFClassbars|r"
-    L.duffeduihelp_content4_line1 = "To change the height and width of the classbars go into:\n\nWoW/Interface/AddOns/kacaosUI_config/config.lua\n\nThere you can find the bars in explicit files."
+    L.duffeduihelp_content4_line1 = "To use the classbars you need to choose in the ingameconfig the classbar optionpanel. When you have done this you can enable or disable each classbar.\n\n Also you can change the height und width. You have two little windows where you can edit them."
     L.duffeduihelp_content4_line2 = ""
     L.duffeduihelp_content4_line3 = "You can move them with eh /moveui command :)"
     L.duffeduihelp_content4_line4 = ""
    
 	L.duffeduihelp_content8_title = "|cff1E90FFFilger / xCT|r"
-    L.duffeduihelp_content8_line1 = "Here i will explain you something about the included AddOns Filger and xCT.\n\nFilger is an Buff/Debuff/CD tracker which options can be find in the ingameconfig at *Filger*. All frames of filger are moveable via the moveui command.\n\nxCT is an ScrollingCombatText which options can be find in the ingameconfig at *xCT*. To move the frames you need to use the /xct command."
+    L.duffeduihelp_content8_line1 = "Here i will explain you something about the included AddOns Filger and xCT.\n\nFilger is an Buff/Debuff/CD tracker which options can be find in the ingameconfig at *Filger*. All frames of filger are moveable via the moveui command.\n\nxCT is an ScrollingCombatText which options can be find in the ingameconfig at *xCT*. To move the frames you need to use the /xct unlock command, if you want to close the configmode you need to use /xct lock. Also you can test xct with the /xct test command."
     L.duffeduihelp_content8_line2 = ""
     L.duffeduihelp_content8_line3 = ""
     L.duffeduihelp_content8_line4 = ""
@@ -169,5 +180,5 @@ if T.client == "enEN" then
     L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => Open this panel\n|cff1E90FF/resetui|r => Resets the completly framepositions to the default.\n|cff1E90FF/install|r => Shows the installation frame and you can completly install the interface new."
     L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Let you move nearyl every frame int the interface.\n|cff1E90FF/kb|r => Easy way to set some keybindings by mouseover a button and only pressing the hotkey you want on that button.\n|cff1E90FF/rl|r => reloads the interface."
     L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => Opens the ingame configuration. There you can configure your interface how you want it."
-    L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out."
+    L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out.\n\n|cff1E90FF/xct|r => List xct commands in chat.\n|cff1E90FF//xct unlock|r => Unlock xct, to move the frames.\n|cff1E90FF/xct lock|r => Lock the moveable frames.\n|cff1E90FF/xct test|r => Toggle xct testmode."
 end

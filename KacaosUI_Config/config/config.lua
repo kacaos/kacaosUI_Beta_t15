@@ -46,6 +46,7 @@ C.actionbar = {
 	bar4 = true,									-- activate 2 bottombars and 3 sidebars
 	buttonspacing = 3,								-- buttonspacing of actionbars
 	petbuttonsize = 18,								-- buttonsize of petbar
+	buttonsize = 27,
 	sidebar1mouseover = true,						-- rightbar1 on mouseover
 	sidebar2mouseover = true,						-- rightbar2 on mouseover
 	sidebar3mouseover = true,						-- rightbar3 on mouseover
@@ -68,15 +69,16 @@ C.unitframes = {
 }
 
 C.classbar = {
-    --["class"] = { enabled, width, height }
-	runeBars = { true, 157, 5 },
-	eclipseBar = { true, 157, 5 },
-	holyPower = { true, 157, 5 },
-	comboPoints = { true, 157, 5 },
-	totemTimers = { true, 157, 5 },
-	soulShards = { true, 157, 5 },
-	shadowOrb = { true, 157, 5 },
-	harmonyBar = { true, 157, 5 },
+    warlock = true,
+	deathknight = true,
+	paladin = true,
+	shaman = true,
+	priest = true,
+	druid = true,
+	monk = true,
+	combopoints = true,
+	height = 8,
+	width = 175,
 }
 
 C.chat = {

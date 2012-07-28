@@ -1,6 +1,7 @@
 local T, C, L, G = unpack(Tukui)
 
-local tbWidth, tbHeight = C.classbar.soulShards[2], C.classbar.soulShards[3]
+local tbWidth = C.classbar.width
+local tbHeight = C.classbar.height
 
 -------------------------------------
 -- mover
@@ -25,7 +26,7 @@ tinsert(T.AllowFrameMoving, mover)
 --------------------------------------
 
 			if( T.myclass == "WARLOCK" ) then
-				if( C.classbar.soulShards[1] ~= true ) then
+				if( C.classbar.warlock ~= true ) then
 					G.UnitFrames.Player.WarlockSpecBars:Kill()
 				else	
 					G.UnitFrames.Player.WarlockSpecBars:ClearAllPoints()
@@ -51,10 +52,8 @@ tinsert(T.AllowFrameMoving, mover)
 -- Druid
 -------------------------------------
 
-local tbWidth, tbHeight = C.classbar.eclipseBar[2], C.classbar.eclipseBar[3]
-
 			if( T.myclass == "DRUID" ) then
-				if( C.classbar.eclipseBar[1] ~= true ) then
+				if( C.classbar.druid ~= true ) then
 					G.UnitFrames.Player.EclipseBar:Kill()
 			else					
 					G.UnitFrames.Player.DruidManaBackground:Kill()
@@ -79,10 +78,9 @@ local tbWidth, tbHeight = C.classbar.eclipseBar[2], C.classbar.eclipseBar[3]
 -------------------------------------
 -- Deathknight
 -------------------------------------
-local tbWidth, tbHeight = C.classbar.runeBars[2], C.classbar.runeBars[3]
 
 if( T.myclass == "DEATHKNIGHT" ) then
-				if( C.classbar.runeBars[1] ~= true ) then
+				if( C.classbar.deathknight ~= true ) then
 					G.UnitFrames.Player.Runes:Kill()
 					for i = 1, 6 do
 						G.UnitFrames.Player.Runes[i]:Kill()
@@ -111,10 +109,8 @@ if( T.myclass == "DEATHKNIGHT" ) then
 -- Shaman
 --------------------------------------
 
-local tbWidth, tbHeight = C.classbar.totemTimers[2], C.classbar.totemTimers[3]
-
 if( T.myclass == "SHAMAN" ) then
-				if( C.classbar.totemTimers[1] ~= true ) then
+				if( C.classbar.shaman ~= true ) then
 					for i = 1, 4  do
 						G.UnitFrames.Player.TotemBar[i]:Kill()
 					end
@@ -143,10 +139,8 @@ if( T.myclass == "SHAMAN" ) then
 -- Priest
 --------------------------------------
 
-local tbWidth, tbHeight = C.classbar.shadowOrb[2], C.classbar.shadowOrb[3]
-
 if( T.myclass == "PRIEST" ) then
-				if( C.classbar.shadowOrb[1] ~= true ) then
+				if( C.classbar.priest ~= true ) then
 					G.UnitFrames.Player.ShadowOrbsBar:Kill()
 				else	
 					G.UnitFrames.Player.ShadowOrbsBar:ClearAllPoints()
@@ -171,10 +165,8 @@ if( T.myclass == "PRIEST" ) then
 -- Monk
 -------------------------------------
 
-local tbWidth, tbHeight = C.classbar.harmonyBar[2], C.classbar.harmonyBar[3]
-
 if T.myclass == "MONK" then
-				if( C.classbar.harmonyBar[1] ~= true ) then
+				if( C.classbar.monk ~= true ) then
 					G.UnitFrames.Player.HarmonyBar:Kill()
 				else	
 					G.UnitFrames.Player.HarmonyBar:ClearAllPoints()
@@ -227,10 +219,8 @@ if T.myclass == "MONK" then
 -- Paladin
 -----------------------------------------
 
-local tbWidth, tbHeight = C.classbar.holyPower[2], C.classbar.holyPower[3]
-
 if( T.myclass == "PALADIN" ) then
-				if( C.classbar.holyPower[1] ~= true ) then
+				if( C.classbar.paladin ~= true ) then
 					G.UnitFrames.Player.HolyPower:Kill()
 					for i = 1, 5 do
 						G.UnitFrames.Player.HolyPower[i]:Kill()
@@ -258,11 +248,10 @@ if( T.myclass == "PALADIN" ) then
 -- Rogue
 ----------------------------------------
 
-local tbWidth, tbHeight = C.classbar.comboPoints[2], C.classbar.comboPoints[3]
 local combobar = G.UnitFrames.Player.ComboPointsBar or G.UnitFrames.Target.ComboPointsBar
 if( T.myclass == "ROGUE") then
 if (T.myclass == "DRUID") then
-				if( C.classbar.comboPoints[1] ~= true ) then
+				if( C.classbar.combopoints ~= true ) then
 					combobar:Kill()
 				else	
 					combobar:ClearAllPoints()
@@ -309,4 +298,4 @@ if (T.myclass == "DRUID") then
 					end)		
 				end
 			end
-			end
+end
