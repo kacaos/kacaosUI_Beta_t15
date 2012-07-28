@@ -238,6 +238,8 @@ button:SetScript( "OnClick", openAll )
 button:SetScript( "OnEvent", onEvent )
 button2 = makeButton( "OpenAllButton2", "Gold", 70, 25, 28, -408 )
 button2:SetScript( "OnClick", openAllCash )
+T.SkinButton(OpenAllButton)
+T.SkinButton(OpenAllButton2)
 
 button:SetScript( "OnEnter", function()
 	GameTooltip:SetOwner( button, "ANCHOR_RIGHT" )

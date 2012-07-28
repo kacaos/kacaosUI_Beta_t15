@@ -1,7 +1,7 @@
 local T, C, L, G = unpack( Tukui )
 if not C.unitframes.raid == true then return end
 if not C.unitframes.enable == true then return end
-if C.misc.raidstyle ~= 1 then return end
+if C.misc.raidstyle ~= "dps" then return end
 
 --------------------------------------------------------------
 --Header
@@ -14,9 +14,9 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 	showPlayer = true
 	xOffset = T.Scale( 7 )
 	yOffset = T.Scale( -5 )
-	point = "TOP"
+	point = "LEFT"
 	columnSpacing = T.Scale( 6 )
-	columnAnchorPoint = "LEFT"
+	columnAnchorPoint = "TOP"
 
 	T.RaidFrameAttributes = function()
 		return
@@ -67,10 +67,24 @@ self.Health:CreateBorder(false, true)
 
 self.Health.value:Kill()
 
-		local LFDRole = self.Health:CreateTexture( nil, "OVERLAY" )
-		LFDRole:Height(10)
-		LFDRole:Width(10)
-		LFDRole:Point("TOPRIGHT", 0, 0)
-		LFDRole:SetTexture( "Interface\\AddOns\\Tukui\\medias\\textures\\lfdicons.blp" )
-		self.LFDRole = LFDRole
+local LFDRole = self.Health:CreateTexture( nil, "OVERLAY" )
+LFDRole:Height(10)
+LFDRole:Width(10)
+LFDRole:Point("TOPRIGHT", 0, 0)
+LFDRole:SetTexture( "Interface\\AddOns\\Tukui\\medias\\textures\\lfdicons.blp" )
+self.LFDRole = LFDRole
+
 end
+
+
+---------------------------------------------------------------
+-- Raidposition
+---------------------------------------------------------------
+local RaidPosition = CreateFrame("Frame")
+RaidPosition:RegisterEvent("PLAYER_LOGIN")
+RaidPosition:SetScript("OnEvent", function(self, event)
+	local raid = G.UnitFrames.RaidUnits
+	local pets = G.UnitFrames.RaidPets
+	raid:ClearAllPoints()
+	raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 5)
+end)

@@ -169,6 +169,3 @@ if( InCombatLockdown() ) then print( ERR_NOT_IN_COMBAT ) return end
 end
 	
 hooksecurefunc(_G.SlashCmdList, "MOVING", MoveUI)
-
-TukuiRollAnchor:ClearAllPoints()
-TukuiRollAnchor:Point("CENTER", UIParent, "CENTER", 0, 50)

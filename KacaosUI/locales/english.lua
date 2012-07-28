@@ -133,7 +133,7 @@ if T.client == "enEN" then
 	L.duffeduihelp_content9_line1 = ""
     L.duffeduihelp_content9_line2 = "The Credits goes to everyone who helped me to get that interface finished!"
     L.duffeduihelp_content9_line3 = ""
-    L.duffeduihelp_content9_line4 = "Tukz, Pat, Swordyy, Sinaris, Merith, Elv, Smelly, Saft, Ex, Sniffles, Gszus, JerichoHM"
+    L.duffeduihelp_content9_line4 = "Tukz, Pat, Swordyy, Sinaris, Merith, Elv, Smelly, Saft, Ex, Sniffles, Gszus, JerichoHM, Nisha"
    
     L.duffeduihelp_content4_title = "|cff1E90FFClassbars|r"
     L.duffeduihelp_content4_line1 = "To use the classbars you need to choose in the ingameconfig the classbar optionpanel. When you have done this you can enable or disable each classbar.\n\n Also you can change the height und width. You have two little windows where you can edit them."
@@ -180,5 +180,5 @@ if T.client == "enEN" then
     L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => Open this panel\n|cff1E90FF/resetui|r => Resets the completly framepositions to the default.\n|cff1E90FF/install|r => Shows the installation frame and you can completly install the interface new."
     L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Let you move nearyl every frame int the interface.\n|cff1E90FF/kb|r => Easy way to set some keybindings by mouseover a button and only pressing the hotkey you want on that button.\n|cff1E90FF/rl|r => reloads the interface."
     L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => Opens the ingame configuration. There you can configure your interface how you want it."
-    L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out.\n\n|cff1E90FF/xct|r => List xct commands in chat.\n|cff1E90FF//xct unlock|r => Unlock xct, to move the frames.\n|cff1E90FF/xct lock|r => Lock the moveable frames.\n|cff1E90FF/xct test|r => Toggle xct testmode."
+    L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out.\n\n|cff1E90FF/xct|r => List xct commands in chat.\n|cff1E90FF/xct unlock|r => Unlock xct, to move the frames.\n|cff1E90FF/xct lock|r => Lock the moveable frames.\n|cff1E90FF/xct test|r => Toggle xct testmode."
 end
