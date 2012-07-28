@@ -1,0 +1,46 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="locales\german.lua"/>
+	<Script file="locales\english.lua"/>
+	<Script file="core\api.lua"/>
+	<Script file="core\move.lua"/>
+	<Script file="core\helpframe.lua"/>
+	<Script file="core\filters\debuffwatch.lua"/>
+	<Script file="core\install.lua"/>
+	
+	<Script file="modules\actionbars\actionbars.lua"/>
+	<Script file="modules\actionbars\actionbars2.lua"/>
+	<Script file="modules\actionbars\style.lua"/>
+	
+	<Script file="modules\chat\chat.lua"/>
+	<Script file="modules\chat\hyperlink.lua"/>
+
+	<Script file="modules\buffs\buff.lua"/>
+	<Script file="modules\bags\bags.lua"/>
+	
+	<Script file="modules\tooltip\tooltip.lua"/>
+	<Script file="modules\unitframes\layout.lua"/>
+	<Script file="modules\unitframes\layout2.lua"/>
+	<Script file="modules\unitframes\layout3.lua"/>
+	<Script file="modules\unitframes\raidlayout.lua"/>
+	<Script file="modules\unitframes\raidlayout2.lua"/>
+	
+	<Script file="modules\panels\panels.lua"/>
+	
+	<Script file="modules\map\minimap.lua"/>
+	
+	<Script file="modules\datatext\datatext.lua"/>
+	
+	<Script file="modules\misc\uibuttons.lua"/>
+	<Script file="modules\misc\addonmanager.lua"/>
+	<Script file="modules\misc\afkcam.lua"/>
+	<Script file="modules\misc\ilvlr.lua"/>
+	<Script file="modules\misc\threatbar.lua"/>
+	<Script file="modules\misc\altpowerbar.lua"/>
+	<Script file="modules\misc\raidbuffreminder.lua"/>
+	<Script file="modules\misc\filger.lua"/>
+	<Script file="modules\misc\combattext.lua"/>
+	
+	<Script file="modules\nameplates\nameplates.lua"/>
+	
+	<Script file="modules\classbars\classbars.lua"/>
+</Ui>

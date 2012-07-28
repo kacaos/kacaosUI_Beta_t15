@@ -1,0 +1,6 @@
+## Interface: 50001
+## Title: |cff1E90FFkacaosUI Config|r
+## Notes: Options for KacaosUI
+## Author: kacaos
+
+config\config.lua
