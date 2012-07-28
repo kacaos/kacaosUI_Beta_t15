@@ -13,7 +13,7 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 	showRaid = true
 	showPlayer = true
 	xOffset = T.Scale( 7 )
-	yOffset = T.Scale( -5 )
+	yOffset = T.Scale( 5 )
 	point = "LEFT"
 	columnSpacing = T.Scale( 6 )
 	columnAnchorPoint = "TOP"
@@ -34,8 +34,8 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 		"showRaid", true,
 		"showPlayer", true,
 		"showSolo", true,
-		"xoffset",(0),
-		"yOffset", (-5),
+		"xoffset",(5),
+		"yOffset", (5),
 		"point", point,
 		"groupFilter", "1,2,3,4,5",
 		"groupingOrder", "1,2,3,4,5",
@@ -51,6 +51,8 @@ T.PostUpdateRaidUnit = function( self )
 -- kill some frames
 self.panel:Kill()
 self.Power:Kill()
+self.RaidDebuffs:Kill()
+self.AuraWatch:Kill()
 		
 -- set Names
 self.Name:SetParent(self.Health)
@@ -68,12 +70,29 @@ self.Health:CreateBorder(false, true)
 self.Health.value:Kill()
 
 local LFDRole = self.Health:CreateTexture( nil, "OVERLAY" )
-LFDRole:Height(10)
-LFDRole:Width(10)
+LFDRole:Height(14)
+LFDRole:Width(14)
 LFDRole:Point("TOPRIGHT", 0, 0)
 LFDRole:SetTexture( "Interface\\AddOns\\Tukui\\medias\\textures\\lfdicons.blp" )
 self.LFDRole = LFDRole
 
+------------------------------------------------------------
+--MouseOver Highlight (Thx Hydra)
+------------------------------------------------------------
+	if C.unitframes.unicolor and C.unitframes.mouseoverhighlight then
+		self:HookScript("OnEnter", function(self)
+			if not UnitIsConnected(self.unit) or UnitIsDead(self.unit) or UnitIsGhost(self.unit) or (not UnitInRange(self.unit) and not UnitIsPlayer(self.unit)) then return end
+			local hover = RAID_CLASS_COLORS[select(2, UnitClass(self.unit))]
+			self.Health:SetStatusBarColor(hover.r, hover.g, hover.b)
+			self.Health.classcolored = true
+		end)
+
+		self:HookScript("OnLeave", function(self)
+			if not UnitIsConnected(self.unit) or UnitIsDead(self.unit) or UnitIsGhost(self.unit) then return end
+			self.Health:SetStatusBarColor(.3, .3, .3, 1)
+			self.Health.classcolored = false
+		end)
+	end
 end
 
 

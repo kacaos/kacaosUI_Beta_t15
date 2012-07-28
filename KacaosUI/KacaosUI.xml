@@ -6,6 +6,8 @@
 	<Script file="core\helpframe.lua"/>
 	<Script file="core\filters\debuffwatch.lua"/>
 	<Script file="core\install.lua"/>
+	<Script file="core\debuffs.lua"/>
+	<Script file="core\funtions.lua"/>
 	
 	<Script file="modules\actionbars\actionbars.lua"/>
 	<Script file="modules\actionbars\actionbars2.lua"/>
@@ -39,6 +41,7 @@
 	<Script file="modules\misc\raidbuffreminder.lua"/>
 	<Script file="modules\misc\filger.lua"/>
 	<Script file="modules\misc\combattext.lua"/>
+	<Script file="modules\misc\wlexecut.lua"/>
 	
 	<Script file="modules\nameplates\nameplates.lua"/>
 	

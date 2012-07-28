@@ -8,7 +8,7 @@ if C.misc.raidstyle ~= "heal" then return end
 --------------------------------------------------------------
 local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, columnSpacing, columnAnchorPoint
 	width = 60
-	height = 30
+	height = 40
 	showParty = true
 	showRaid = true
 	showPlayer = true
@@ -29,7 +29,7 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 			self:SetHeight( header:GetAttribute( "initial-height" ) )
 		]],
 		"initial-width", (60),
-		"initial-height",(30),
+		"initial-height",(40),
 		"showParty", true,
 		"showRaid", true,
 		"showPlayer", true,
@@ -60,7 +60,7 @@ self.Name:SetShadowOffset(0,0,0,0)
 --self:Tag(self.Name, '[Tukui:getnamecolor][Tukui:namemshort]')	
 
 --set Health
-self.Health:Height(30)
+self.Health:Height(40)
 self.Health:Width(60)
 self.Health:CreateBorder(false, true)
 self.Health.value:ClearAllPoints()
@@ -76,41 +76,61 @@ self.Power:CreateBorder(false, true)
 self.Power:Point("BOTTOM", self.Health, 0, 2)
 self.Power:SetFrameLevel(5)
 
---set debuffs
-if( C["auras"].raidunitdebuffwatch == true ) then
-			self.RaidDebuffs:Height(22)
-			self.RaidDebuffs:Width(22)
-			self.RaidDebuffs:Point("CENTER", self.Health, 0, 0)
-
-			self.RaidDebuffs.count:ClearAllPoints()
-			self.RaidDebuffs.count:SetPoint("CENTER", self.Raiddebuff, -6, 6 )
-			self.RaidDebuffs.count:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
-
-			self.RaidDebuffs.time:ClearAllPoints()
-			self.RaidDebuffs.time:SetPoint("CENTER", self.Raiddebuff, 0, 0)
-			self.RaidDebuffs.time:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
+--------------------------------------------------------------
+-- debuffs
+--------------------------------------------------------------
+		
+		if C["unitframes"].raidunitdebuffwatch == true then
+			self.RaidDebuffs:Kill()
+			
+			-- Raid Debuffs (big middle icon)
+			local RaidDebuffs = CreateFrame('Frame', nil, self)
+			RaidDebuffs:Height(24)
+			RaidDebuffs:Width(24)
+			RaidDebuffs:Point('CENTER', self.Health, 1,0)
+			RaidDebuffs:SetFrameStrata(self.Health:GetFrameStrata())
+			RaidDebuffs:SetFrameLevel(self.Health:GetFrameLevel() + 2)
+			
+			RaidDebuffs:SetTemplate("Default")
+			
+			RaidDebuffs.icon = RaidDebuffs:CreateTexture(nil, 'OVERLAY')
+			RaidDebuffs.icon:SetTexCoord(.1,.9,.1,.9)
+			RaidDebuffs.icon:Point("TOPLEFT", 1, -1)
+			RaidDebuffs.icon:Point("BOTTOMRIGHT", -1, 1)
+			
+			RaidDebuffs.count = RaidDebuffs:CreateFontString(nil, 'OVERLAY')
+			RaidDebuffs.count:SetFont(C["media"].uffont, 12, "THINOUTLINE")
+			RaidDebuffs.count:SetPoint('BOTTOMRIGHT', RaidDebuffs, 'BOTTOMRIGHT', 0, 2)
+			RaidDebuffs.count:SetTextColor(1, .9, 0)
+			
+			RaidDebuffs:FontString('time', C["media"].uffont, 14, "THINOUTLINE")
+			RaidDebuffs.time:SetPoint('CENTER')
+			RaidDebuffs.time:SetTextColor(1, .9, 0)
+			
+			self.RaidDebuffs = RaidDebuffs
 		end
 		
---set Icons		
+	--set Icons		
 		local leader = self.Health:CreateTexture( nil, "OVERLAY" )
 		leader:Height(15)
 		leader:Width(15)
-		leader:SetPoint("TOPRIGHT", 2,2)
+		leader:SetPoint("TOPRIGHT", 0,6)
 		self.Leader = leader
 
+		local MasterLooter = self.Health:CreateTexture( nil, "OVERLAY" )
+		MasterLooter:Height(15)
+		MasterLooter:Width(15)
+		MasterLooter:SetPoint("TOPRIGHT", -18,8)
+		self.MasterLooter = MasterLooter
+		self:RegisterEvent("PARTY_LEADER_CHANGED", T.MLAnchorUpdate)
+		self:RegisterEvent("PARTY_MEMBERS_CHANGED", T.MLAnchorUpdate)
+		
 		local LFDRole = self.Health:CreateTexture( nil, "OVERLAY" )
 		LFDRole:Height(15)
 		LFDRole:Width(15)
 		LFDRole:Point("TOPLEFT", 0, 0)
 		LFDRole:SetTexture( "Interface\\AddOns\\Tukui\\medias\\textures\\lfdicons.blp" )
 		self.LFDRole = LFDRole
-
-		local MasterLooter = self.Health:CreateTexture( nil, "OVERLAY" )
-		MasterLooter:Height(15)
-		MasterLooter:Width(15)
-		self.MasterLooter = MasterLooter
-		self:RegisterEvent( "PARTY_LEADER_CHANGED", T.MLAnchorUpdate )
-		self:RegisterEvent( "PARTY_MEMBERS_CHANGED", T.MLAnchorUpdate )
 
 		local Resurrect = CreateFrame( "Frame", nil, self.Health )
 		Resurrect:SetFrameLevel( self.Health:GetFrameLevel() + 1 )

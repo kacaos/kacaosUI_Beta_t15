@@ -1,4 +1,4 @@
-local T, C, L = unpack(Tukui)
+local T, C, L, G = unpack(Tukui)
 
 ---------------------------------------------------------------
 -- Panels
@@ -162,12 +162,16 @@ ipr:SetTemplate("Transparent")
 ----------------------------------------------------------
 
 -- move the left button the the chatbackground
-TukuiExitVehicleButtonLeft:ClearAllPoints()
-TukuiExitVehicleButtonLeft:Point("BOTTOMLEFT", ChatBackgroundLeft, "BOTTOMRIGHT", 2, 0)
-TukuiExitVehicleButtonLeft:Height(30)
-TukuiExitVehicleButtonLeft:Width(30)
-TukuiExitVehicleButtonLeft:SetTemplate("Transparent")
-TukuiExitVehicleButtonLeft:SetFrameStrata("Background")
+G.ActionBars.ExitVehicleLeft:ClearAllPoints()
+G.ActionBars.ExitVehicleLeft:Point("BOTTOMLEFT", ChatBackgroundLeft, "BOTTOMRIGHT", 2, 0)
+G.ActionBars.ExitVehicleLeft:Height(30)
+G.ActionBars.ExitVehicleLeft:Width(30)
+G.ActionBars.ExitVehicleLeft:SetTemplate("Transparent")
+G.ActionBars.ExitVehicleLeft:SetFrameStrata("Background")
+G.ActionBars.ExitVehicleLeft:FontString("Text", C.media.font, 28)
+G.ActionBars.ExitVehicleLeft.text:Point("CENTER", 0, 0)
+G.ActionBars.ExitVehicleLeft.text:SetText("L")
+
 
 -- kill the right exit button
 TukuiExitVehicleButtonRight:Kill()

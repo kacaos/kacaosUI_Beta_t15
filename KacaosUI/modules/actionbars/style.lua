@@ -55,3 +55,14 @@ local function StyleActionBarButton(self)
 end
 
 hooksecurefunc(T, "StyleActionBarButton", StyleActionBarButton)
+
+T.ShowHighlightActionButton = function(self)
+	-- hide ugly blizzard proc highlight
+	if self.overlay then
+		self.overlay:Show()
+		ActionButton_ShowOverlayGlow(self)
+		self.backdrop:SetBackdropBorderColor(0, 0, 0)
+	end
+end
+
+hooksecurefunc("ActionButton_ShowOverlayGlow", T.ShowHighlightActionButton)

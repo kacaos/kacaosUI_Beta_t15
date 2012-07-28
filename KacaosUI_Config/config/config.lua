@@ -46,7 +46,7 @@ C.actionbar = {
 	bar4 = true,									-- activate 2 bottombars and 3 sidebars
 	buttonspacing = 3,								-- buttonspacing of actionbars
 	petbuttonsize = 18,								-- buttonsize of petbar
-	buttonsize = 27,
+	buttonsize = 24,
 	sidebar1mouseover = true,						-- rightbar1 on mouseover
 	sidebar2mouseover = true,						-- rightbar2 on mouseover
 	sidebar3mouseover = true,						-- rightbar3 on mouseover
@@ -55,54 +55,53 @@ C.actionbar = {
 }
 
 C.unitframes = {
-	style = 2,										-- change unitframe style 1, 2 and 3
+	style = 3,										-- change unitframe style 1, 2 and 3
 	showdb = false,									-- show debuffs on target (only layout 3)
 	onlyselfdebuffs = false,						-- track only your debuffs on target
 	hpshow = false,									-- show hp/mp on target (only at style 1, at heal its all time visible)
-	hpshowp = false,									-- show hp/mp on player (only at style 1, at layout 2 its all time visible)
-	charportrait = false,							-- show portrait on healthbar
-	totshow = false,								-- show target of target
-	petshow = false,								-- show pet
-	cbbutton = false,								-- show castbar button/icon
+	hpshowp = false,								-- show hp/mp on player (only at style 1, at layout 2 its all time visible)
+	charportrait = true,							-- show portrait on healthbar
+	totshow = true,									-- show target of target
+	petshow = true,									-- show pet
+	cbbutton = true,								-- show castbar button/icon
 	mouseoverhighlight = true,						-- mouseoverhiglight at raidframes layout2
-	showsolo = true,								-- show player solo in raid
 }
 
 C.classbar = {
-    warlock = true,
-	deathknight = true,
-	paladin = true,
-	shaman = true,
-	priest = true,
-	druid = true,
-	monk = true,
-	combopoints = true,
-	height = 8,
-	width = 175,
+    warlock = true,									-- enable warlock classbar
+	deathknight = true,								-- enable deathknight classbar
+	paladin = true,									-- enable paladin classbar
+	shaman = true,									-- enable shaman classabr
+	priest = true,									-- enable priest classbar
+	druid = true,									-- enable druid classabr
+	monk = true,									-- enable monk classbar
+	combopoints = true,								-- enable combopoints for rogue an druid (in catform)
+	height = 8,										-- choose height of classbars
+	width = 157,									-- choose width of classbars
 }
 
 C.chat = {
-	chattab = false,									-- enable/disable chattab panel
-	chatbackground = false,							-- enable/disable chatbackground
-		chatbackgroundwidth = 300,					-- set chatbackground width
-		chatbackgroundheight = 100,					-- set chatbackground height
-	chattabshow = false,								-- show chattabs
-	fadeout = false,									-- enable/disable chatbackground fadeout infight
+	chattab = true,									-- enable/disable chattab panel
+	chatbackground = true,							-- enable/disable chatbackground
+		chatbackgroundwidth = 350,					-- set chatbackground width
+		chatbackgroundheight = 120,					-- set chatbackground height
+	chattabshow = true,								-- show chattabs
+	fadeout = false,								-- enable/disable chatbackground fadeout infight
 	namealert = false,								-- Play sound when your name is called in chat
-	names = { -- name alert in chat change to your own names (credit Hydra)
+	names = {									    -- name alert in chat change to your own names (credit Hydra)
 		"Jaspar",
 		"Jasper"
 	},
 }
 
 C.misc = {
-	uibuttons = false,								-- enable 3 ui buttons in the top and the 2 over the minimap
-	threatbar = false,								-- enable threatbar
+	uibuttons = true,								-- enable 3 ui buttons in the top and the 2 over the minimap
+	threatbar = true,								-- enable threatbar
 	afkcam = false,									-- activate akf spin cam
-	hyperlink = false,								-- show itemlinks in chat on mouseover
+	hyperlink = true,								-- show itemlinks in chat on mouseover
 	raidbuffreminder = false,						-- raidbuffreminder at the top of the screen
-	raidstyle = 1,									-- choose between style 1 and 2
-	ilvlr = false,									-- show ilvl and durability in charakterframe
+	raidstyle = "heal",									-- choose between style dps and heal
+	ilvlr = true,									-- show ilvl and durability in charakterframe
 	infobottom = false,								-- show infopanel at the bottom of you screen
 }
 
@@ -115,9 +114,9 @@ C.tooltip = {
 }
 
 C.filger = {
-	enable = false,									-- enable filger
+	enable = true,									-- enable filger
 	filgerconfig = false,							-- enable configmode
-	iconsize = 45,									-- bla
+	iconsize = 32,									-- bla
 	proccs = "RIGHT",								-- direction of proccs
 	buffs = "RIGHT",								-- direction of buffs
 	debuffs = "RIGHT",								-- direction of debuffs
@@ -126,7 +125,7 @@ C.filger = {
 }
 
 C.combattext = {
-	enable = false,							-- Global enable combat text
+	enable = tre,							-- Global enable combat text
 	blizzheadnumbers = false,				-- Use blizzard damage/healing output(above mob/player head)
 	damagestyle = false,					-- Change default damage/healing font above mobs/player heads(you need to restart WoW to see changes)
 	damage = true,							-- Show outgoing damage in it's own frame
@@ -138,12 +137,12 @@ C.combattext = {
 	damagecolor = true,						-- Display damage numbers depending on school of magic
 	critprefix = "*",						-- Symbol that will be added before crit
 	critpostfix = "*",						-- Symbol that will be added after crit
-	icons = false,							-- Show outgoing damage icons
+	icons = true,							-- Show outgoing damage icons
 	iconsize = 16,							-- Icon size of spells in outgoing damage frame, also has effect on dmg font size
 	treshold = 1,							-- Minimum damage to show in damage frame
 	healtreshold = 1,						-- Minimum healing to show in incoming/outgoing healing messages
 	scrollable = false,						-- Allows you to scroll frame lines with mousewheel
-	maxlines = 8,							-- Max lines to keep in scrollable mode(more lines = more memory)
+	maxlines = 5,							-- Max lines to keep in scrollable mode(more lines = more memory)
 	timevisible = 3,						-- Time(seconds) a single message will be visible
 	stopvespam = false,						-- Automaticly turns off healing spam for priests in shadowform
 	dkrunes = true,							-- Show deathknight rune recharge
