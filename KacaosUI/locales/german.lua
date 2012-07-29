@@ -91,10 +91,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarpriest = "Aktiviere Priester Klassenleiste"
 		TukuiConfigUILocalization.classbardruid = "Aktiviere Druiden Klassenleiste"
 		TukuiConfigUILocalization.classbarmonk = "Aktiviere Mönch Klassenleiste"
-		TukuiConfigUILocalization.classbarmonkwidth = "Setze Breite der einzelnen Chi´s (normale Breiteneinstellung geht hier nicht!!!)"
 		TukuiConfigUILocalization.classbarcombopoints = "Aktiviere Klassenleiste für Schurken und für Druiden(in Katzengestalt)"
 		TukuiConfigUILocalization.classbarheight = "Setze Höhe der Klassenleiste"
-		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste (außer Monk)"
+		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste (shards/runen/chi etc.)"
+		TukuiConfigUILocalization.classbarebwidth = "Setze Breite Eclipse/Solarbar"
 		TukuiConfigUILocalization.merchantautorepair = "Auto Reparieren (Auto-Gildenreparieren muss AUS sein!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto Gildenreparieren (Auto-Repair muss AUS sein!!!)"
 	end

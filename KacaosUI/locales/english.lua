@@ -83,10 +83,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarpriest = "Enable Priest Classbars"
 		TukuiConfigUILocalization.classbardruid = "Enable Druid Classbars"
 		TukuiConfigUILocalization.classbarmonk = "Enable Monk Classbars"
-		TukuiConfigUILocalization.classbarmonkwidth = "Set width of eacht Chi (option for classbar width cant be use here!!!)"
 		TukuiConfigUILocalization.classbarcombopoints = "Enable combopoints for rogue and druid (in catform) "
 		TukuiConfigUILocalization.classbarheight = "Set Height of classbars"
-		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (doesnt work for monks!!!!)"
+		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (shards/runes/chi etc.)"
+		TukuiConfigUILocalization.classbarebwidth = "Set width eclipse/solarbar"
 		TukuiConfigUILocalization.merchantautorepair = "Auto repair (auto-Guildrepair need to be OFF!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto guild-repair (auto-repair need to be OFF!!!)"
 	end
