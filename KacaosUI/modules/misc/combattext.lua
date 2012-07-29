@@ -1,5 +1,5 @@
 ﻿local T, C, L, G = unpack(Tukui)
---if not C.combattext.enable == true then return end
+if not C.combattext.enable == true then return end
 
 ----------------------------------------------------------------------------------------
 --	Combat Text(xCT by Affli)
@@ -606,7 +606,7 @@ xCT:RegisterEvent("UNIT_EXITING_VEHICLE")
 xCT:RegisterEvent("PLAYER_ENTERING_WORLD")
 xCT:SetScript("OnEvent", OnEvent)
 
---Turn off Blizzard CT
+-- Turn off Blizzard CT
 CombatText:UnregisterAllEvents()
 CombatText:SetScript("OnLoad", nil)
 CombatText:SetScript("OnEvent", nil)

@@ -15,6 +15,7 @@ local SaveVariables = function(self, event)
 			TukuiData.DebuffList = T.debuffids
 		else
 			T.debuffids = TukuiData.DebuffList
+			RaidDebuff:RegisterDebuffs(T.debuffids)
 		end
 	elseif event == "PLAYER_LOGOUT" then
 		TukuiData.DebuffList = T.debuffids
@@ -39,12 +40,27 @@ local OnMouseWheel = function(self, delta)
 end
 
 local CreateDebuffsConfig = function()
+	
 	-- Backdrop
 	local Backdrop = CreateFrame("Frame", "NishaDebuffConfigFrame", UIParent)
 	Backdrop:Size(165, 230)
 	Backdrop:Point("CENTER", UIParent, "CENTER", 0, 0)
-	Backdrop:SetTemplate("Default")
-
+	Backdrop:SetTemplate("Transparent")
+	
+	Backdrop:SetMovable(true)
+	Backdrop:SetScript("OnMouseDown", function() Backdrop:ClearAllPoints() Backdrop:StartMoving() end)
+	Backdrop:SetScript("OnMouseUp", function() Backdrop:StopMovingOrSizing() end)
+	
+	--Caption
+	local caption = CreateFrame("Frame", "Debuffcaption", Backdrop)
+	caption:Size(Backdrop:GetWidth(), 23)
+	caption:Point("TOP", Backdrop, "TOP", 0, 26)
+	caption:SetTemplate("Transparent")
+	
+	caption.Text = T.SetFontString(caption, C.media.font, 12, "OUTLINE")
+	caption.Text:Point("CENTER", caption, "CENTER", 0, 0)
+	caption.Text:SetText("Raid Debuffs")
+	
 	-- Scroll
 	local ScrollArea = CreateFrame("Frame", nil, Backdrop)
 	ScrollArea:Size(Backdrop:GetWidth() - 6, 192)
@@ -139,7 +155,7 @@ local CreateDebuffsConfig = function()
 
 	-- Editbox
 	local EditBox = CreateFrame("Frame", nil, Backdrop)
-	EditBox:Size(Backdrop:GetWidth() - 35, 20)
+	EditBox:Size(Backdrop:GetWidth() - 6, 20)
 	EditBox:Point("TOPLEFT", ScrollArea, "TOPLEFT", 0, 25)
 	EditBox:SetTemplate("Default")
 
@@ -157,8 +173,8 @@ local CreateDebuffsConfig = function()
 	EditBox.Entry:SetScript("OnEditFocusGained", OnEditFocusGained)
 	
 	
-	local close = CreateFrame("Button", "deCloseButton", Backdrop, "UIPanelCloseButton")
-	close:SetPoint("RIGHT", EditBox, "RIGHT", 35, 0)
+	local close = CreateFrame("Button", "deCloseButton", caption, "UIPanelCloseButton")
+	close:SetPoint("RIGHT", caption, "RIGHT", 0, 0)
 	close:SkinCloseButton()
 	close:SetScript("OnClick", function()
 		NishaDebuffConfigFrame:Hide()

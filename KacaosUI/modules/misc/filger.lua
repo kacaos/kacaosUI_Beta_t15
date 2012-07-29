@@ -174,7 +174,7 @@ ns.Filger_Spells = {
 			-- Spiritswalkers Grace
 			{ spellID = 79206, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Focused Insight
-			{ spellID = 77796, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			--{ spellID = 77796, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",

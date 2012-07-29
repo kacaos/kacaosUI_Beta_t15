@@ -38,5 +38,6 @@ OnLoad:SetScript("OnEvent", function()
 	for _,f in pairs(frames) do
 		f:SetTemplate("Transparent")
 		--f:SetBorder(false, true)
+		f:CreateShadow(nil)
 	end
 end)

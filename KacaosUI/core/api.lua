@@ -225,24 +225,3 @@ Kill:SetScript( "OnEvent", function( self, event )
 		CompactRaidFrameContainer:Hide()
 	end
 end )
-
--- make some elements moveable
-TukuiBags:SetMovable(true)
-TukuiBags:SetScript("OnMouseDown", function() TukuiBags:ClearAllPoints() TukuiBags:StartMoving() end)
-TukuiBags:SetScript("OnMouseUp", function() TukuiBags:StopMovingOrSizing() end)
-
-GameMenuFrame:SetMovable(true)
-GameMenuFrame:SetScript("OnMouseDown", function() GameMenuFrame:ClearAllPoints() GameMenuFrame:StartMoving() end)
-GameMenuFrame:SetScript("OnMouseUp", function() GameMenuFrame:StopMovingOrSizing() end)
-
-VideoOptionsFrame:SetMovable(true)
-VideoOptionsFrame:SetScript("OnMouseDown", function() VideoOptionsFrame:ClearAllPoints() VideoOptionsFrame:StartMoving() end)
-VideoOptionsFrame:SetScript("OnMouseUp", function() VideoOptionsFrame:StopMovingOrSizing() end)
-
-InterfaceOptionsFrame:SetMovable(true)
-InterfaceOptionsFrame:SetScript("OnMouseDown", function() InterfaceOptionsFrame:ClearAllPoints() InterfaceOptionsFrame:StartMoving() end)
-InterfaceOptionsFrame:SetScript("OnMouseUp", function() InterfaceOptionsFrame:StopMovingOrSizing() end)
-
-HelpFrame:SetMovable(true)
-HelpFrame:SetScript("OnMouseDown", function() HelpFrame:ClearAllPoints() HelpFrame:StartMoving() end)
-HelpFrame:SetScript("OnMouseUp", function() HelpFrame:StopMovingOrSizing() end)

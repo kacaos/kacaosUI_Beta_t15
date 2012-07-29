@@ -4,6 +4,7 @@
 ## Credits: Tukz, Pat, Swordyy, Sinaris, Merith, Elv, Smelly, Saft, Ex, Sniffles, Gszus, JerichoHM, Nisha and some other people who helped or inspired me  =)
 ## Notes: Kacaos edit of Tukui.
 ## Author: Kacaos (Jâspar - EU Frostwolf)
+## SavedVariables: TukuiData
 ## SavedVariablesPerCharacter: KacaosUISaved
 ## RequiredDeps: KacaosUI_Config, Tukui
 ## OptionalDeps: Blizzard_CombatText

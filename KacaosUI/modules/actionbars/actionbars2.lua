@@ -68,6 +68,7 @@ local Page = {
 ["DRUID"] = "[bonusbar:1,nostealth] 7; [bonusbar:1,stealth] 8; [bonusbar:2] 8; [bonusbar:3] 9; [bonusbar:4] 10;",
 ["WARRIOR"] = "[bonusbar:1] 7; [bonusbar:2] 8; [bonusbar:3] 9;",
 ["PRIEST"] = "[bonusbar:1] 7;",
+["MONK"] = "[form:1] "..(spec == 1 and 8 or spec == 2 and 9 or spec == 3 and 7 or 9).."; [form:2] 7;",
 ["ROGUE"] = "[bonusbar:1] 7; [form:3] "..shd..";",
 ["DEFAULT"] = "[bonusbar:5] 11; [bar:2] 2; [bar:3] 3; [bar:4] 4; [bar:5] 5; [bar:6] 6;",
 }

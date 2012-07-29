@@ -53,8 +53,8 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.combattextdamagestyle = "Change default damage/healing font above mobs/player heads (you need to restart WoW to see changes)"
 		TukuiConfigUILocalization.combattextdamage = "Show outgoing damage in it's own frame"
 		TukuiConfigUILocalization.combattexthealing = "Show outgoing healing in it's own frame"
-		TukuiConfigUILocalization.combattexthots = "Show periodic healing effects in healing frame"
-		TukuiConfigUILocalization.combattextoverhealing = "Show outgoing overhealing"
+		TukuiConfigUILocalization.combattextshowhots = "Show periodic healing effects in healing frame"
+		TukuiConfigUILocalization.combattextshowoverhealing = "Show outgoing overhealing"
 		TukuiConfigUILocalization.combattextpetdamage = "Show your pet damage"
 		TukuiConfigUILocalization.combattextdotdamage = "Show damage from your dots"
 		TukuiConfigUILocalization.combattextdamagecolor = "Display damage numbers depending on school of magic"
@@ -83,9 +83,12 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarpriest = "Enable Priest Classbars"
 		TukuiConfigUILocalization.classbardruid = "Enable Druid Classbars"
 		TukuiConfigUILocalization.classbarmonk = "Enable Monk Classbars"
+		TukuiConfigUILocalization.classbarmonkwidth = "Set width of eacht Chi (option for classbar width cant be use here!!!)"
 		TukuiConfigUILocalization.classbarcombopoints = "Enable combopoints for rogue and druid (in catform) "
 		TukuiConfigUILocalization.classbarheight = "Set Height of classbars"
-		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars"
+		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (doesnt work for monks!!!!)"
+		TukuiConfigUILocalization.merchantautorepair = "Auto repair (auto-Guildrepair need to be OFF!!!)"
+		TukuiConfigUILocalization.merchantautoguildrepair = "Auto guild-repair (auto-repair need to be OFF!!!)"
 	end
 end	
 
@@ -148,7 +151,7 @@ if T.client == "enEN" then
     L.duffeduihelp_content8_line4 = ""
    
     L.duffeduihelp_content3_title = "|cff1E90FFMiscellaneous|r"
-    L.duffeduihelp_content3_line1 = "There you have some options which I want to list now:\n\nActivate the RaidBuffReminder (A panel which is placed at the top edge of the screen. It helps you detect which buffs are given in a raid or not(f.e. Arcane Brilliance).\n\nTo enable or disable the threatbar.\n\nTo enable or disable a AFK-Spincam (rotates the screen slowly when youre flagged as AFK)\n\nActivate the buttons next to the minimap.\n\nTo display the itemlevel and the durability in the Characterpanel.\n\nShow the items linked in the chat with just mouseover (normally by clicking)\n\nEnable a Bottompanel (see layouts)\n\nYou have the option to choose between two raidlayouts. First one minilistic grid or an grid for healers."
+    L.duffeduihelp_content3_line1 = "There you have some options which I want to list now:\n\nActivate the RaidBuffReminder (A panel which is placed at the top edge of the screen. It helps you detect which buffs are given in a raid or not(f.e. Arcane Brilliance).\n\nTo enable or disable the threatbar.\n\nTo enable or disable a AFK-Spincam (rotates the screen slowly when youre flagged as AFK)\n\nActivate the buttons next to the minimap.\n\nTo display the itemlevel and the durability in the Characterpanel.\n\nShow the items linked in the chat with just mouseover (normally by clicking)\n\nEnable a Bottompanel (see layouts)."
     L.duffeduihelp_content3_line3 = ""
     L.duffeduihelp_content3_line4 = ""
    
@@ -180,5 +183,5 @@ if T.client == "enEN" then
     L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => Open this panel\n|cff1E90FF/resetui|r => Resets the completly framepositions to the default.\n|cff1E90FF/install|r => Shows the installation frame and you can completly install the interface new."
     L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Let you move nearyl every frame int the interface.\n|cff1E90FF/kb|r => Easy way to set some keybindings by mouseover a button and only pressing the hotkey you want on that button.\n|cff1E90FF/rl|r => reloads the interface."
     L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => Opens the ingame configuration. There you can configure your interface how you want it."
-    L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out.\n\n|cff1E90FF/xct|r => List xct commands in chat.\n|cff1E90FF/xct unlock|r => Unlock xct, to move the frames.\n|cff1E90FF/xct lock|r => Lock the moveable frames.\n|cff1E90FF/xct test|r => Toggle xct testmode."
+    L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out.\n\n|cff1E90FF/xct|r => List xct commands in chat.\n|cff1E90FF/xct unlock|r => Unlock xct, to move the frames.\n|cff1E90FF/xct lock|r => Lock the moveable frames.\n|cff1E90FF/xct test|r => Toggle xct testmode.\n\n|cff1E90FF/debuffs|r => Opens an extra window where you can add raiddebuffs (with SpellIDs) which will be shown in your grid."
 end

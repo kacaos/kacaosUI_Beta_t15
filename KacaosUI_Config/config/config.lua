@@ -77,7 +77,8 @@ C.classbar = {
 	monk = true,									-- enable monk classbar
 	combopoints = true,								-- enable combopoints for rogue an druid (in catform)
 	height = 8,										-- choose height of classbars
-	width = 157,									-- choose width of classbars
+	width = 30,										-- choose width of each rune/shard/chi etc.
+	ebwidth = 30,									-- change size !!ONLY!! for eclipse/solarbar
 }
 
 C.chat = {
@@ -100,7 +101,6 @@ C.misc = {
 	afkcam = false,									-- activate akf spin cam
 	hyperlink = true,								-- show itemlinks in chat on mouseover
 	raidbuffreminder = false,						-- raidbuffreminder at the top of the screen
-	raidstyle = "heal",									-- choose between style dps and heal
 	ilvlr = true,									-- show ilvl and durability in charakterframe
 	infobottom = false,								-- show infopanel at the bottom of you screen
 }
@@ -111,6 +111,11 @@ C.auras = {
 
 C.tooltip = {
 	ilvl = false,									-- activate ilvl in tooltip
+}
+
+C.merchant = {
+	autorepair = false,								-- activate auto-repair (auto-guildrepair need to be off!!!)
+	autoguildrepair = true,							-- activate auto-guildrepair (auto-repair need to be off!!!)
 }
 
 C.filger = {
@@ -125,9 +130,9 @@ C.filger = {
 }
 
 C.combattext = {
-	enable = tre,							-- Global enable combat text
+	enable = true,							-- Global enable combat text
 	blizzheadnumbers = false,				-- Use blizzard damage/healing output(above mob/player head)
-	damagestyle = false,					-- Change default damage/healing font above mobs/player heads(you need to restart WoW to see changes)
+	damagestyle = true,					-- Change default damage/healing font above mobs/player heads(you need to restart WoW to see changes)
 	damage = true,							-- Show outgoing damage in it's own frame
 	healing = true,							-- Show outgoing healing in it's own frame
 	showhots = false,						-- Show periodic healing effects in healing frame
@@ -138,7 +143,7 @@ C.combattext = {
 	critprefix = "*",						-- Symbol that will be added before crit
 	critpostfix = "*",						-- Symbol that will be added after crit
 	icons = true,							-- Show outgoing damage icons
-	iconsize = 16,							-- Icon size of spells in outgoing damage frame, also has effect on dmg font size
+	iconsize = 14,							-- Icon size of spells in outgoing damage frame, also has effect on dmg font size
 	treshold = 1,							-- Minimum damage to show in damage frame
 	healtreshold = 1,						-- Minimum healing to show in incoming/outgoing healing messages
 	scrollable = false,						-- Allows you to scroll frame lines with mousewheel
@@ -159,9 +164,9 @@ C.media = {
 	["uffont"] = [[Interface\Addons\Tukui\medias\fonts\normal_font.ttf]], 			-- general font of unitframes
 	["pixelfont"] = [[Interface\Addons\KacaosUI\media\font\HOOG0555.ttf]],			-- font of datatext uf etc.
 	["help"] = [[Interface\Addons\KacaosUI\media\font\normal_font.ttf]],			-- font for helpframe
-	["combattextfont"] = [[Interface\Addons\KacaosUI\media\font\HOOG0555.ttf]],		-- font for combattext /xct
-	combattextfontsize = 12,														-- fontsize of combattext
-	["combattextfontstyle"] = "MONOCHROMEOUTLINE",									-- outline of combattextfont
+	["combattextfont"] = [[Interface\AddOns\Tukui\medias\fonts\combat_font.ttf]],		-- font for combattext /xct
+	combattextfontsize = 14,														-- fontsize of combattext
+	["combattextfontstyle"] = "OUTLINE",									-- outline of combattextfont
 	["combattextfontshadow"] = false,												-- enable shadow of combattextfont
 	normTex = [[Interface\Addons\kacaosUI\media\textures\normTex]],					-- texture for mana/health etc.
 	kuihelp_pic = [[Interface\Addons\kacaosUI\media\textures\kuihelp_pic]],			-- texture for helpframe

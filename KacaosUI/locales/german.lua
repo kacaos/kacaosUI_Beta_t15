@@ -61,19 +61,19 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.combattextdamagestyle = "Standard Schaden/Heilung Schriftart ueber Kreaturen/Spieler Köpfen aendern (nach restart)"
 		TukuiConfigUILocalization.combattextdamage = "Zeige ausgehenden Schaden in einem eigenen Fenster"
 		TukuiConfigUILocalization.combattexthealing = "Zeige ausgehende Heilung in einem eigenen Fenster"
-		TukuiConfigUILocalization.combattexthots = "Zeige peroidische Heilungseffekte im Heilungsfenster"
-		TukuiConfigUILocalization.combattextoverhealing = "Zeige ausgehende Überheilung an"
+		TukuiConfigUILocalization.combattextshowhots = "Zeige peroidische Heilungseffekte im Heilungsfenster"
+		TukuiConfigUILocalization.combattextshowoverhealing = "Zeige ausgehende Überheilung an"
 		TukuiConfigUILocalization.combattextpetdamage = "Zeige Begleiterschaden"
 		TukuiConfigUILocalization.combattextdotdamage = "Zeige Schaden von Schaden über Zeit"
 		TukuiConfigUILocalization.combattextdamagecolor = "Zeige Schadensnummern in Abhängigkeit von der Art des Zaubers"
 		TukuiConfigUILocalization.combattextcritprefix = "Symbol vor einem kritischen Treffer"
 		TukuiConfigUILocalization.combattextcritpostfix = "Symbol hinter einem kritischen Treffer"
 		TukuiConfigUILocalization.combattexticons = "Zeige Symbole fuer ausgehenden Schaden"
-		TukuiConfigUILocalization.combattexticonsize = "Symbolgröße der Zauber im Fenster fuer ausgehenden Schaden. Nimmt auch Einfluss auf die Schriftgröße"
+		TukuiConfigUILocalization.combattexticonsize = "Symbolgröße der Zauber im Fenster fuer ausgehenden Schaden."
 		TukuiConfigUILocalization.combattexttreshold = "Ab welcher Größe soll der Schaden angezeigt werden"
 		TukuiConfigUILocalization.combattexthealtreshold = "Ab welche Größe soll ein-/ausgehende Heilung angezeigt werden"
 		TukuiConfigUILocalization.combattextscrollable = "Erlaubt es dir mit dem Mausrad durch die letzten Zeilen zu scrollen"
-		TukuiConfigUILocalization.combattextmaxlines = "Maximale Zeilen, die behalten werden sollen im Scrollmodus (mehr Zeilen = mehr Speicherverbrauch)"
+		TukuiConfigUILocalization.combattextmaxlines = "Maximale Zeilen, die behalten werden sollen im Scrollmodus"
 		TukuiConfigUILocalization.combattexttimevisible = "Zeit(Sekunden) wielange eine einzelne Nachricht angezeigt wird"
 		TukuiConfigUILocalization.combattextstopvespam = "Heilung von Priestern in Schattenform wird automatisch ausgeschaltet"
 		TukuiConfigUILocalization.combattextdkrunes = "Zeige Runenaufladung vom Todesritter"
@@ -91,9 +91,12 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarpriest = "Aktiviere Priester Klassenleiste"
 		TukuiConfigUILocalization.classbardruid = "Aktiviere Druiden Klassenleiste"
 		TukuiConfigUILocalization.classbarmonk = "Aktiviere Mönch Klassenleiste"
+		TukuiConfigUILocalization.classbarmonkwidth = "Setze Breite der einzelnen Chi´s (normale Breiteneinstellung geht hier nicht!!!)"
 		TukuiConfigUILocalization.classbarcombopoints = "Aktiviere Klassenleiste für Schurken und für Druiden(in Katzengestalt)"
 		TukuiConfigUILocalization.classbarheight = "Setze Höhe der Klassenleiste"
-		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste"
+		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste (außer Monk)"
+		TukuiConfigUILocalization.merchantautorepair = "Auto Reparieren (Auto-Gildenreparieren muss AUS sein!!!)"
+		TukuiConfigUILocalization.merchantautoguildrepair = "Auto Gildenreparieren (Auto-Repair muss AUS sein!!!)"
 	end
 end	
 
@@ -156,7 +159,7 @@ if T.client == "deDE" then
 	L.duffeduihelp_content8_line4 = ""
 
 	L.duffeduihelp_content3_title = "|cff1E90FFVerschiedenes|r"
-	L.duffeduihelp_content3_line1 = "Dort hast du einige Optionen welche ich dir hier kurz aufliste:\n\nAktiviere den Raidbuffreminder (Ein Panel welches am oberen Rand des Bildschirm ist. Um zu sehen welche Buffs man besitzt und welche noch fehlen).\n\nDie Bedrohungsleiste ein- und auszuschalten\n\nEine AFK-Spin-Cam zu aktivieren (Drehen des Bildschirms wenn du als AFK geflaged wirst)\n\nAktivieren der Buttons neben der Minimap\n\nDas Itemlevel im Charakterfenster sowie die Haltbarkeit anzuzeigen\n\nItemlinks im Chat per Mouseover anzeigen zu lassen\n\nDas Panel am unteren Rand aktivieren (siehe Layouts)\n\nF\195\188r die Raidlayouts hast du hier die M\195\182glichkeitn zwischen zwei layouts zu w\195\164hlen. Entweder du nutzt ein minimalistisches Grid, oder du nutzt ein Grid was extra f\195\188r Heiler angepasst ist."
+	L.duffeduihelp_content3_line1 = "Dort hast du einige Optionen welche ich dir hier kurz aufliste:\n\nAktiviere den Raidbuffreminder (Ein Panel welches am oberen Rand des Bildschirm ist. Um zu sehen welche Buffs man besitzt und welche noch fehlen).\n\nDie Bedrohungsleiste ein- und auszuschalten\n\nEine AFK-Spin-Cam zu aktivieren (Drehen des Bildschirms wenn du als AFK geflaged wirst)\n\nAktivieren der Buttons neben der Minimap\n\nDas Itemlevel im Charakterfenster sowie die Haltbarkeit anzuzeigen\n\nItemlinks im Chat per Mouseover anzeigen zu lassen\n\nDas Panel am unteren Rand aktivieren (siehe Layouts)."
 	L.duffeduihelp_content3_line3 = ""
 	L.duffeduihelp_content3_line4 = ""
 
@@ -186,9 +189,9 @@ if T.client == "deDE" then
 
 	L.duffeduihelp_content6_title = "|cff1E90FFBefehle|r"
 	L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => \195\150ffnet dieses Panel\n|cff1E90FF/resetui|r => Setzt die Frameposition des gesamten UIs zur\195\188ck\n|cff1E90FF/install|r => Neuinstallation der gesamten UI"
-	L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Aktiviert die Bewegungsanker der UI-Elemente\n|cff1E90FF/kb|r => Keybindings setzen per mouseover\n|cff1E90FF/rl|r => L\195\164dt das UI neu"
-	L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => \195\150ffnet die ingame-Config"
-	L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => \195\150ffnet den Addonmanager\n\n|cff1E90FF/xct|r => Zeige xct Befehle im Chat.\n|cff1E90FF/xct unlock|r => Schalte den xct Configmodus an. Zum verschieben der Frames.\n|cff1E90FF/xct lock|r => Verschließe die Frames nach dem verschieben.\n|cff1E90FF/xct test|r => Aktiviere xct Testmodus."
+	L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Aktiviert die Bewegungsanker der UI-Elemente\n|cff1E90FF/kb|r => Keybindings setzen per mouseover\n|cff1E90FF/rl|r => L\195\164dt das UI neu\n|cff1E90FF/tc|r => \195\150ffnet die ingame-Config"
+	L.duffeduihelp_content6_line3 = "|cff1E90FF/heal|r => Aktiviert das Heal-Raid-Layout\n|cff1E90FF/dps|r => Aktiviert das DPS/Tank-Raid-Layout"
+	L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => \195\150ffnet den Addonmanager\n\n|cff1E90FF/xct|r => Zeige xct Befehle im Chat.\n|cff1E90FF/xct unlock|r => Schalte den xct Configmodus an. Zum verschieben der Frames.\n|cff1E90FF/xct lock|r => Verschließe die Frames nach dem verschieben.\n|cff1E90FF/xct test|r => Aktiviere xct Testmodus.\n\n|cff1E90FF/debuffs|r => Öffnet ein Fenster wo ihr Ingame RaidDebuffs (SpedllIDs) eintragen könnt. Diese werden euch dann im Grid angezeigt."
 	
 	-- Combat text
 	L.COMBATTEXTKILLINGBLOW = "Todesstoss"

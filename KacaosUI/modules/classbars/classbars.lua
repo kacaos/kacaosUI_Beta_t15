@@ -2,6 +2,7 @@ local T, C, L, G = unpack(Tukui)
 
 local tbWidth = C.classbar.width
 local tbHeight = C.classbar.height
+local ebWidth = C.classbar.ebwidth
 
 -------------------------------------
 -- mover
@@ -31,17 +32,17 @@ tinsert(T.AllowFrameMoving, mover)
 				else	
 					G.UnitFrames.Player.WarlockSpecBars:ClearAllPoints()
 					G.UnitFrames.Player.WarlockSpecBars:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.WarlockSpecBars:Size(tbWidth, tbHeight)
+					G.UnitFrames.Player.WarlockSpecBars:Size((tbWidt*4)+3, tbHeight)
 					G.UnitFrames.Player.WarlockSpecBars:SetFrameStrata("LOW")
 					G.UnitFrames.Player.WarlockSpecBars:CreateBorder(false, true)
 					for i = 1, 4  do
 
 						if i == 1 then
 							G.UnitFrames.Player.WarlockSpecBars[i]:Point("TOPLEFT", G.UnitFrames.Player.WarlockSpecBars, "BOTTOMLEFT", 0, tbHeight)
-							G.UnitFrames.Player.WarlockSpecBars[i]:Size(tbWidth/4, tbHeight)
+							G.UnitFrames.Player.WarlockSpecBars[i]:Size(tbWidth*4, tbHeight)
 						else
 							G.UnitFrames.Player.WarlockSpecBars[i]:Point("LEFT", G.UnitFrames.Player.WarlockSpecBars[i-1], "RIGHT", 1, 0)
-							G.UnitFrames.Player.WarlockSpecBars[i]:Size(tbWidth/4, tbHeight)
+							G.UnitFrames.Player.WarlockSpecBars[i]:Size(tbWidth*4, tbHeight)
 						end
 					end	
 				end
@@ -59,7 +60,7 @@ tinsert(T.AllowFrameMoving, mover)
 					G.UnitFrames.Player.DruidManaBackground:Kill()
 					G.UnitFrames.Player.EclipseBar:ClearAllPoints()
 					G.UnitFrames.Player.EclipseBar:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.EclipseBar:Size(tbWidth, tbHeight)
+					G.UnitFrames.Player.EclipseBar:Size(ebWidth, tbHeight)
 					G.UnitFrames.Player.EclipseBar:CreateBorder(false, true)
 					G.UnitFrames.Player.EclipseBar:SetFrameStrata("LOW")
 					G.UnitFrames.Player.EclipseBar.LunarBar:SetSize( G.UnitFrames.Player.EclipseBar:GetWidth(), G.UnitFrames.Player.EclipseBar:GetHeight() )
@@ -67,9 +68,10 @@ tinsert(T.AllowFrameMoving, mover)
 					G.UnitFrames.Player.EclipseBar.Text:ClearAllPoints()
 					G.UnitFrames.Player.EclipseBar.Text:SetPoint( "TOP", G.UnitFrames.Player.EclipseBar, 0, tbHeight)
 					G.UnitFrames.Player.EclipseBar.Text:SetFont(C.media.pixelfont, tbHeight, "MONOCHROMEOUTLINE")
-					G.UnitFrames.Player.EclipseBar.Text:SetShadowOffset( T.mult, -T.mult )					
+					G.UnitFrames.Player.EclipseBar.Text:SetShadowOffset( T.mult, -T.mult )	
 				end
-			end
+			
+end
 					
 			if (T.myclass == "DRUID") then
 					G.UnitFrames.Player.DruidManaText:Kill()
@@ -88,18 +90,18 @@ if( T.myclass == "DEATHKNIGHT" ) then
 				else	
 					G.UnitFrames.Player.Runes:ClearAllPoints()
 					G.UnitFrames.Player.Runes:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.Runes:Size(tbWidth+4, tbHeight)
+					G.UnitFrames.Player.Runes:Size((tbWidth*6)+5, tbHeight)
 					G.UnitFrames.Player.Runes:CreateBorder(false, true)
 
 					for i = 1, 6 do
 						if( i == 1 ) then
 							G.UnitFrames.Player.Runes[i]:SetPoint( "BOTTOMLEFT", G.UnitFrames.Player.Runes, "TOPLEFT", 0, -tbHeight)
-							G.UnitFrames.Player.Runes[i]:Size(tbWidth/6, tbHeight)
+							G.UnitFrames.Player.Runes[i]:Size(tbWidth, tbHeight)
 						elseif( i == 2 or i == 3 ) then
-							G.UnitFrames.Player.Runes[i]:Size(tbWidth/6, tbHeight)
+							G.UnitFrames.Player.Runes[i]:Size(tbWidth, tbHeight)
 						else
 							G.UnitFrames.Player.Runes[i]:Point("LEFT", G.UnitFrames.Player.Runes[i - 1], "RIGHT", 1, 0)
-							G.UnitFrames.Player.Runes[i]:Size(tbWidth/6, tbHeight)
+							G.UnitFrames.Player.Runes[i]:Size(tbWidth, tbHeight)
 						end
 					end
 				end
@@ -116,7 +118,7 @@ if( T.myclass == "SHAMAN" ) then
 					end
 				else	
 					local totembg = CreateFrame("Frame", "totembg", UIParent)
-					totembg:Size(tbWidth, tbHeight)
+					totembg:Size((tbWidth*4)+3, tbHeight)
 					totembg:SetPoint("CENTER", mover)
 					totembg:SetTemplate("Default")
 					totembg:CreateBorder(false, true)
@@ -125,11 +127,11 @@ if( T.myclass == "SHAMAN" ) then
 						if i == 1 then
 							G.UnitFrames.Player.TotemBar[i]:ClearAllPoints()
 							G.UnitFrames.Player.TotemBar[i]:SetPoint("BOTTOMLEFT", totembg, "TOPLEFT", 0, -tbHeight)
-							G.UnitFrames.Player.TotemBar[i]:Size(tbWidth/4, tbHeight)
+							G.UnitFrames.Player.TotemBar[i]:Size(tbWidth, tbHeight)
 						else
 							G.UnitFrames.Player.TotemBar[i]:ClearAllPoints()
 							G.UnitFrames.Player.TotemBar[i]:Point("LEFT", G.UnitFrames.Player.TotemBar[i-1], "RIGHT", 1, 0)
-							G.UnitFrames.Player.TotemBar[i]:Size(tbWidth/4, tbHeight)
+							G.UnitFrames.Player.TotemBar[i]:Size(tbWidth, tbHeight)
 						end
 					end
 				end
@@ -145,17 +147,17 @@ if( T.myclass == "PRIEST" ) then
 				else	
 					G.UnitFrames.Player.ShadowOrbsBar:ClearAllPoints()
 					G.UnitFrames.Player.ShadowOrbsBar:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.ShadowOrbsBar:Size(tbWidth, tbHeight)
+					G.UnitFrames.Player.ShadowOrbsBar:Size((tbWidth*3)+2, tbHeight)
 					G.UnitFrames.Player.ShadowOrbsBar:SetFrameStrata("LOW")
 					G.UnitFrames.Player.ShadowOrbsBar:CreateBorder(false, true)
 					for i = 1, 3  do
 
 						if i == 1 then
 							G.UnitFrames.Player.ShadowOrbsBar[i]:SetPoint( "BOTTOMLEFT", G.UnitFrames.Player.ShadowOrbsBar, "TOPLEFT", 0, -tbHeight)
-							G.UnitFrames.Player.ShadowOrbsBar[i]:Size(tbWidth/3, tbHeight)
+							G.UnitFrames.Player.ShadowOrbsBar[i]:Size(tbWidth, tbHeight)
 						else
 							G.UnitFrames.Player.ShadowOrbsBar[i]:Point("LEFT", G.UnitFrames.Player.ShadowOrbsBar[i-1], "RIGHT", 1, 0)
-							G.UnitFrames.Player.ShadowOrbsBar[i]:Size(tbWidth/3, tbHeight)
+							G.UnitFrames.Player.ShadowOrbsBar[i]:Size(tbWidth, tbHeight)
 						end
 					end
 				end
@@ -165,55 +167,29 @@ if( T.myclass == "PRIEST" ) then
 -- Monk
 -------------------------------------
 
+
 if T.myclass == "MONK" then
-				if( C.classbar.monk ~= true ) then
+			if( C.classbar.monk ~= true ) then
 					G.UnitFrames.Player.HarmonyBar:Kill()
 				else	
 					G.UnitFrames.Player.HarmonyBar:ClearAllPoints()
 					G.UnitFrames.Player.HarmonyBar:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.HarmonyBar:Size(tbWidth, tbHeight)
+					G.UnitFrames.Player.HarmonyBar:Size((sbWidth*5)+4, tbHeight)
 					G.UnitFrames.Player.HarmonyBar:SetFrameStrata("LOW")
 					G.UnitFrames.Player.HarmonyBar:CreateBorder(false, true)
 					for i = 1, 5 do
 
 						if i == 1 then
 							G.UnitFrames.Player.HarmonyBar[i]:Point("TOPLEFT", G.UnitFrames.Player.HarmonyBar, "BOTTOMLEFT", 0, tbHeight)
-							G.UnitFrames.Player.HarmonyBar[i]:Size(tbWidth, tbHeight)
+							G.UnitFrames.Player.HarmonyBar[i]:Size(sbWidth, tbHeight)
 						else
 							G.UnitFrames.Player.HarmonyBar[i]:Point("LEFT", G.UnitFrames.Player.HarmonyBar[i-1], "RIGHT", 1, 0)
-							G.UnitFrames.Player.HarmonyBar[i]:Size(tbWidth, tbHeight)
+							G.UnitFrames.Player.HarmonyBar[i]:Size(sbWidth, tbHeight)
 						end
 					end
-
-					-- energy bar
-					local nPowerBG = CreateFrame("Frame", "nPowerBG", G.UnitFrames.Player.HarmonyBar)
-					nPowerBG:Size((G.UnitFrames.Player.HarmonyBar:GetWidth()+6), G.UnitFrames.Player.HarmonyBar:GetHeight()*1.5)
-					nPowerBG:Point("TOPLEFT", G.UnitFrames.Player.HarmonyBar, "BOTTOMLEFT", -3, -5)
-					nPowerBG:SetTemplate("Default")
-					local nPowerStatus = CreateFrame("StatusBar", "nPowerStatus", nPowerBG)
-					nPowerStatus:SetStatusBarTexture(C["media"].normTex)
-					nPowerStatus:SetFrameLevel(6)
-					nPowerStatus:Point("TOPLEFT", nPowerBG, "TOPLEFT", 2, -2)
-					nPowerStatus:Point("BOTTOMRIGHT", nPowerBG, "BOTTOMRIGHT", -2, 2)
-					nPowerStatus.t = nPowerStatus:CreateFontString(nil, "OVERLAY")
-					nPowerStatus.t:SetPoint("CENTER", 0, -1)
-					nPowerStatus.t:SetFont(C.media.pixelfont, tbHeight, "MONOCHROMEOUTLINE")
-					nPowerStatus.t:SetShadowOffset(0.5, -0.5)
-					nPowerStatus.t:SetShadowColor(0,0,0)
-					local color = RAID_CLASS_COLORS[T.myclass]
-					nPowerStatus:SetStatusBarColor(color.r, color.g, color.b)
-					local t = 0
-					nPowerStatus:SetScript("OnUpdate", function(self, elapsed)
-						t = t + elapsed;
-						if (t > 0.07) then
-							nPowerStatus:SetMinMaxValues(0, UnitPowerMax("player"))
-							local power = UnitPower("player")
-							nPowerStatus:SetValue(power)
-							nPowerStatus.t:SetText(power)
-						end
-					end)
 				end
-			end
+	
+end
 			
 -----------------------------------------
 -- Paladin
@@ -228,17 +204,17 @@ if( T.myclass == "PALADIN" ) then
 				else	
 					G.UnitFrames.Player.HolyPower:ClearAllPoints()
 					G.UnitFrames.Player.HolyPower:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.HolyPower:Size(tbWidth, tbHeight)
+					G.UnitFrames.Player.HolyPower:Size((tbWidth*5)+4, tbHeight)
 					G.UnitFrames.Player.HolyPower:SetFrameStrata("LOW")
 					G.UnitFrames.Player.HolyPower:CreateBorder(false, true)
 					for i = 1, 5  do
 							G.UnitFrames.Player.HolyPower[i]:SetStatusBarColor( 228 / 255, 225 / 255, 16 / 255 )
 						if i == 1 then
 							G.UnitFrames.Player.HolyPower[i]:Point("TOPLEFT", G.UnitFrames.Player.HolyPower, "BOTTOMLEFT", 0, tbHeight)
-							G.UnitFrames.Player.HolyPower[i]:Size(tbWidth/5, tbHeight)
+							G.UnitFrames.Player.HolyPower[i]:Size(tbWidth, tbHeight)
 						else
 							G.UnitFrames.Player.HolyPower[i]:Point("LEFT", G.UnitFrames.Player.HolyPower[i-1], "RIGHT", 1, 0)
-							G.UnitFrames.Player.HolyPower[i]:Size(tbWidth/5, tbHeight)
+							G.UnitFrames.Player.HolyPower[i]:Size(tbWidth, tbHeight)
 						end
 					end	
 				end
@@ -249,53 +225,24 @@ if( T.myclass == "PALADIN" ) then
 ----------------------------------------
 
 local combobar = G.UnitFrames.Player.ComboPointsBar or G.UnitFrames.Target.ComboPointsBar
-if( T.myclass == "ROGUE") then
-if (T.myclass == "DRUID") then
+if( T.myclass == "ROGUE" or "DRUID") then
 				if( C.classbar.combopoints ~= true ) then
 					combobar:Kill()
 				else	
 					combobar:ClearAllPoints()
 					combobar:SetPoint("CENTER", mover)
-					combobar:Size(tbWidth+5, tbHeight)
+					combobar:Size((tbWidth*5)+4, tbHeight)
 					combobar:SetFrameStrata("LOW")
 					combobar:CreateBorder(false, true)
 					for i = 1, 5  do
 
 						if i == 1 then
 							combobar[i]:Point("TOPLEFT", combobar, "BOTTOMLEFT", 0, tbHeight)
-							combobar[i]:Size(tbWidth/5, tbHeight)
+							combobar[i]:Size(tbWidth, tbHeight)
 						else
 							combobar[i]:Point("LEFT", combobar[i-1], "RIGHT", 1, 0)
-							combobar[i]:Size(tbWidth/5, tbHeight)
+							combobar[i]:Size(tbWidth, tbHeight)
 						end
 					end	
-
-					local sPowerBG = CreateFrame("Frame", "sPowerBG", TukuiTarget)
-					sPowerBG:Size((combobar:GetWidth()+6), combobar:GetHeight()*1.5)
-					sPowerBG:Point("TOPLEFT", combobar, "BOTTOMLEFT", -3, -5)
-					local sPowerStatus = CreateFrame("StatusBar", "sPowerStatus", TukuiTarget)
-					sPowerStatus:SetStatusBarTexture(C["media"].normTex)
-					sPowerStatus:CreateBorder(false, true)
-					sPowerStatus:SetTemplate("Default")
-					sPowerStatus:Point("TOPLEFT", sPowerBG, "TOPLEFT", 2, -2)
-					sPowerStatus:Point("BOTTOMRIGHT", sPowerBG, "BOTTOMRIGHT", -2, 2)
-					sPowerStatus.t = sPowerStatus:CreateFontString(nil, "OVERLAY")
-					sPowerStatus.t:SetPoint("CENTER")
-					sPowerStatus.t:SetFont(C.media.pixelfont, tbHeight, "MONOCHROMEOUTLINE")
-					sPowerStatus.t:SetShadowOffset(0.5, -0.5)
-					sPowerStatus.t:SetShadowColor(0,0,0)
-					local color = RAID_CLASS_COLORS[T.myclass]
-					sPowerStatus:SetStatusBarColor(color.r, color.g, color.b)
-					local t = 0
-					sPowerStatus:SetScript("OnUpdate", function(self, elapsed)
-						t = t + elapsed;
-						if (t > 0.07) then
-							sPowerStatus:SetMinMaxValues(0, UnitPowerMax("player"))
-							local power = UnitPower("player")
-							sPowerStatus:SetValue(power)
-							sPowerStatus.t:SetText(power)
-						end
-					end)		
-				end
 			end
-end
+		end

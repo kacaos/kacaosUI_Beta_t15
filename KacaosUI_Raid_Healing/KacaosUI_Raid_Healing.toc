@@ -1,0 +1,8 @@
+## Interface: 50001
+## Title: |cff1E90FFkacaosUI Raid for Healer|r
+## Notes: Raid Layout for party and raid.
+## Version: 1.2.2
+## Author: Kacaos
+## RequiredDeps: KacaosUI
+
+Raid_Healing.lua
