@@ -4,7 +4,7 @@ local C = {}
 -------------------------------------------------------------
 
 C.general = {
-	blizzardreskin = false,							-- to set alpha go to tukui/core/api.lua and set balpha
+	blizzardreskin = true,							-- to set alpha go to tukui/core/api.lua and set balpha
 	backdropcolor = {.06,.06,.06},					-- backdrop color of all panel
 	bordercolor = {0,0,0},							-- border color of all panel
 	tinydpsreskin = false,                          -- reskin tinydps
@@ -52,6 +52,7 @@ C.actionbar = {
 	sidebar3mouseover = true,						-- rightbar3 on mouseover
 	b2bottom = true,								-- enable 3 bottomrows (only useable together with 2bottombars option)
 	hpetbar = true,									-- enable vertical petbar
+	hideshapeshift = true,							-- hide shapeshift or totembar because it was a lot requested.
 }
 
 C.unitframes = {
@@ -65,6 +66,11 @@ C.unitframes = {
 	petshow = true,									-- show pet
 	cbbutton = true,								-- show castbar button/icon
 	mouseoverhighlight = true,						-- mouseoverhiglight at raidframes layout2
+	showraidpets = false,							-- enable raidpets
+	combatfeedback = false,							-- enable combattext on player and target
+	unicolor = true,								-- enable unicolortheme
+	charportrait = true,							-- enable portraits on unitframes
+	movecombobar = false,							-- display the new combo bar (t14+) from target to player (ROGUE ONLY)
 }
 
 C.classbar = {
@@ -88,7 +94,7 @@ C.chat = {
 		chatbackgroundheight = 120,					-- set chatbackground height
 	chattabshow = true,								-- show chattabs
 	fadeout = false,								-- enable/disable chatbackground fadeout infight
-	namealert = false,								-- Play sound when your name is called in chat
+	namealert = true,								-- Play sound when your name is called in chat
 	names = {									    -- name alert in chat change to your own names (credit Hydra)
 		"Jaspar",
 		"Jasper"
@@ -113,6 +119,10 @@ C.tooltip = {
 	ilvl = false,									-- activate ilvl in tooltip
 }
 
+C.nameplate = {
+	enhancethreat = true,							-- threat features based on if your a tank or not
+}
+	
 C.merchant = {
 	autorepair = false,								-- activate auto-repair (auto-guildrepair need to be off!!!)
 	autoguildrepair = true,							-- activate auto-guildrepair (auto-repair need to be off!!!)

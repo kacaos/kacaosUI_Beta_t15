@@ -32,7 +32,7 @@ tinsert(T.AllowFrameMoving, mover)
 				else	
 					G.UnitFrames.Player.WarlockSpecBars:ClearAllPoints()
 					G.UnitFrames.Player.WarlockSpecBars:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.WarlockSpecBars:Size((tbWidt*4)+3, tbHeight)
+					G.UnitFrames.Player.WarlockSpecBars:Size((tbWidth*4)+3, tbHeight)
 					G.UnitFrames.Player.WarlockSpecBars:SetFrameStrata("LOW")
 					G.UnitFrames.Player.WarlockSpecBars:CreateBorder(false, true)
 					for i = 1, 4  do

@@ -99,6 +99,10 @@ for _, frame in pairs(units) do
 		PlayerCast.Time:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		PlayerCast.Time:SetShadowOffset(0,0)
 		PlayerCast:CreateBorder(false, true)
+		PlayerCast.CustomTimeText = T.CustomCastTimeText
+	    PlayerCast.CustomDelayText = T.CustomCastDelayText
+        PlayerCast.PostCastStart = T.PostCastStart
+        PlayerCast.PostChannelStart = T.PostCastStart
 		
 		if C.unitframes.cbbutton == true then
 		PlayerCast.button:ClearAllPoints()
@@ -113,6 +117,7 @@ for _, frame in pairs(units) do
 		PlayerCast.button:Kill()
 		end
 		
+	
 		--[experience bar on player via mouseover for player currently levelling a character
 		local Experience = TukuiPlayer.Experience
 		local Resting = TukuiPlayer.Resting
@@ -298,13 +303,13 @@ for _, frame in pairs(units) do
 		-- target debuffs
 		if C.unitframes.showdb then
 		TukuiTarget.Debuffs:ClearAllPoints()
-		TukuiTarget.Debuffs:Point("CENTER", self.Power, "CENTER", 1, 60)
+		TukuiTarget.Debuffs:Point("BOTTOMRIGHT", self.Health, "BOTTOMRIGHT", 2, 52)
 		TukuiTarget.Debuffs.size = 21
 		TukuiTarget.Debuffs:Width(200)
 		TukuiTarget.Debuffs.num = 14
 		TukuiTarget.Debuffs["growth-y"] = "UP"
 		TukuiTarget.Debuffs["growth-x"] = "LEFT"
-		TukuiTarget.Debuffs.spacing = 1
+		TukuiTarget.Debuffs.spacing = 2
 		TukuiTarget.Debuffs.PostCreateIcon = T.PostCreateAura
 		TukuiTarget.Debuffs.PostUpdateIcon = T.PostUpdateAura
 		else

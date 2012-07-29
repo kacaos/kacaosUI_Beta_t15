@@ -574,9 +574,9 @@ for i = 1, numf do
 			f:SetHeight(150)
 		end
 		if C.unitframes.enable == true and G.UnitFrames.Target then
-			f:SetPoint("BOTTOMRIGHT", G.UnitFrames.Target, "TOPRIGHT", 2, 278)
+			f:SetPoint("BOTTOMRIGHT", G.UnitFrames.Target, "TOPRIGHT", 2, 90)
 		else
-			f:SetPoint("CENTER", 330, 205)
+			f:SetPoint("CENTER", 330, 0)
 		end
 		local a, _, c = f:GetFont()
 		if C.media.combattextfontsize == "auto" then

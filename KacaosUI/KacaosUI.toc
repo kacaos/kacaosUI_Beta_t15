@@ -8,5 +8,6 @@
 ## SavedVariablesPerCharacter: KacaosUISaved
 ## RequiredDeps: KacaosUI_Config, Tukui
 ## OptionalDeps: Blizzard_CombatText
+## X-oUF: oUFTukui
 
 KacaosUI.xml

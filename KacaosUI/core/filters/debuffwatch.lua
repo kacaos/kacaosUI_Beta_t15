@@ -125,7 +125,6 @@ if C["unitframes"].raidunitdebuffwatch == true then
 			SpellName(119985),		-- Dread Spray
 			SpellName(119086),		-- Penetrating Bolt
 			SpellName(119775),		-- Reaching Attack
-			SpellName(6788), -- Test!!!!!!!!
 		}
 
 		T.ReverseTimer = {

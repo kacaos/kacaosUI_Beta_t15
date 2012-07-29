@@ -50,7 +50,7 @@ self.panel:Kill()
 -- set Names
 self.Name:SetParent(self.Health)
 self.Name:ClearAllPoints()
-self.Name:SetPoint("BOTTOM", self.Health, 2, 5)
+self.Name:SetPoint("BOTTOM", self.Health, 1, 5)
 self.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 self.Name:SetShadowOffset(0,0,0,0)
 --self:Tag(self.Name, '[Tukui:getnamecolor][Tukui:namemshort]')	
