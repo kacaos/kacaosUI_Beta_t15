@@ -18,7 +18,7 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 		return
 		"TukuiRaid",
 		nil,
-		"solo,raid,party",
+		"custom [petbattle] hide;show",
 		"oUF-initialConfigFunction", [[
 			local header = self:GetParent()
 			self:SetWidth( header:GetAttribute( "initial-width" ) )

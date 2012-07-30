@@ -50,95 +50,40 @@ TukuiBar4:Kill()
 -- make tukuibar1 2x6
 --------------------------------------------------------------
 local bar = TukuiBar1
---[[
-Bonus bar classes id
+--------------------------------------------------------------------------
+-- Setup Main Action Bar.
+-- Now used for stances, Bonus, Vehicle at the same time.
+-- Since t12, it's also working for druid cat stealth. (a lot requested)
+---------------------------------------------------------------------------
 
-DRUID: Caster: 0, Cat: 1, Tree of Life: 0, Bear: 3, Moonkin: 4
-WARRIOR: Battle Stance: 1, Defensive Stance: 2, Berserker Stance: 3
-ROGUE: Normal: 0, Stealthed: 1
-PRIEST: Normal: 0, Shadowform: 1
+--This frame puts spells on the damn actionbar, fucking obliterate that shit
+IconIntroTracker:UnregisterAllEvents()
+IconIntroTracker:Hide()
+IconIntroTracker:SetParent(UIHider)
 
-When Possessing a Target: 5
-]]--
-
-local shd = 7
-if C.actionbar.ownshdbar then shd = 10 end
-
-local Page = {
-["DRUID"] = "[bonusbar:1,nostealth] 7; [bonusbar:1,stealth] 8; [bonusbar:2] 8; [bonusbar:3] 9; [bonusbar:4] 10;",
-["WARRIOR"] = "[bonusbar:1] 7; [bonusbar:2] 8; [bonusbar:3] 9;",
-["PRIEST"] = "[bonusbar:1] 7;",
-["MONK"] = "[form:1] "..(spec == 1 and 8 or spec == 2 and 9 or spec == 3 and 7 or 9).."; [form:2] 7;",
-["ROGUE"] = "[bonusbar:1] 7; [form:3] "..shd..";",
-["DEFAULT"] = "[bonusbar:5] 11; [bar:2] 2; [bar:3] 3; [bar:4] 4; [bar:5] 5; [bar:6] 6;",
-}
-
-local function GetBar()
-local condition = Page["DEFAULT"]
-local class = T.myclass
-local page = Page[class]
-if page then
-condition = condition.." "..page
-end
-condition = condition.." 1"
-return condition
-end
-
-bar:RegisterEvent("PLAYER_LOGIN")
-bar:RegisterEvent("PLAYER_ENTERING_WORLD")
-bar:RegisterEvent("KNOWN_CURRENCY_TYPES_UPDATE")
-bar:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
-bar:RegisterEvent("BAG_UPDATE")
-bar:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
-bar:SetScript("OnEvent", function(self, event, ...)
-if event == "PLAYER_LOGIN" then
-local button
-for i = 1, NUM_ACTIONBAR_BUTTONS do
-button = _G["ActionButton"..i]
-self:SetFrameRef("ActionButton"..i, button)
-end
-
-self:Execute([[
-buttons = table.new()
-for i = 1, 12 do
-table.insert(buttons, self:GetFrameRef("ActionButton"..i))
-end
-]])
-
-self:SetAttribute("_onstate-page", [[
-for i, button in ipairs(buttons) do
-button:SetAttribute("actionpage", tonumber(newstate))
-end
-]])
-
-RegisterStateDriver(self, "page", GetBar())
-elseif event == "PLAYER_ENTERING_WORLD" then
-if T.toc < 40200 then MainMenuBar_UpdateKeyRing() end
-
-local button
-for i = 1, 12 do
-button = _G["ActionButton"..i]
-button:SetSize(T.buttonsize, T.buttonsize)
-button:ClearAllPoints()
-button:SetParent(bar)
-button:SetFrameStrata("BACKGROUND")
-button:SetFrameLevel(15)
-if i == 1 then
-button:SetPoint("BOTTOMLEFT", T.buttonspacing, 0)
-elseif i == 7 then
-button:SetPoint("BOTTOMLEFT", bar, T.buttonspacing, (T.buttonsize+T.buttonspacing))
-else
-local previous = _G["ActionButton"..i-1]
-button:SetPoint("LEFT", previous, "RIGHT", T.buttonspacing, 0)
-end
-end
-elseif event == "ACTIVE_TALENT_GROUP_CHANGED" then
--- attempt to fix blocked glyph change after switching spec.
-LoadAddOn("Blizzard_GlyphUI")
-else
-MainMenuBar_OnEvent(self, event, ...)
-end
+local bar = TukuiBar1
+bar:HookScript("OnEvent", function(self, event, unit)
+	if event == "PLAYER_ENTERING_WORLD" then
+		local button
+		for i = 1, 12 do
+			button = _G["ActionButton" .. i]
+			button:SetSize(T.buttonsize, T.buttonsize)
+			button:ClearAllPoints()
+			button:SetParent(bar)
+			button:SetFrameStrata("BACKGROUND")
+			button:SetFrameLevel( 15 )
+			if i == 1 then
+					button:Point("BOTTOMLEFT", T.buttonspacing, 0)
+			elseif i == 7 then
+					button:SetPoint("BOTTOMLEFT", bar, T.buttonspacing, (T.buttonsize+T.buttonspacing))
+			else
+				local previous = _G["ActionButton" .. i-1]
+				button:SetPoint("LEFT", previous, "RIGHT", T.buttonspacing, 0)
+			end
+		end
+	end
 end)
+RegisterStateDriver(bar, "visibility", "[vehicleui][petbattle][overridebar] hide; show")
 
 ---------------------------------------------------------------------------
 -- setup PetActionBar
@@ -166,7 +111,6 @@ TukuiPetBar:SetPoint("LEFT", mover, 0, 0)
 else
 
 local bar = TukuiPetBar
-bar:SetAlpha(0.8)
 	
 bar:RegisterEvent("PLAYER_LOGIN")
 bar:RegisterEvent("PLAYER_CONTROL_LOST")
@@ -204,7 +148,7 @@ bar:SetScript("OnEvent", function(self, event, arg1)
 			button:Show()
 			self:SetAttribute("addchild", button)
 		end
-		RegisterStateDriver(self, "visibility", "[pet,novehicleui,nobonusbar:5] show; hide")
+		RegisterStateDriver(self, "visibility", "[pet,petbattle,novehicleui,nobonusbar:5] show; hide")
 		hooksecurefunc("PetActionBar_Update", T.PetBarUpdate)
 	elseif event == "PET_BAR_UPDATE" or event == "UNIT_PET" and arg1 == "player" 
 	or event == "PLAYER_CONTROL_LOST" or event == "PLAYER_CONTROL_GAINED" or event == "PLAYER_FARSIGHT_FOCUS_CHANGED" or event == "UNIT_FLAGS"
@@ -243,7 +187,7 @@ end
 local mover = CreateFrame("Frame", "TukuiBar1Mover", UIParent)
 mover:Width(162)
 mover:Height(51)
-mover:Point("CENTER", UIParent, "CENTER", 0, -210)
+mover:Point("CENTER", UIParent, "CENTER", 0, -230)
 mover:SetTemplate("Transparent")
 mover:SetBackdropBorderColor(0,1,0)
 mover:SetClampedToScreen(true)

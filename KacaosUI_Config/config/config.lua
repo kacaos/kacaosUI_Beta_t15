@@ -83,14 +83,14 @@ C.classbar = {
 	monk = true,									-- enable monk classbar
 	combopoints = true,								-- enable combopoints for rogue an druid (in catform)
 	height = 8,										-- choose height of classbars
-	width = 30,										-- choose width of each rune/shard/chi etc.
-	ebwidth = 30,									-- change size !!ONLY!! for eclipse/solarbar
+	width = 35,										-- choose width of each rune/shard/chi etc.
+	ebwidth = 157,									-- change size !!ONLY!! for eclipse/solarbar
 }
 
 C.chat = {
 	chattab = true,									-- enable/disable chattab panel
 	chatbackground = true,							-- enable/disable chatbackground
-		chatbackgroundwidth = 350,					-- set chatbackground width
+		chatbackgroundwidth = 315,					-- set chatbackground width
 		chatbackgroundheight = 120,					-- set chatbackground height
 	chattabshow = true,								-- show chattabs
 	fadeout = false,								-- enable/disable chatbackground fadeout infight

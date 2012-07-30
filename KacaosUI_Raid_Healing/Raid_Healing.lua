@@ -9,16 +9,16 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 	showRaid = true
 	showPlayer = true
 	xOffset = T.Scale( 3 )
-	yOffset = T.Scale( -6 )
+	yOffset = T.Scale( 0 )
 	point = "LEFT"
-	columnSpacing = T.Scale( 6 )
+	columnSpacing = T.Scale( 3 )
 	columnAnchorPoint = "TOP"
 
 	T.RaidFrameAttributes = function()
 		return
 		"TukuiRaid",
 		nil,
-		"solo,raid,party",
+		"custom [petbattle] hide;show",
 		"oUF-initialConfigFunction", [[
 			local header = self:GetParent()
 			self:SetWidth( header:GetAttribute( "initial-width" ) )
@@ -31,14 +31,14 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 		"showPlayer", true,
 		"showSolo", true,
 		"xoffset",(3),
-		"yOffset", (-6),
+		"yOffset", (0),
 		"point", point,
 		"groupFilter", "1,2,3,4,5,6,7,8",
 		"groupingOrder", "1,2,3,4,5,6,7,8",
 		"groupBy", "GROUP",
 		"maxColumns", 5,
 		"unitsPerColumn", 5,
-		"columnSpacing", T.Scale(6),
+		"columnSpacing", T.Scale(3),
 		"columnAnchorPoint", columnAnchorPoint
 	end
 	

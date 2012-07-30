@@ -104,7 +104,7 @@ end
 if T.client == "deDE" then
 	
 	L.wmes_1 = "Hey, |cff1E90FF"..T.myname.."!|r Willkommen zu |cff1E90FFKacaosUI|r v"..T.kacaosrelease..""
-	L.wmes_2 = "Die akktuellste Version findest du unter: |cff00FF33http://www.tukui.org/addons/index.php?act=view&id=49|r"
+	L.wmes_2 = "Die aktuellste Version findest du unter: |cff00FF33http://www.tukui.org/addons/index.php?act=view&id=49|r"
 	
 	L.mover_castbarplayer = "Spieler Zauberleiste"
 	L.mover_castbartarget = "Ziel Zauberleiste"
