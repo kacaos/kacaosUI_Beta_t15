@@ -343,6 +343,8 @@ ns.Filger_Spells = {
 			{ spellID = 70840, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Burning Soul
 			{ spellID = 84254, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Pyro
+			{ spellID = 117896, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",
@@ -395,6 +397,10 @@ ns.Filger_Spells = {
 
 			-- SoulBurn
 			{ spellID = 74434, size = C.filger.iconsize, filter = "CD" },
+			-- demonsoul
+			{ spellID = 113858, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- fbrunst
+			{ spellID = 17962, size = C.filger.iconsize, filter = "CD" },
 		},
 	},
 	["DRUID"] = { -------------------------------------------------------------------------------------------------------- Druid

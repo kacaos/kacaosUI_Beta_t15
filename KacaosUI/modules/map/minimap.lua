@@ -39,7 +39,7 @@ KacaosUI_Minimap_Button:HookScript("OnLeave", function(self) GameTooltip:Hide() 
 	KacaosUI_Minimap_Button:HookScript("OnLeave", function(self)
 		self:SetBackdropBorderColor(.06,.06,.06)
 	end)
-RegisterStateDriver(KacaosUI_Minimap_Button, "visibility", "[petbattle] hide; show")
+
 	
 -- fade out infight
 local fadeout = CreateFrame("Frame")

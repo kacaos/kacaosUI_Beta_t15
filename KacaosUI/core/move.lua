@@ -6,6 +6,14 @@ local function MoveUI()
 	if InCombatLockdown() then return end
 	if ENABLE_MOVE then ENABLE_MOVE = false else ENABLE_MOVE = true end
 	
+	if RaidCD then
+		if ENABLE_MOVE then
+				RaidCD:Show()
+			else
+				RaidCD:Hide()
+		end
+	end	
+	
 	if FilgerPlayerCDMover then
 		if ENABLE_MOVE then
 				FilgerPlayerCDMover:Show()

@@ -45,6 +45,54 @@ tinsert(T.AllowFrameMoving, mover)
 							G.UnitFrames.Player.WarlockSpecBars[i]:Size(tbWidth*4, tbHeight)
 						end
 					end	
+				local wlPowerStatus = CreateFrame("StatusBar", "wlPowerStatus", G.UnitFrames.Player.WarlockSpecBars)
+					wlPowerStatus:Point("TOPLEFT", G.UnitFrames.Player.WarlockSpecBars, "TOPLEFT", 2, -2)
+					wlPowerStatus:Point("BOTTOMRIGHT", G.UnitFrames.Player.WarlockSpecBars, "BOTTOMRIGHT", -2, 2)
+					wlPowerStatus.t = wlPowerStatus:CreateFontString(nil, "OVERLAY")
+					wlPowerStatus.t:SetPoint("CENTER")
+					wlPowerStatus.t:SetFont(C.media.pixelfont, 10, "MONOCHROMEOUTLINE")
+					
+					local function showpower()
+						local spec = GetSpecialization()
+						local SPEC_WARLOCK_DEMONOLOGY = SPEC_WARLOCK_DEMONOLOGY
+						local SPEC_WARLOCK_DESTRUCTION = SPEC_WARLOCK_DESTRUCTION
+						local SPEC_WARLOCK_AFFLICTION = SPEC_WARLOCK_AFFLICTION
+						
+						if spec == SPEC_WARLOCK_DEMONOLOGY then
+							local SPELL_POWER_DEMONIC_FURY = SPELL_POWER_DEMONIC_FURY
+							local power = UnitPower("player", SPELL_POWER_DEMONIC_FURY)
+							local maxPower = UnitPowerMax("player", SPELL_POWER_DEMONIC_FURY)
+							wlPowerStatus:SetMinMaxValues(0, maxPower)
+							wlPowerStatus:SetValue(power)
+							wlPowerStatus.t:SetText(power)
+						elseif spec == SPEC_WARLOCK_DESTRUCTION then
+							local maxPower = UnitPowerMax("player", SPELL_POWER_BURNING_EMBERS, true)
+							local power = UnitPower("player", SPELL_POWER_BURNING_EMBERS, true)
+							local numBars = floor(maxPower / MAX_POWER_PER_EMBER)
+							for i = 1, numBars do
+								wlPowerStatus:SetMinMaxValues((MAX_POWER_PER_EMBER * i) - MAX_POWER_PER_EMBER, MAX_POWER_PER_EMBER * i)
+								wlPowerStatus:SetValue(power)
+							end
+							wlPowerStatus.t:SetText(power)
+						elseif spec == SPEC_WARLOCK_AFFLICTION then
+							wlPowerStatus.t:SetText(power)
+						end
+					end
+					
+					local function createBars()
+						wlPowerStatus:RegisterEvent('UNIT_POWER')
+						wlPowerStatus:RegisterEvent("PLAYER_TALENT_UPDATE")
+						wlPowerStatus:SetScript("OnEvent", showpower)
+						showpower()
+					end
+					wlPowerStatus:RegisterEvent("PLAYER_ENTERING_WORLD")
+					wlPowerStatus:SetScript("OnEvent",function(self,event)
+						if event == "PLAYER_ENTERING_WORLD" then
+							createBars()
+							showpower()
+						end
+					end)
+				
 				end
 			end
 
@@ -69,6 +117,28 @@ tinsert(T.AllowFrameMoving, mover)
 					G.UnitFrames.Player.EclipseBar.Text:SetPoint( "TOP", G.UnitFrames.Player.EclipseBar, 0, tbHeight)
 					G.UnitFrames.Player.EclipseBar.Text:SetFont(C.media.pixelfont, tbHeight, "MONOCHROMEOUTLINE")
 					G.UnitFrames.Player.EclipseBar.Text:SetShadowOffset( T.mult, -T.mult )	
+					
+					local DPowerStatus = CreateFrame("StatusBar", "DPowerStatus", G.UnitFrames.Player.EclipseBar)
+					DPowerStatus:Point("TOPLEFT", G.UnitFrames.Player.EclipseBar, "TOPLEFT", 2, -2)
+					DPowerStatus:Point("BOTTOMRIGHT", G.UnitFrames.Player.EclipseBar, "BOTTOMRIGHT", -2, 2)
+					
+					DPowerStatus.t = DPowerStatus:CreateFontString(nil, "OVERLAY")
+					DPowerStatus.t:SetPoint("CENTER")
+					DPowerStatus.t:SetFont(unpack(T.Fonts.dFont.setfont))
+					DPowerStatus.t:SetShadowOffset(0.5, -0.5)
+					DPowerStatus.t:SetShadowColor(0,0,0)
+					
+					local t = 0
+					DPowerStatus:SetScript("OnUpdate", function(self, elapsed)
+						t = t + elapsed;
+						if (t > 0.07) then
+							local power = UnitPower('player', SPELL_POWER_ECLIPSE)
+							local maxPower = UnitPowerMax('player', SPELL_POWER_ECLIPSE)				
+							DPowerStatus:SetMinMaxValues(-maxPower, maxPower)
+							DPowerStatus:SetValue(power)
+							DPowerStatus.t:SetText(power)
+						end
+					end)	
 				end
 			
 end
