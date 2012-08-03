@@ -30,7 +30,6 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.miscilvlr = "Show ilvl and durability in the Charakterframe"
 		TukuiConfigUILocalization.miscraidstyle = "Choose between 1 and 2"
 		TukuiConfigUILocalization.miscafkcam = "Activate Afk Spin Cam"
-		TukuiConfigUILocalization.miscuibuttons = "Show UIbuttons left to the minimap"
 		TukuiConfigUILocalization.miscthreatbar = "Show Threatbar"	
 		TukuiConfigUILocalization.miscraidbuffreminder = "Activate the raidbuffreminder at the top"
 		TukuiConfigUILocalization.miscspecialbuff = "Set Specialbuff im Raidbuffreminder"
@@ -151,7 +150,7 @@ if T.client == "enEN" then
     L.duffeduihelp_content8_line4 = ""
    
     L.duffeduihelp_content3_title = "|cff1E90FFMiscellaneous|r"
-    L.duffeduihelp_content3_line1 = "There you have some options which I want to list now:\n\nActivate the RaidBuffReminder (A panel which is placed at the top edge of the screen. It helps you detect which buffs are given in a raid or not(f.e. Arcane Brilliance).\n\nTo enable or disable the threatbar.\n\nTo enable or disable a AFK-Spincam (rotates the screen slowly when youre flagged as AFK)\n\nActivate the buttons next to the minimap.\n\nTo display the itemlevel and the durability in the Characterpanel.\n\nShow the items linked in the chat with just mouseover (normally by clicking)\n\nEnable a Bottompanel (see layouts)."
+    L.duffeduihelp_content3_line1 = "There you have some options which I want to list now:\n\nActivate the RaidBuffReminder (A panel which is placed at the top edge of the screen. It helps you detect which buffs are given in a raid or not(f.e. Arcane Brilliance).\n\nTo enable or disable the threatbar.\n\nTo enable or disable a AFK-Spincam (rotates the screen slowly when youre flagged as AFK).\n\nTo display the itemlevel and the durability in the Characterpanel.\n\nShow the items linked in the chat with just mouseover (normally by clicking)\n\nEnable a Bottompanel (see layouts)."
     L.duffeduihelp_content3_line3 = ""
     L.duffeduihelp_content3_line4 = ""
    
@@ -165,7 +164,7 @@ if T.client == "enEN" then
     L.duffeduihelp_content5_line1 = "Here you can choose between 2 panellayouts.\n\nIn the ingameconfig under miscellaneous you can activate the panel at the bottom of the screen."
     L.duffeduihelp_content5_line2 = "When you did that you have a panel at the bottom of the screen where you can place 6 datatexts which the datatexts you want."
     L.duffeduihelp_content5_line3 = "Now I list the anchorpoints for the datatexts:\n\nThere are 3 in the bottom right and 3 in the bottom left. In the bottom left we have the datatexts |cff1E90FF7,8,9|r from the ingameconfig and in the bottom right we have the datatexts |cff1E90FF4,5,6|r from the ingameconfig."
-    L.duffeduihelp_content5_line4 = ""
+    L.duffeduihelp_content5_line4 = "\nIf you click the button next to the chat, you will be able to open an controlpanel. This controlpanel have some options / uibuttons."
    
     L.duffeduihelp_content7_title = "|cff1E90FFChat|r"
     L.duffeduihelp_content7_line1 = "At the Chat you can:\n\n|cff1E90FF1.|r Enable a Chatbackground\n\n|cff1E90FF2.|r Enable a Chattabbackground\n\n|cff1E90FF3.|r To enable the Chattabs themselves (normaly hidden on mouseover)\n\n|cff1E90FF4.|r To let the chat fade out in combat\n\n|cff1E90FF5.|r To get a noise when your name is displayed in the chat. You can change the name under: wow/interface/addons/kacaosUI_config/config.lua\n\n|cff1E90FF6.|r Change the height and width of the chat."

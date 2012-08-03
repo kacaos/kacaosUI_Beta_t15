@@ -14,7 +14,6 @@ DuffedUIMainFrame:SetScript("OnMouseDown", function() DuffedUIMainFrame:ClearAll
 DuffedUIMainFrame:SetScript("OnMouseUp", function() DuffedUIMainFrame:StopMovingOrSizing() end)
 
 local DuffedUIMainFrameTitle = CreateFrame("Frame", "TukuiInstallTitle", DuffedUIMainFrame)
---DuffedUIMainFrameTitle:CreatePanel("Transparent", DuffedUIMainFrame:GetWidth( ) - 92, 30, "BOTTOM", DuffedUIMainFrame, "TOP", 0, 3)
 DuffedUIMainFrameTitle:SetSize(DuffedUIMainFrame:GetWidth() - 92, 30)
 DuffedUIMainFrameTitle:SetTemplate("Transparent")
 DuffedUIMainFrameTitle:SetPoint("BOTTOM", DuffedUIMainFrame, "TOP", 0, 3)
@@ -105,7 +104,6 @@ local DuffedUIMainFrameNavigationButtonTexts = {
 local DuffedUIMainFrameNavigationButton = CreateFrame("Button", "DuffedUIMainFrameNavigationButton", DuffedUIMainFrameNavigation)
 for i = 1, 9 do
 	DuffedUIMainFrameNavigationButton[i] = CreateFrame("Button", "DuffedUIMainFrameNavigationButton" .. i, DuffedUIMainFrameNavigation, "SecureActionButtonTemplate")
-	--DuffedUIMainFrameNavigationButton[i]:CreatePanel("Default", DuffedUIMainFrameNavigation:GetWidth() - 8, 24, "TOP", DuffedUIMainFrameNavigation, "TOP", 0, -4, true)
 	DuffedUIMainFrameNavigationButton[i]:SetSize(DuffedUIMainFrameNavigation:GetWidth() - 8, 24)
 	DuffedUIMainFrameNavigationButton[i]:SetPoint("TOP", DuffedUIMainFrameNavigation, "TOP", 0, -4, true)
 	DuffedUIMainFrameNavigationButton[i]:SetTemplate("Default")

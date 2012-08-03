@@ -17,4 +17,4 @@ UIOnLogon:SetScript( "OnEvent", function( self, event )
 		StaticPopup_Show("KACAOSUIDISABLE_RAID")
 	end
 
-end )
+end)

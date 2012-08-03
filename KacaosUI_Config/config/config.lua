@@ -102,7 +102,6 @@ C.chat = {
 }
 
 C.misc = {
-	uibuttons = true,								-- enable 3 ui buttons in the top and the 2 over the minimap
 	threatbar = true,								-- enable threatbar
 	afkcam = false,									-- activate akf spin cam
 	hyperlink = true,								-- show itemlinks in chat on mouseover

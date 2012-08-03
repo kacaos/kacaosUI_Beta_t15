@@ -12,7 +12,6 @@ end
 -- bottom panel
 if C.misc.infobottom then
 local ibottom = CreateFrame("Frame", "InfoBottom", UIParent)
---ibottom:CreatePanel("Default", T.screenwidth, 13, "BOTTOM", UIParent, "BOTTOM", 0, 0)
 ibottom:SetTemplate("Default")
 ibottom:Height(13)
 ibottom:Width(T.screenwidth)
@@ -29,7 +28,6 @@ local clHeight = C.chat.chatbackgroundheight
 if not C.misc.infobottom == true then
 	if C.chat.chatbackground then
 		local chatbleft = CreateFrame("Frame", "ChatBackgroundLeft", UIParent)
-			--chatbleft:CreatePanel("Default", clWidth, clHeight, "BOTTOMLEFT", UIParent, "BOTTOMLEFT", 0, 0)
 			chatbleft:Height(clHeight)
 			chatbleft:Width(clWidth)
 			chatbleft:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 0, 0)
@@ -39,7 +37,6 @@ if not C.misc.infobottom == true then
 			chatbleft:SetBackdropColor(.06,.06,.06,.7)
 		else	
 		local chatbleft = CreateFrame("Frame", "ChatBackgroundLeft", UIParent)
-			--chatbleft:CreatePanel("Default", clWidth, clHeight, "BOTTOMLEFT", UIParent, "BOTTOMLEFT", 0, 0)
 			chatbleft:Height(clHeight)
 			chatbleft:Width(clWidth)
 			chatbleft:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 0, 0)
@@ -55,7 +52,6 @@ if not C.misc.infobottom == true then
 	
 	elseif C.chat.chatbackground then
 		local chatbleft = CreateFrame("Frame", "ChatBackgroundLeft", UIParent)
-		--	chatbleft:CreatePanel("Default", clWidth, clHeight, "BOTTOMLEFT", UIParent, "BOTTOMLEFT", 3, 18)
 			chatbleft:Height(clHeight)
 			chatbleft:Width(clWidth)
 			chatbleft:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 3, 18)
@@ -66,7 +62,6 @@ if not C.misc.infobottom == true then
 		else
 		
 		local chatbleft = CreateFrame("Frame", "ChatBackgroundLeft", UIParent)
-			--chatbleft:CreatePanel("Default", clWidth, clHeight, "BOTTOMLEFT", UIParent, "BOTTOMLEFT", 3, 18)
 			chatbleft:Height(clHeight)
 			chatbleft:Width(clWidth)
 			chatbleft:Point("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 3, 18)
