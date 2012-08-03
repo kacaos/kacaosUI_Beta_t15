@@ -2,7 +2,7 @@
 	Credits for this script goes to JerichoHM
 ]]--
 
-local T, C, L = unpack(Tukui)
+local T, C, L, G = unpack(Tukui)
 if not C.misc.ilvlr then return end
 
 local frame = {
@@ -16,7 +16,6 @@ local frame = {
 	CharacterTabardSlot,
 	CharacterMainHandSlot,
 	CharacterSecondaryHandSlot,
-	CharacterRangedSlot,
 	CharacterHandsSlot,
 	CharacterWaistSlot,
 	CharacterLegsSlot,
@@ -38,7 +37,6 @@ local slot = {
 	"TabardSlot",
 	"MainHandSlot",
 	"SecondaryHandSlot",
-	"RangedSlot",
 	"HandsSlot",
 	"WaistSlot",
 	"LegsSlot",
