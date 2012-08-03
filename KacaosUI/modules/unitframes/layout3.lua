@@ -13,10 +13,6 @@ local units = {
 	"Focus",
 }
 
-	hooksecurefunc(T, "PostCreateAura", function(element, button)
-	button.Glow:Kill()
-	end)
-
 for _, frame in pairs(units) do
 	local t = "Tukui"
 	local self = _G[t..frame]
@@ -26,10 +22,6 @@ for _, frame in pairs(units) do
 	if self.shadow then
 		self.shadow:Kill()
 	end
-	
-	hooksecurefunc(T, "PostCreateAura", function(element, button)
-	button.Glow:Kill()
-	end)
 	
 	-- player stuff
 	if unit == "player" then	

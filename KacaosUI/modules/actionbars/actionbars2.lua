@@ -83,7 +83,6 @@ bar:HookScript("OnEvent", function(self, event, unit)
 		end
 	end
 end)
-RegisterStateDriver(bar, "visibility", "[vehicleui][petbattle][overridebar] hide; show")
 
 ---------------------------------------------------------------------------
 -- setup PetActionBar

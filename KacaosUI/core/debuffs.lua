@@ -2,7 +2,7 @@ local T, C, L, G = unpack(Tukui)
 local oUF = oUFTukui
 local RaidDebuff = oUF_RaidDebuffs or oUFTukui_RaidDebuffs
 
-local TukuiData == nil then return end
+if TukuiData == nil then return end
 
 local items = {}
 local SearchString = "Enter Spell ID"
