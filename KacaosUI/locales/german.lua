@@ -189,7 +189,7 @@ if T.client == "deDE" then
 	L.duffeduihelp_content6_title = "|cff1E90FFBefehle|r"
 	L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => \195\150ffnet dieses Panel\n|cff1E90FF/resetui|r => Setzt die Frameposition des gesamten UIs zur\195\188ck\n|cff1E90FF/install|r => Neuinstallation der gesamten UI"
 	L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Aktiviert die Bewegungsanker der UI-Elemente\n|cff1E90FF/kb|r => Keybindings setzen per mouseover\n|cff1E90FF/rl|r => L\195\164dt das UI neu\n|cff1E90FF/tc|r => \195\150ffnet die ingame-Config"
-	L.duffeduihelp_content6_line3 = "|cff1E90FF/heal|r => Aktiviert das Heal-Raid-Layout\n|cff1E90FF/dps|r => Aktiviert das DPS/Tank-Raid-Layout"
+	L.duffeduihelp_content6_line3 = "|cff1E90FF/heal|r => Aktiviert das Heal-Raid-Layout\n|cff1E90FF/dps|r => Aktiviert das DPS/Tank-Raid-Layout\n|cff1E90FF/ainv nachricht|r => Aktiviert den Autoinv modus. Nachricht = Wort welches den inv losschickt.\n|cff1E90FF/ainv off|r => Deaktiviert den Autoinv."
 	L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => \195\150ffnet den Addonmanager\n\n|cff1E90FF/xct|r => Zeige xct Befehle im Chat.\n|cff1E90FF/xct unlock|r => Schalte den xct Configmodus an. Zum verschieben der Frames.\n|cff1E90FF/xct lock|r => Verschließe die Frames nach dem verschieben.\n|cff1E90FF/xct test|r => Aktiviere xct Testmodus.\n\n|cff1E90FF/debuffs|r => Öffnet ein Fenster wo ihr Ingame RaidDebuffs (SpedllIDs) eintragen könnt. Diese werden euch dann im Grid angezeigt."
 	
 	-- Combat text

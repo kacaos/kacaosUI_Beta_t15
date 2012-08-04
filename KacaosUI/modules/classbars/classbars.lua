@@ -124,7 +124,7 @@ tinsert(T.AllowFrameMoving, mover)
 					
 					DPowerStatus.t = DPowerStatus:CreateFontString(nil, "OVERLAY")
 					DPowerStatus.t:SetPoint("CENTER")
-					DPowerStatus.t:SetFont(unpack(T.Fonts.dFont.setfont))
+					DPowerStatus.t:SetFont(C.media.pixelfont, 10, "MONOCHROMEOUTLINE")
 					DPowerStatus.t:SetShadowOffset(0.5, -0.5)
 					DPowerStatus.t:SetShadowColor(0,0,0)
 					

@@ -227,7 +227,6 @@ for _, frame in pairs(units) do
 		
 		-- resize health & power
 		self.Health:Height(12)
-		self.Health:SetFrameLevel(5)
 		self.Health:CreateBorder(false, true)
 		self.Power:ClearAllPoints()
 		self.Power:Point("BOTTOM", self.Health, 0, -4)
@@ -238,14 +237,14 @@ for _, frame in pairs(units) do
 		
 		-- move the default position
 		self:ClearAllPoints()
-		self:Point("CENTER", UIParent, 250, -135)	
+		self:Point("CENTER", UIParent, 250, -135)
+
 		
 		-- change the font of name into target
 		self.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		self.Name:SetShadowOffset(0,0)
-		self.Name:SetParent(self.Health)
 		self.Name:ClearAllPoints()
-		self.Name:SetPoint("LEFT", 0, 12)
+		self.Name:SetPoint("LEFT", self.Health, 0, 12)
 		
 		-- castbar
 		local mover = CreateFrame("Frame", "TukuiTargetCastbarMover", UIParent)
@@ -339,11 +338,11 @@ for _, frame in pairs(units) do
 	end
 	
 	--remove pets lvl
-	local pet = TukuiPet
-	pet:Tag(pet.Name, "[Tukui:getnamecolor][Tukui:nameshort]")
+	--local pet = TukuiPet
+	--pet:Tag(pet.Name, "[Tukui:getnamecolor][Tukui:nameshort]")
 	
 	if unit == "pet" then
-		if C.unitframes.petshow then
+
 		
 		-- kill the panel
 		if not T.lowversion then
@@ -371,9 +370,6 @@ for _, frame in pairs(units) do
 		self.Name:SetPoint("CENTER", 0, 0)
 		
 		self.Castbar:Kill()
-		else
-		self:Disable()
-		end
 	end
 	
 	-- resize tot name
@@ -381,7 +377,7 @@ for _, frame in pairs(units) do
 	tot:Tag(tot.Name, "[Tukui:getnamecolor][Tukui:nameshort]")
 	
 	if unit == "targettarget" then
-		if C.unitframes.totshow then
+
 		
 		-- kill the panel
 		if not T.lowversion then
@@ -406,9 +402,7 @@ for _, frame in pairs(units) do
 		self.Name:SetParent(self.Health)
 		self.Name:ClearAllPoints()
 		self.Name:SetPoint("CENTER", 0, 0)
-		else
-		self:Disable()
-		end
+
 		
 	end
 	
@@ -796,29 +790,3 @@ if C["unitframes"].charportrait == true then
 			TukuiTarget.Health:SetPoint("TOPRIGHT", 0,0)
 			TukuiTarget.Health:SetPoint("TOPLEFT")
 end
-
-
---[[add spark to castbar
-local oUF = oUFTukui or oUF
-
-if not oUF then
-	return
-end
-
-local AddCastBarSpark = function(self)
-	local Spark = self:CreateTexture(nil, "OVERLAY")
-	Spark:SetTexture("Interface\\CastingBar\\UI-CastingBar-Spark")
-	Spark:SetVertexColor(1, 1, 1)
-	Spark:SetBlendMode("ADD")
-	Spark:Width(14)
-	Spark:Height(self:GetHeight() * 1.6)
-	Spark:Point("LEFT", self:GetStatusBarTexture(), "RIGHT", -6, 0)
-
-	self.Spark = Spark
-end
-
-for unit, object in pairs(oUF.units) do
-	if object.Castbar then
-		AddCastBarSpark(object.Castbar)
-	end
-end]]

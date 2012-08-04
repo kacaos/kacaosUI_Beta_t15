@@ -181,6 +181,6 @@ if T.client == "enEN" then
     L.duffeduihelp_content6_title = "|cff1E90FFCommands|r"
     L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => Open this panel\n|cff1E90FF/resetui|r => Resets the completly framepositions to the default.\n|cff1E90FF/install|r => Shows the installation frame and you can completly install the interface new."
     L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Let you move nearyl every frame int the interface.\n|cff1E90FF/kb|r => Easy way to set some keybindings by mouseover a button and only pressing the hotkey you want on that button.\n|cff1E90FF/rl|r => reloads the interface."
-    L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => Opens the ingame configuration. There you can configure your interface how you want it."
+    L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => Opens the ingame configuration. There you can configure your interface how you want it.\n|cff1E90FF/ainv msg|r => Enable autoinv, msg = word which need to be invited.\n|cff1E90FF/ainv off|r => Disable the autoinv."
     L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out.\n\n|cff1E90FF/xct|r => List xct commands in chat.\n|cff1E90FF/xct unlock|r => Unlock xct, to move the frames.\n|cff1E90FF/xct lock|r => Lock the moveable frames.\n|cff1E90FF/xct test|r => Toggle xct testmode.\n\n|cff1E90FF/debuffs|r => Opens an extra window where you can add raiddebuffs (with SpellIDs) which will be shown in your grid."
 end
