@@ -22,9 +22,6 @@
 	<Script file="modules\bags\bags.lua"/>
 	
 	<Script file="modules\tooltip\tooltip.lua"/>
-	<Script file="modules\unitframes\layout.lua"/>
-	<Script file="modules\unitframes\layout2.lua"/>
-	<Script file="modules\unitframes\layout3.lua"/>
 	
 	<Script file="modules\panels\panels.lua"/>
 	
@@ -50,4 +47,9 @@
 	<Script file="modules\classbars\classbars.lua"/>
 	
 	<Script file="modules\skins\blizzard.lua"/>
+	
+	<Script file="modules\unitframes\plugins\exp_rep.lua"/>	
+	<Script file="modules\unitframes\tags\tag.lua"/>
+	<Script file="modules\unitframes\functions\functions.lua"/>	
+	<Include file="modules\unitframes\load_unitframes.xml"/>
 </Ui>

@@ -53,7 +53,7 @@ hookSpell(_G["ItemRefTooltip"])
 local SlotName = {
         "Head","Neck","Shoulder","Back","Chest","Wrist",
         "Hands","Waist","Legs","Feet","Finger0","Finger1",
-        "Trinket0","Trinket1","MainHand","SecondaryHand","Ranged"
+        "Trinket0","Trinket1","MainHand","SecondaryHand"
     }
 local function GetItemLVL(unit)
 local total, item = 0, 0;

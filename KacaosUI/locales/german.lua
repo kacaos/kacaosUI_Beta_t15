@@ -13,13 +13,12 @@ end )
 if TukuiConfigUILocalization then
 	if T.client == "deDE" then
 		TukuiConfigUILocalization.unitframesmouseoverhighlight = "Aktiviere aufblinken der Raidframes per Mouseover in Heallayout"
-		TukuiConfigUILocalization.unitframesstyle = "Unitframestyle waehle zwischen 1, 2 oder 3"
+		TukuiConfigUILocalization.unitframesstyle = "Unitframestyle waehle zwischen 1 oder 2"
 		TukuiConfigUILocalization.unitframestotshow = "Aktiviere Ziel des Ziels"
 		TukuiConfigUILocalization.unitframespetshow = "Aktiviere Begleiteranzeige"
-		TukuiConfigUILocalization.unitframeshpshow = "Zeige HP/MP auf dem Ziel (nur style1 u 3 layout)"
-		TukuiConfigUILocalization.unitframeshpshowp = "Zeige HP/MP auf dem Spieler (nur style1 u. 3 layout)"
-		TukuiConfigUILocalization.unitframesshowdb = "Zeige Debuffs auf dem Ziel (nur in Layout3)"
-		TukuiConfigUILocalization.unitframescbbutton = "Zeige Zauberleisten Button/Icon (nur in Layout3)"
+		TukuiConfigUILocalization.unitframeshpshowp = "Zeige HP/MP auf dem Spieler und Ziel (nur in layout2)"
+		TukuiConfigUILocalization.unitframesshowdb = "Zeige Debuffs auf dem Ziel (nur in Layout2)"
+		TukuiConfigUILocalization.unitframesminigrid = "Aktiviere minimalistisches Grid (nur in /dps)"
 		TukuiConfigUILocalization.actionbarstyle = "Aktionsleistenstyle 1 oder 2"
 		TukuiConfigUILocalization.actionbarallbars = "Aktiviere alle Bars (nur in Aktionsleistenlayout1)"
 		TukuiConfigUILocalization.actionbarbar4 = "Aktiviere 2 Bars unten (nur in Aktionsleistenlayout1)"
@@ -37,7 +36,6 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.chatnamealert = "Aktiviere Sound bei einem Namen im Chat"
 		TukuiConfigUILocalization.misc = "Verschiedenes"
 		TukuiConfigUILocalization.miscilvlr = "Zeige Ilvl und Haltbarkeit im Charakterfenster"
-		TukuiConfigUILocalization.miscraidstyle = "Wähle zwischen dps und heal"
 		TukuiConfigUILocalization.miscafkcam = "Aktiviere Afk Spin Cam"
 		TukuiConfigUILocalization.miscthreatbar = "Aktiviere Bedrohungsanzeige"
 		TukuiConfigUILocalization.miscraidbuffreminder = "Aktiviere den Raidbuffreminder (anzeige wichtiger spells im raid)"
@@ -92,8 +90,8 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarmonk = "Aktiviere Mönch Klassenleiste"
 		TukuiConfigUILocalization.classbarcombopoints = "Aktiviere Klassenleiste für Schurken und für Druiden(in Katzengestalt)"
 		TukuiConfigUILocalization.classbarheight = "Setze Höhe der Klassenleiste"
-		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste (shards/runen/chi etc.)"
-		TukuiConfigUILocalization.classbarebwidth = "Setze Breite Eclipse/Solarbar"
+		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste (shards/runen etc.)"
+		TukuiConfigUILocalization.classbarebwidth = "Setze Breite für Moonkins und Monks"
 		TukuiConfigUILocalization.merchantautorepair = "Auto Reparieren (Auto-Gildenreparieren muss AUS sein!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto Gildenreparieren (Auto-Repair muss AUS sein!!!)"
 	end
@@ -181,8 +179,8 @@ if T.client == "deDE" then
 	L.duffeduihelp_content7_line4 = ""
 
 	L.duffeduihelp_content1_title = "|cff1E90FFEinheitenfenster|r"
-	L.duffeduihelp_content1_line1 = "Als erstes, du hast drei unterschiedliche Layouts f\195\188r die Einheitenfenster."
-	L.duffeduihelp_content1_line2 = "Du kannst diese in der Config unter Einheitenfenster - Unitframestyle wechseln. Es gibt die Styles:\n1, 2 und 3."
+	L.duffeduihelp_content1_line1 = "Als erstes, du hast zwei unterschiedliche Layouts f\195\188r die Einheitenfenster."
+	L.duffeduihelp_content1_line2 = "Du kannst diese in der Config unter Einheitenfenster - Unitframestyle wechseln. Es gibt die Styles:\n1 und 2."
 	L.duffeduihelp_content1_line3 = "Unter den Optionen Einheitenfenster findest du viele verschiedene M\195\182glichkeiten deine Unitframes anzupassen. Hinter einigen Optionen steht in Klammern in welchem Layout man diese Option benutzen kann."
 	L.duffeduihelp_content1_line4 = "Die Unitframes sind alle mit dem befehl moveui zu bewegen, sowie deren Klassenleisten und Zauberleisten."
 

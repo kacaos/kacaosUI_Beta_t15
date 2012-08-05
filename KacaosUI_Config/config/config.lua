@@ -40,6 +40,7 @@ C.datatext = {
 	fontsize = 10,									-- font size of all datatexts
 }
 
+
 C.actionbar = {
 	style = 2,										-- change between styl 1 and 2
 	allbars = true,									-- get 1bottom bar with 14buttons and 3 sidebars								
@@ -56,21 +57,21 @@ C.actionbar = {
 }
 
 C.unitframes = {
-	style = 3,										-- change unitframe style 1, 2 and 3
+	style = 2,										-- change unitframe style 1, 2 and 3
 	showdb = false,									-- show debuffs on target (only layout 3)
 	onlyselfdebuffs = false,						-- track only your debuffs on target
-	hpshow = false,									-- show hp/mp on target (only at style 1, at heal its all time visible)
-	hpshowp = false,								-- show hp/mp on player (only at style 1, at layout 2 its all time visible)
+	hpshowp = false,								-- show hp/mp on player and target (only at style 2)
 	charportrait = true,							-- show portrait on healthbar
 	totshow = true,									-- show target of target
 	petshow = true,									-- show pet
-	cbbutton = true,								-- show castbar button/icon
-	mouseoverhighlight = true,						-- mouseoverhiglight at raidframes layout2
-	showraidpets = false,							-- enable raidpets
 	combatfeedback = false,							-- enable combattext on player and target
 	unicolor = true,								-- enable unicolortheme
 	charportrait = true,							-- enable portraits on unitframes
 	movecombobar = false,							-- display the new combo bar (t14+) from target to player (ROGUE ONLY)
+	
+	mouseoverhighlight = true,						-- mouseoverhiglight at raidframes layout2
+	showraidpets = false,							-- enable raidpets
+	minigrid = true,								-- enable minimalistic grid
 }
 
 C.classbar = {
@@ -84,14 +85,14 @@ C.classbar = {
 	combopoints = true,								-- enable combopoints for rogue an druid (in catform)
 	height = 8,										-- choose height of classbars
 	width = 35,										-- choose width of each rune/shard/chi etc.
-	ebwidth = 157,									-- change size !!ONLY!! for eclipse/solarbar
+	ebwidth = 157,									-- change size !!ONLY!! for moonkin and monks
 }
 
 C.chat = {
 	chattab = true,									-- enable/disable chattab panel
 	chatbackground = true,							-- enable/disable chatbackground
-		chatbackgroundwidth = 315,					-- set chatbackground width
-		chatbackgroundheight = 120,					-- set chatbackground height
+	chatbackgroundwidth = 315,					-- set chatbackground width
+	chatbackgroundheight = 120,					-- set chatbackground height
 	chattabshow = true,								-- show chattabs
 	fadeout = false,								-- enable/disable chatbackground fadeout infight
 	namealert = true,								-- Play sound when your name is called in chat

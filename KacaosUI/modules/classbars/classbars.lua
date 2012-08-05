@@ -239,27 +239,31 @@ if( T.myclass == "PRIEST" ) then
 
 
 if T.myclass == "MONK" then
-			if( C.classbar.monk ~= true ) then
+				if( C["classbar"].monk ~= true) then
 					G.UnitFrames.Player.HarmonyBar:Kill()
 				else	
 					G.UnitFrames.Player.HarmonyBar:ClearAllPoints()
 					G.UnitFrames.Player.HarmonyBar:SetPoint("CENTER", mover)
-					G.UnitFrames.Player.HarmonyBar:Size((sbWidth*5)+4, tbHeight)
+					G.UnitFrames.Player.HarmonyBar:Size((ebWidth+4), tbHeight)
 					G.UnitFrames.Player.HarmonyBar:SetFrameStrata("LOW")
-					G.UnitFrames.Player.HarmonyBar:CreateBorder(false, true)
+					G.UnitFrames.Player.HarmonyBar:SetBackdropBorderColor(0,0,0,0)
+					G.UnitFrames.Player.HarmonyBar:SetBackdropColor(0,0,0,0)
 					for i = 1, 5 do
 
 						if i == 1 then
-							G.UnitFrames.Player.HarmonyBar[i]:Point("TOPLEFT", G.UnitFrames.Player.HarmonyBar, "BOTTOMLEFT", 0, tbHeight)
-							G.UnitFrames.Player.HarmonyBar[i]:Size(sbWidth, tbHeight)
+							G.UnitFrames.Player.HarmonyBar[i]:Point("TOPLEFT", G.UnitFrames.Player.HarmonyBar, "BOTTOMLEFT", 0, 11)
+							G.UnitFrames.Player.HarmonyBar[i]:Size(ebWidth/4, tbHeight)
+							G.UnitFrames.Player.HarmonyBar[i]:SetTemplate("Default")
+							G.UnitFrames.Player.HarmonyBar[i]:CreateBorder(false, true)
 						else
-							G.UnitFrames.Player.HarmonyBar[i]:Point("LEFT", G.UnitFrames.Player.HarmonyBar[i-1], "RIGHT", 1, 0)
-							G.UnitFrames.Player.HarmonyBar[i]:Size(sbWidth, tbHeight)
+							G.UnitFrames.Player.HarmonyBar[i]:Point("LEFT", G.UnitFrames.Player.HarmonyBar[i-1], "RIGHT", 0, 0)
+							G.UnitFrames.Player.HarmonyBar[i]:Size(ebWidth/4, tbHeight)
+							G.UnitFrames.Player.HarmonyBar[i]:SetTemplate("Default")
+							G.UnitFrames.Player.HarmonyBar[i]:CreateBorder(false, true)
 						end
 					end
 				end
-	
-end
+			end
 			
 -----------------------------------------
 -- Paladin

@@ -4,13 +4,12 @@ T.kacaosrelease = GetAddOnMetadata("KacaosUI", "Version")
 if TukuiConfigUILocalization then
 	if T.client == "enEN" then
 		TukuiConfigUILocalization.unitframesmouseoverhighlight = "Activate mouseover higlight at raidframes layout2"
-		TukuiConfigUILocalization.unitframesstyle = "Unitframestyle choose 1, 2 or 3"
+		TukuiConfigUILocalization.unitframesstyle = "Unitframestyle choose 1 or 2"
 		TukuiConfigUILocalization.unitframestotshow = "Show Target of Target"
 		TukuiConfigUILocalization.unitframespetshow = "Show Pet"
-		TukuiConfigUILocalization.unitframeshpshow = "Show HP/MP value on Target (only on style1 and 3 layout)"
-		TukuiConfigUILocalization.unitframeshpshowp = "Show HP/MP value on Player (only on style1 and 3 layout)"
-		TukuiConfigUILocalization.unitframesshowdb = "Show debuffs on target (only layout3)"
-		TukuiConfigUILocalization.unitframescbbutton = "Show castbar button/icon (only layout3)"
+		TukuiConfigUILocalization.unitframeshpshowp = "Show HP/MP value on Player (only in layout2)"
+		TukuiConfigUILocalization.unitframesshowdb = "Show debuffs on target (only layout2)"
+		TukuiConfigUILocalization.unitframesminigrid = "Enable minimalistic Grid (only in /dps)"
 		TukuiConfigUILocalization.actionbarstyle = "Actionbarlayout 1 or 2"
 		TukuiConfigUILocalization.actionbarallbars = "Show AllBars (only in actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarbar4 = "Activate 2 bars at the bottom (only in actionbarlayout1)"
@@ -28,7 +27,6 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.chatnamealert = "Play sound when an name is in chat"
 		TukuiConfigUILocalization.misc = "Misc"
 		TukuiConfigUILocalization.miscilvlr = "Show ilvl and durability in the Charakterframe"
-		TukuiConfigUILocalization.miscraidstyle = "Choose between 1 and 2"
 		TukuiConfigUILocalization.miscafkcam = "Activate Afk Spin Cam"
 		TukuiConfigUILocalization.miscthreatbar = "Show Threatbar"	
 		TukuiConfigUILocalization.miscraidbuffreminder = "Activate the raidbuffreminder at the top"
@@ -84,8 +82,8 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarmonk = "Enable Monk Classbars"
 		TukuiConfigUILocalization.classbarcombopoints = "Enable combopoints for rogue and druid (in catform) "
 		TukuiConfigUILocalization.classbarheight = "Set Height of classbars"
-		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (shards/runes/chi etc.)"
-		TukuiConfigUILocalization.classbarebwidth = "Set width eclipse/solarbar"
+		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (shards/runes etc.)"
+		TukuiConfigUILocalization.classbarebwidth = "Set width for moonkins and monks"
 		TukuiConfigUILocalization.merchantautorepair = "Auto repair (auto-Guildrepair need to be OFF!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto guild-repair (auto-repair need to be OFF!!!)"
 	end
@@ -172,9 +170,9 @@ if T.client == "enEN" then
     L.duffeduihelp_content7_line3 = ""
     L.duffeduihelp_content7_line4 = ""
   
-   L.duffeduihelp_content1_title = "|cff1E90FFUnitframes|r"
-    L.duffeduihelp_content1_line1 = "At first, you have the choose between three different layout for the unitframes."
-    L.duffeduihelp_content1_line2 = "You can change them in the ingameconfig under Unitframes Unitframestyle. Already said. they're these styles:\n1, 2 and 3."
+	L.duffeduihelp_content1_title = "|cff1E90FFUnitframes|r"
+    L.duffeduihelp_content1_line1 = "At first, you have the choose between two different layout for the unitframes."
+    L.duffeduihelp_content1_line2 = "You can change them in the ingameconfig under Unitframes Unitframestyle. Already said. They're these styles:\n1 and 2."
     L.duffeduihelp_content1_line3 = "Under the unitframe option you find many things you can change in your unitframes. Some are only available in some specific layouts (Number is shown then in brackets)."
     L.duffeduihelp_content1_line4 = "The unitframes, stancebar and there castbar are all movable by the /moveui command."
    
@@ -183,4 +181,17 @@ if T.client == "enEN" then
     L.duffeduihelp_content6_line2 = "|cff1E90FF/moveui|r => Let you move nearyl every frame int the interface.\n|cff1E90FF/kb|r => Easy way to set some keybindings by mouseover a button and only pressing the hotkey you want on that button.\n|cff1E90FF/rl|r => reloads the interface."
     L.duffeduihelp_content6_line3 = "|cff1E90FF/tc|r => Opens the ingame configuration. There you can configure your interface how you want it.\n|cff1E90FF/ainv msg|r => Enable autoinv, msg = word which need to be invited.\n|cff1E90FF/ainv off|r => Disable the autoinv."
     L.duffeduihelp_content6_line4 = "|cff1E90FF/am|r => Opens the AddOn-manager, where you can enable and disable AddOns without logging out.\n\n|cff1E90FF/xct|r => List xct commands in chat.\n|cff1E90FF/xct unlock|r => Unlock xct, to move the frames.\n|cff1E90FF/xct lock|r => Lock the moveable frames.\n|cff1E90FF/xct test|r => Toggle xct testmode.\n\n|cff1E90FF/debuffs|r => Opens an extra window where you can add raiddebuffs (with SpellIDs) which will be shown in your grid."
+
+	-- Combat text
+	L.COMBATTEXTKILLINGBLOW = "Killing Blow"
+	L.COMBATTEXTALREADYUNLOCKED = "Combat text already unlocked."
+	L.COMBATTEXTALREADYLOCKED = "Combat text already locked."
+	L.COMBATTEXTTESTDISABLED = "Combat text test mode disabled."
+	L.COMBATTEXTTESTENABLED = "Combat text test mode enabled."
+	L.COMBATTEXTTESTUSEUNLOCK = "Type /xct unlock to move and resize combat text frames."
+	L.COMBATTEXTTESTUSELOCK = "Type /xct lock to lock combat text frames."
+	L.COMBATTEXTTESTUSETEST = "Type /xct test to toggle combat text testmode."
+	L.COMBATTEXTPOPUP = "To save combat text window positions you need to reload your UI."
+	L.COMBATTEXTUNSAVED = "Combat text window positions unsaved, don't forget to reload UI."
+	L.COMBATTEXTUNLOCKED = "Combat text unlocked."	
 end

@@ -8,7 +8,7 @@ local T, C, L = unpack(Tukui)
 TukuiAurasPlayerBuffs:ClearAllPoints()
 TukuiAurasPlayerBuffs:Point("TOPRIGHT", UIParent, "TOPRIGHT", -4, -2)
 TukuiAurasPlayerBuffs:SetAttribute("xOffset", -32)
-TukuiAurasPlayerBuffs:SetAttribute("wrapYOffset", -31)
+TukuiAurasPlayerBuffs:SetAttribute("wrapYOffset", -36)
 
 local mover = CreateFrame("Frame", "DebuffsMover", UIParent)
 mover:Width(200)

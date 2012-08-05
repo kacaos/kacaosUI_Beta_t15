@@ -47,15 +47,18 @@ T.PostUpdateRaidUnit = function( self )
 -- kill some frames
 self.panel:Kill()
 		
--- set Names
+------------------------------------------------------
+-- names
+------------------------------------------------------
 self.Name:SetParent(self.Health)
 self.Name:ClearAllPoints()
 self.Name:SetPoint("BOTTOM", self.Health, 1, 5)
 self.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 self.Name:SetShadowOffset(0,0,0,0)
---self:Tag(self.Name, '[Tukui:getnamecolor][Tukui:namemshort]')	
-
---set Health
+	
+-------------------------------------------------------
+-- health
+-------------------------------------------------------
 self.Health:Height(40)
 self.Health:Width(60)
 self.Health:CreateBorder(false, true)
@@ -64,7 +67,9 @@ self.Health.value:Point("TOP", self.Health, 0, -1)
 self.Health.value:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 self.Health.value:SetShadowOffset(0,0,0,0)
 
---set Power
+-------------------------------------------------------
+-- power
+-------------------------------------------------------
 self.Power:ClearAllPoints()
 self.Power:Height(1)
 self.Power:Width(55)
@@ -106,7 +111,9 @@ self.Power:SetFrameLevel(5)
 			self.RaidDebuffs = RaidDebuffs
 		end
 		
-	--set Icons		
+--------------------------------------------------------
+-- icons
+--------------------------------------------------------
 		local leader = self.Health:CreateTexture( nil, "OVERLAY" )
 		leader:Height(15)
 		leader:Width(15)
@@ -182,5 +189,11 @@ RaidPosition:SetScript("OnEvent", function(self, event)
 	local raid = G.UnitFrames.RaidUnits
 	local pets = G.UnitFrames.RaidPets
 	raid:ClearAllPoints()
-	raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 5)
+	raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 8)
 end)
+
+
+
+
+
+
