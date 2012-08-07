@@ -1,5 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Include file="core\oUF\oUF.xml"/>
-	<Include file="layout1\layout1.xml"/>
-	<Include file="layout2\layout2.xml"/>
+	<Include file="layouts\layout1\layout1.xml"/>
+	<Include file="layouts\layout2\layout2.xml"/>
 </Ui>

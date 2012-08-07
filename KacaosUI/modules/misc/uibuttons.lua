@@ -287,7 +287,7 @@ KacaosUI_Minimap_Button:SetScript("OnMouseDown", function(self)
 		TukuiMinimap:Hide()
 		TukuiTooltipAnchor:ClearAllPoints()
 		TukuiTooltipAnchor:SetClampedToScreen(false)
-		TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", 47, -30)
+		TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", 118, -30)
 	else
 		TukuiMinimap:Show()
 		TukuiTooltipAnchor:ClearAllPoints()

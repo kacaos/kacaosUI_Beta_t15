@@ -51,7 +51,7 @@ local function SetBuffs()
 		1126, -- "Mark of the wild"
 		90363, --"Embrace of the Shale Spider"
 		20217, --"Greater Blessing of Kings",
-		117666, --Vermächtnis des Kaisers
+		117666, --Legacy of The Emperor
 	}
 	Spell4Buff = { --Total Stamina
 		469, -- Commanding Shout

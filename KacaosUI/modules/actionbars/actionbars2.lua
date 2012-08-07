@@ -13,9 +13,12 @@ TukuiBar2Button.ClearAllPoints = T.dummy
 TukuiBar2Button.SetPoint = T.dummy
 
 --kill buttons
-TukuiBar4Button:Kill()
-TukuiBar5ButtonTop:Kill()
-TukuiBar5ButtonBottom:Kill()
+TukuiBar4Button:Size(0.001, 0.001)
+TukuiBar4Button:SetAlpha(0)
+TukuiBar5ButtonTop:Size(0.001, 0.001)
+TukuiBar5ButtonTop:SetAlpha(0)
+TukuiBar5ButtonBottom:Size(0.001, 0.001)
+TukuiBar5ButtonBottom:SetAlpha(0)
 
 -- Kill backdrop of bars
 TukuiBar2:SetBackdrop(nil)

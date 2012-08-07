@@ -52,15 +52,15 @@ self.panel:Kill()
 ------------------------------------------------------
 self.Name:SetParent(self.Health)
 self.Name:ClearAllPoints()
-self.Name:SetPoint("BOTTOM", self.Health, 1, 5)
+self.Name:SetPoint("CENTER", self.Health, 1, 0)
 self.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 self.Name:SetShadowOffset(0,0,0,0)
 	
 -------------------------------------------------------
 -- health
 -------------------------------------------------------
-self.Health:Height(40)
-self.Health:Width(60)
+self.Health:Height(45)
+self.Health:Width(80)
 self.Health:CreateBorder(false, true)
 self.Health.value:ClearAllPoints()
 self.Health.value:Point("TOP", self.Health, 0, -1)
@@ -189,7 +189,7 @@ RaidPosition:SetScript("OnEvent", function(self, event)
 	local raid = G.UnitFrames.RaidUnits
 	local pets = G.UnitFrames.RaidPets
 	raid:ClearAllPoints()
-	raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 8)
+	raid:SetPoint("CENTER", UIParent, "CENTER", -500, -135)
 end)
 
 

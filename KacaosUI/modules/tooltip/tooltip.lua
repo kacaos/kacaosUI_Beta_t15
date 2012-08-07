@@ -5,7 +5,7 @@ if not C["tooltip"].enable then return end
 --------------------------------------------------------
 TukuiTooltipAnchor:ClearAllPoints()
 TukuiTooltipAnchor:SetClampedToScreen(false)
-TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -78, -30)
+TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -5, -30)
 
 --------------------------------------------------------
 -- icon on tooltip

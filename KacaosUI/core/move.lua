@@ -6,124 +6,18 @@ local function MoveUI()
 	if InCombatLockdown() then return end
 	if ENABLE_MOVE then ENABLE_MOVE = false else ENABLE_MOVE = true end
 	
-	if RaidCD then
-		if ENABLE_MOVE then
-				RaidCD:Show()
+	local movers = {RaidCD, FilgerPlayerPvEDebuffMover, FilgerPlayerCDMover, FilgerPlayerProccsMover, FilgerPlayerDebuffsMover, FilgerPlayerBuffsMover, tbMover, TukuiTargetCastbarMover, TukuiPlayerCastbarMover, DebuffsMover, TukuiBar1Mover, TukuiBar2Mover, TukuiBar3Mover, TukuiBar4Mover, TukuiBar5Mover, TukuiPetBarMover}
+	if RaidCD or FilgerPlayerPvEDebuffMover or FilgerPlayerCDMover or FilgerPlayerProccsMover or FilgerPlayerDebuffsMover or FilgerPlayerBuffsMover or tbMover or TukuiTargetCastbarMover or TukuiPlayerCastbarMover or DebuffsMover or TukuiBar1Mover or TukuiBar2Mover or TukuiBar3Mover or TukuiBar4Mover or TukuiBar5Mover or TukuiPetBarMover then
+			if ENABLE_MOVE then
+				for _, panels in pairs(movers) do
+					panels:Show()
+				end
+
 			else
-				RaidCD:Hide()
-		end
-	end	
-	
-	if FilgerPlayerCDMover then
-		if ENABLE_MOVE then
-				FilgerPlayerCDMover:Show()
-			else
-				FilgerPlayerCDMover:Hide()
-		end
-	end	
-	
-	if FilgerPlayerProccsMover then
-		if ENABLE_MOVE then
-				FilgerPlayerProccsMover:Show()
-			else
-				FilgerPlayerProccsMover:Hide()
-		end
-	end	
-	
-	if FilgerPlayerDebuffsMover then
-		if ENABLE_MOVE then
-				FilgerPlayerDebuffsMover:Show()
-			else
-				FilgerPlayerDebuffsMover:Hide()
-		end
-	end	
-	
-	if FilgerPlayerBuffsMover then
-		if ENABLE_MOVE then
-				FilgerPlayerBuffsMover:Show()
-			else
-				FilgerPlayerBuffsMover:Hide()
-		end
-	end
-	
-	if tbMover then
-		if ENABLE_MOVE then
-				tbMover:Show()
-			else
-				tbMover:Hide()
-		end
-	end
-	
-	if TukuiTargetCastbarMover then
-		if ENABLE_MOVE then
-				TukuiTargetCastbarMover:Show()
-			else
-				TukuiTargetCastbarMover:Hide()
-		end
-	end
-	
-	if TukuiPlayerCastbarMover then
-		if ENABLE_MOVE then
-				TukuiPlayerCastbarMover:Show()
-			else
-				TukuiPlayerCastbarMover:Hide()
-		end
-	end
-	
-	if DebuffsMover then
-		if ENABLE_MOVE then
-				DebuffsMover:Show()
-			else
-				DebuffsMover:Hide()
-		end
-	end
-	
-	if TukuiBar1Mover then
-		if ENABLE_MOVE then
-				TukuiBar1Mover:Show()
-			else
-				TukuiBar1Mover:Hide()
-		end
-	end
-	
-	if TukuiBar2Mover then
-		if ENABLE_MOVE then
-				TukuiBar2Mover:Show()
-			else
-				TukuiBar2Mover:Hide()
-		end
-	end
-	
-	if TukuiBar3Mover then
-		if ENABLE_MOVE then
-				TukuiBar3Mover:Show()
-			else
-				TukuiBar3Mover:Hide()
-		end
-	end
-	
-	if TukuiBar4Mover then
-		if ENABLE_MOVE then
-				TukuiBar4Mover:Show()
-			else
-				TukuiBar4Mover:Hide()
-		end
-	end
-	
-	if TukuiBar5Mover then
-		if ENABLE_MOVE then
-				TukuiBar5Mover:Show()
-			else
-				TukuiBar5Mover:Hide()
-		end
-	end
-	
-	if TukuiPetBarMover then
-		if ENABLE_MOVE then
-				TukuiPetBarMover:Show()
-			else
-				TukuiPetBarMover:Hide()
-		end
+				for _, panels in pairs(movers ) do
+					panels:Hide()
+				end
+			end
 	end
 	
 if( InCombatLockdown() ) then print( ERR_NOT_IN_COMBAT ) return end

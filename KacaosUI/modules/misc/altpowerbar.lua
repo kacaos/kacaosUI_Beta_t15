@@ -5,31 +5,12 @@ local bar = TukuiAltPowerBar
 local status = TukuiAltPowerBarStatus
 local text = TukuiAltPowerBarText
 
-if C.unitframes.style == 2 then
+if C.unitframes.style == 1 then
 	-- position the bar
 	bar:SetParent(UIParent)
 	bar:ClearAllPoints()
 	bar:Size(177, 8)
 	bar:SetPoint("TOP", TukuiPlayer.Power, "BOTTOM", 0, -3)
-	bar:SetTemplate()
-	bar:SetFrameStrata("HIGH")
-
-	-- position status bar
-	status:SetParent(bar)
-	status:ClearAllPoints()
-	status:Point("TOPLEFT", 2, -2)
-	status:Point("BOTTOMRIGHT", -2, 2)
-
-	-- change the font
-	text:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
-	text:SetShadowOffset(0,0)
-elseif C.unitframes.style == 1 then
-
-	-- position the bar
-	bar:SetParent(UIParent)
-	bar:ClearAllPoints()
-	bar:Size(177, 8)
-	bar:SetPoint("BOTTOM", TukuiThreatBar, "TOP", 0, 3)
 	bar:SetTemplate()
 	bar:SetFrameStrata("HIGH")
 

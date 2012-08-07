@@ -1,5 +1,5 @@
 local T, C, L = unpack(Tukui)
-
+if not C.auras.enable == false then return end
 ---------------------------------------------------------------
 -- Buffs
 ---------------------------------------------------------------
@@ -7,8 +7,13 @@ local T, C, L = unpack(Tukui)
 -- move the player buffs at the topright corner
 TukuiAurasPlayerBuffs:ClearAllPoints()
 TukuiAurasPlayerBuffs:Point("TOPRIGHT", UIParent, "TOPRIGHT", -4, -2)
-TukuiAurasPlayerBuffs:SetAttribute("xOffset", -32)
 TukuiAurasPlayerBuffs:SetAttribute("wrapYOffset", -36)
+if C.auras.classictimer == false then
+	TukuiAurasPlayerBuffs:SetAttribute("xOffset", -42)
+else
+	TukuiAurasPlayerBuffs:SetAttribute("xOffset", -32)
+end
+
 
 local mover = CreateFrame("Frame", "DebuffsMover", UIParent)
 mover:Width(200)
@@ -43,6 +48,16 @@ local OnAttributeChanged = function(self)
 			child.Duration:SetFont(C["media"].pixelfont, 8, "MONOCHROMEOUTLINE")
 			child.Duration:SetShadowOffset(0,0)
 			child.Duration:SetPoint("BOTTOM", 1, 1)
+		end
+		
+		if child.Holder then
+			child.Holder:ClearAllPoints()
+			child.Holder:SetPoint("TOPRIGHT", child, "TOPLEFT", -1, 0)
+			child.Holder:Size(7, 30)
+		end
+		
+		if child.Bar then
+			child.Bar:SetOrientation("VERTICAL")
 		end
 
 		if child.Count then

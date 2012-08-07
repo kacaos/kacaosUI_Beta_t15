@@ -4,7 +4,7 @@ if not C.misc.threatbar == true then return end
 
 
 
-if C.unitframes.style == 2 then
+if C.unitframes.style == 1 then
 		
 	local status = TukuiThreatBar
 	status:SetParent(UIParent)
@@ -20,25 +20,6 @@ if C.unitframes.style == 2 then
 	background:Point("BOTTOMRIGHT", 1, -1)
 	background:SetTemplate("Transparent")
 		
-	status.text:Kill()
-	status.Title:Kill()
-
-elseif C.unitframes.style == 1 then
-
-	local status = TukuiThreatBar
-	status:SetParent(UIParent)
-	status:Width(175)
-	status:Height(3)
-	status:ClearAllPoints()
-	status:Point("BOTTOM", TukuiPlayer, "TOP", 0, 5)
-	status:SetOrientation("Horizontal")
-
-	local background = CreateFrame("Frame", nil, status)
-	background:SetFrameLevel(status:GetFrameLevel() - 1)
-	background:Point("TOPLEFT", -1, 1)
-	background:Point("BOTTOMRIGHT", 1, -1)
-	background:SetTemplate("Transparent")
-
 	status.text:Kill()
 	status.Title:Kill()
 

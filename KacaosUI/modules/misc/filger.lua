@@ -343,8 +343,10 @@ ns.Filger_Spells = {
 			{ spellID = 70840, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Burning Soul
 			{ spellID = 84254, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Pyro
+			-- Backdraft
 			{ spellID = 117896, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Backlash
+			{ spellID = 108563, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",
@@ -361,6 +363,18 @@ ns.Filger_Spells = {
 			{ spellID = 6789, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
 			-- Banish
 			{ spellID = 710, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
+			-- Unending Resolve
+			{ spellID = 104773, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Twilight Ward
+			{ spellID = 131623, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Worgen sprint
+			{ spellID = 68992, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Burning Rush
+			{ spellID = 111400, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Fire and Brimstone
+			{ spellID = 108683, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- demonsoul
+			{ spellID = 113858, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",
@@ -398,9 +412,23 @@ ns.Filger_Spells = {
 			-- SoulBurn
 			{ spellID = 74434, size = C.filger.iconsize, filter = "CD" },
 			-- demonsoul
-			{ spellID = 113858, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- fbrunst
+			{ spellID = 113858, size = C.filger.iconsize, filter = "CD"},
+			-- Conflag
 			{ spellID = 17962, size = C.filger.iconsize, filter = "CD" },
+			-- Shadowfury
+			{ spellID = 30283, size = C.filger.iconsize, filter = "CD" },
+			-- Kil'jaeden's Cunning
+			{ spellID = 119049, size = C.filger.iconsize, filter = "CD" },
+			-- Summon Doomguard	
+			{ spellID = 112927, size = C.filger.iconsize, filter = "CD" },
+			-- havoc	
+			{ spellID = 80240, size = C.filger.iconsize, filter = "CD" },
+			-- Unending Resolve
+			{ spellID = 104773, size = C.filger.iconsize, filter = "CD" },
+			-- Dark Regeneration
+			{ spellID = 108359, size = C.filger.iconsize, filter = "CD" },
+			-- AV
+			{ spellID = 108505, size = C.filger.iconsize, filter = "CD" },
 		},
 	},
 	["DRUID"] = { -------------------------------------------------------------------------------------------------------- Druid
@@ -744,28 +772,63 @@ ns.Filger_Spells = {
 	["ALL"] = {
 		{ -- Here we track pvp debuffs on ourself
 			Name = "PVPYOSELF",
-			Direction = "LEFT",
+			Direction = "BOTTOM",
 			Interval = 2,
 			Mode = "ICON",
-			setPoint = { "CENTER", UIParent, "CENTER", -180, 150 },
+			setPoint = { "CENTER", FilgerPlayerPvEDebuffMover, "CENTER", 0, 0},
 
-			--Rouge
-			--Kidney Shot
-            { spellID = 408, size = 70, unitId = "player", caster = "all", filter = "DEBUFF" },
-
-		},
-		{
---Tons of SpellIDs taken from LoseControl so credit to Kouri 
---Here we track pvp buffs on our target
-			Name = "PVPYOTAR",
-			Direction = "RIGHT",
-			Interval = 2,
-			Mode = "ICON",
-			setPoint = { "CENTER", UIParent, "CENTER", 180, 150 },
-
-			-- Hamstring
-			{ spellID = 118162, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "BUFF" },
-
+			-- Sleight of Hand
+			{ spellID = 118162, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Exhale
+			{ spellID = 122760, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Exhale
+			{ spellID = 122761, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Convert
+			{ spellID = 122740, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Wind Step
+			{ spellID = 123180, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Overwhelming Assault
+			{ spellID = 123474, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Pheromones
+			{ spellID = 122835, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Pungency
+			{ spellID = 123081, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Corrosive Resin Pool
+			{ spellID = 122125, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Amber Prison
+			{ spellID = 121885, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Parasitic Growth
+			{ spellID = 121949, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Cobalt Mine Blast
+			{ spellID = 116281, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Wildfire Spark
+			{ spellID = 116784, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Crossed Over
+			{ spellID = 116161, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Fixate
+			{ spellID = 118303, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Overcharged
+			{ spellID = 117878, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Closed Circuit
+			{ spellID = 117949, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Devastating Arc
+			{ spellID = 116835, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Focused Assault
+			{ spellID = 116525, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Lightning Prison
+			{ spellID = 117436, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Defiled Ground
+			{ spellID = 118091, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Touch of Sha
+			{ spellID = 117519, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Shadow Breath
+			{ spellID = 122752, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Spray
+			{ spellID = 123121, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
+			-- Dread Spray
+			{ spellID = 119985, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Penetrating Bolt
+			{ spellID = 119086, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
 		},
 	},
 }
@@ -832,7 +895,7 @@ function Update(self)
 				if self.Direction == "UP" then
 					bar:Point("BOTTOM", bars[id][index-1], "TOP", 0, self.Interval)
 				elseif self.Direction == "RIGHT" then
-					bar:Point("LEFT", bars[id][index-1], "RIGHT", self.Mode == "ICON" and self.Interval or value.data.barWidth + self.Interval, 0)
+					bar:Point("LEFT", bars[id][index-1], "RIGHT", 1, 0)
 				elseif self.Direction == "LEFT" then
 					bar:Point("RIGHT", bars[id][index-1], "LEFT", self.Mode == "ICON" and -self.Interval or -(value.data.barWidth + self.Interval), 0)
 				else
@@ -844,8 +907,8 @@ function Update(self)
 				bar.icon = _G[bar.icon:GetName()]
 			else
 				bar.icon = bar:CreateTexture("$parentIcon", "ARTWORK")
-				bar.icon:Point("TOPLEFT", 2, -2)
-				bar.icon:Point("BOTTOMRIGHT", -2, 2)
+				bar.icon:Point("TOPLEFT", 1, -1)
+				bar.icon:Point("BOTTOMRIGHT", -1, 1)
 				bar.icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
 			end
 

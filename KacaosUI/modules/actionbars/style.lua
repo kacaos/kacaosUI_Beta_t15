@@ -57,7 +57,6 @@ end
 hooksecurefunc(T, "StyleActionBarButton", StyleActionBarButton)
 
 T.ShowHighlightActionButton = function(self)
-	-- hide ugly blizzard proc highlight
 	if self.overlay then
 		self.overlay:Show()
 		ActionButton_ShowOverlayGlow(self)
