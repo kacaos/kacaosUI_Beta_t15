@@ -24,7 +24,8 @@ local cbWidth = C.chat.chatbackgroundwidth
 			G.UnitFrames.Player.Experience.PostUpdate = T.ExperienceText
 
 			G.UnitFrames.Player.Resting:ClearAllPoints()
-			G.UnitFrames.Player.Resting:SetPoint( "BOTTOMRIGHT", G.UnitFrames.Player, "TOPLEFT", 6, 7 )
+			G.UnitFrames.Player.Resting:Size(0.001, 0.001)
+			G.UnitFrames.Player.Resting:SetAlpha(0)
 		end
 
 	------------------------------

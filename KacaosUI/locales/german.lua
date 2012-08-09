@@ -94,6 +94,11 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarebwidth = "Setze Breite für Moonkins und Monks"
 		TukuiConfigUILocalization.merchantautorepair = "Auto Reparieren (Auto-Gildenreparieren muss AUS sein!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto Gildenreparieren (Auto-Repair muss AUS sein!!!)"
+		TukuiConfigUILocalization.castbar = "Zauberleisten-Größe"
+		TukuiConfigUILocalization.castbarpcheight = "Setze Spieler-Zauberleisten Höhe"
+		TukuiConfigUILocalization.castbarpcwidth = "Setze Spieler-Zauberleisten Breite"
+		TukuiConfigUILocalization.castbartcheight = "Setze Ziel-Zauberleisten Höhe"
+		TukuiConfigUILocalization.castbartcwidth = "Setze Ziel-Zauberleisten Breite"
 	end
 end	
 
@@ -182,7 +187,7 @@ if T.client == "deDE" then
 	L.duffeduihelp_content1_line1 = "Als erstes, du hast zwei unterschiedliche Layouts f\195\188r die Einheitenfenster."
 	L.duffeduihelp_content1_line2 = "Du kannst diese in der Config unter Einheitenfenster - Unitframestyle wechseln. Es gibt die Styles:\n1 und 2."
 	L.duffeduihelp_content1_line3 = "Unter den Optionen Einheitenfenster findest du viele verschiedene M\195\182glichkeiten deine Unitframes anzupassen. Hinter einigen Optionen steht in Klammern in welchem Layout man diese Option benutzen kann."
-	L.duffeduihelp_content1_line4 = "Die Unitframes sind alle mit dem befehl moveui zu bewegen, sowie deren Klassenleisten und Zauberleisten."
+	L.duffeduihelp_content1_line4 = "\nUm die Zauberleisten zu skalieren musst du nur in der ingameconfig auf den Reiter Zauberleisten-Größe gehen.\n\nDie Unitframes sind alle mit dem befehl moveui zu bewegen, sowie deren Klassenleisten und Zauberleisten."
 
 	L.duffeduihelp_content6_title = "|cff1E90FFBefehle|r"
 	L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => \195\150ffnet dieses Panel\n|cff1E90FF/resetui|r => Setzt die Frameposition des gesamten UIs zur\195\188ck\n|cff1E90FF/install|r => Neuinstallation der gesamten UI"

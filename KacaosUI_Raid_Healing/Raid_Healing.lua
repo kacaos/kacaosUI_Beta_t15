@@ -4,7 +4,7 @@ local T, C, L, G = unpack( Tukui )
 --------------------------------------------------------------
 local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, columnSpacing, columnAnchorPoint
 	width = 60
-	height = 40
+	height = 45
 	showParty = true
 	showRaid = true
 	showPlayer = true
@@ -25,7 +25,7 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 			self:SetHeight( header:GetAttribute( "initial-height" ) )
 		]],
 		"initial-width", (60),
-		"initial-height",(40),
+		"initial-height",(45),
 		"showParty", true,
 		"showRaid", true,
 		"showPlayer", true,
@@ -36,7 +36,7 @@ local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, c
 		"groupFilter", "1,2,3,4,5,6,7,8",
 		"groupingOrder", "1,2,3,4,5,6,7,8",
 		"groupBy", "GROUP",
-		"maxColumns", 5,
+		"maxColumns", 8,
 		"unitsPerColumn", 5,
 		"columnSpacing", T.Scale(3),
 		"columnAnchorPoint", columnAnchorPoint
@@ -46,6 +46,9 @@ T.PostUpdateRaidUnit = function( self )
 		
 -- kill some frames
 self.panel:Kill()
+self:SetFrameLevel(1)
+local color = RAID_CLASS_COLORS[T.myclass]
+self:HighlightUnit(color.r,color.g,color.b,1)
 		
 ------------------------------------------------------
 -- names
@@ -62,6 +65,7 @@ self.Name:SetShadowOffset(0,0,0,0)
 self.Health:Height(45)
 self.Health:Width(80)
 self.Health:CreateBorder(false, true)
+self.Health:SetFrameLevel(1)
 self.Health.value:ClearAllPoints()
 self.Health.value:Point("TOP", self.Health, 0, -1)
 self.Health.value:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
@@ -75,7 +79,7 @@ self.Power:Height(1)
 self.Power:Width(55)
 self.Power:CreateBorder(false, true)
 self.Power:Point("BOTTOM", self.Health, 0, 2)
-self.Power:SetFrameLevel(5)
+self.Power:SetFrameLevel(8)
 
 --------------------------------------------------------------
 -- debuffs

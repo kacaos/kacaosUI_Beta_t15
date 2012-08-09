@@ -22,7 +22,7 @@ if C.combattext.mergeaoespam then
 end
 
 -- Class config
-if T.class == "WARLOCK" then
+if T.myclass == "WARLOCK" then
 	if C.combattext.mergeaoespam then
 		ct.aoespam[27243] = true	-- Seed of Corruption (DoT)
 		ct.aoespam[27285] = true	-- Seed of Corruption (Explosion)
@@ -42,6 +42,18 @@ if T.class == "WARLOCK" then
 		ct.aoespam[30213] = true	-- Legion Strike (Felguard)
 		ct.aoespam[89753] = true	-- Felstorm (Felguard)
 		ct.aoespam[20153] = true	-- Immolation (Infrenal)
+		ct.aoespam[129476] = true	-- Immolation Aura REAL
+		ct.aoespam[103967] = true	-- Carrion Swarm
+		ct.aoespam[124915] = true	-- Chaos Wave
+		ct.aoespam[86040] = true	-- Hand of Gul'dan
+		ct.aoespam[108371] = true	-- Harvest Life
+		ct.aoespam[114654] = true	-- AE Incinerate
+		ct.aoespam[108686] = true	-- AE Immolate
+		ct.aoespam[108685] = true	-- AE Conflag
+		ct.aoespam[104232] = true	-- Rain of Fire NEW
+		ct.aoespam[115422] = true 	-- Void Ray 
+		ct.aoespam[115832] = true	-- Wrathstorm 
+		ct.aoespam[115625] = true	-- Mortal Cleave 
 	end
 	if C.combattext.healing then
 		ct.healfilter[28176] = true	-- Fel Armor
@@ -52,7 +64,7 @@ if T.class == "WARLOCK" then
 		ct.healfilter[79268] = true	-- Soul Harvest
 		ct.healfilter[30294] = true	-- Soul Leech
 	end
-elseif T.class == "DRUID" then
+elseif T.myclass == "DRUID" then
 	if C.combattext.mergeaoespam then
 		-- Healer spells
 		ct.aoespam[774] = true		-- Rejuvenation (Normal)
@@ -78,7 +90,7 @@ elseif T.class == "DRUID" then
 		ct.aoespam[33745] = true	-- Lacerate
 		ct.aoespam[1079] = true		-- Rip
 	end
-elseif T.class == "PALADIN" then
+elseif T.myclass == "PALADIN" then
 	if C.combattext.mergeaoespam then
 		-- Healer spells
 		ct.aoespam[20167] = true	-- Seal of Insight (Heal Effect)
@@ -99,7 +111,7 @@ elseif T.class == "PALADIN" then
 		ct.aoespam[31935] = true	-- Avenger's Shield
 		ct.aoespam[96172] = true	-- Hand of Light (Mastery)
 	end
-elseif T.class == "PRIEST" then
+elseif T.myclass == "PRIEST" then
 	if C.combattext.mergeaoespam then
 		-- Healer spells
 		ct.aoespam[47750] = true	-- Penance (Heal Effect)
@@ -131,7 +143,7 @@ elseif T.class == "PRIEST" then
 		ct.healfilter[2944] = true	-- Devouring Plague (Healing)
 		ct.healfilter[15290] = true	-- Vampiric Embrace
 	end
-elseif T.class == "SHAMAN" then
+elseif T.myclass == "SHAMAN" then
 	if C.combattext.mergeaoespam then
 		-- Healer spells
 		ct.aoespam[73921] = true	-- Healing Rain
@@ -151,7 +163,7 @@ elseif T.class == "SHAMAN" then
 		ct.aoespam[8050] = true		-- Flame Shock
 		ct.aoespam[25504] = true	-- Windfury
 	end
-elseif T.class == "MAGE" then
+elseif T.myclass == "MAGE" then
 	if C.combattext.mergeaoespam then
 		ct.aoespam[44461] = true	-- Living Bomb Explosion
 		ct.aoespam[44457] = true	-- Living Bomb Dot
@@ -171,7 +183,7 @@ elseif T.class == "MAGE" then
 		ct.aoespam[83619] = true	-- Fire Power
 		ct.aoespam[120] = true		-- Cone of Cold
 	end
-elseif T.class == "WARRIOR" then
+elseif T.myclass == "WARRIOR" then
 	if C.combattext.mergeaoespam then
 		ct.aoespam[845] = true		-- Cleave
 		ct.aoespam[46968] = true	-- Shockwave
@@ -186,7 +198,7 @@ elseif T.class == "WARRIOR" then
 		ct.healfilter[23880] = true	-- Bloodthirst
 		ct.healfilter[55694] = true	-- Enraged Regeneration
 	end
-elseif T.class == "HUNTER" then
+elseif T.myclass == "HUNTER" then
 	if C.combattext.mergeaoespam then
 		ct.aoespam[2643] = true		-- Multi-Shot
 		ct.aoespam[83077] = true	-- Instant part of Serpent Sting
@@ -196,7 +208,7 @@ elseif T.class == "HUNTER" then
 		ct.aoespam[13812] = true	-- Explosive Trap
 		ct.aoespam[53301] = true	-- Explosive Shot
 	end
-elseif T.class == "MONK" then
+elseif T.myclass == "MONK" then
 	if C.combattext.mergeaoespam then
 		-- Healing spells
 		ct.aoespam[115175] = true	-- Soothing Mist
@@ -206,9 +218,11 @@ elseif T.class == "MONK" then
 		-- Damaging spells
 		ct.aoespam[117952] = true	-- Crackling Jade Lightning
 		ct.aoespam[107270] = true	-- Spinning Crane Kick
+		ct.aoespam[101546] = true	-- Spinning Crane Kick
+		ct.aoespam[128531] = true 	--Blackout Kick
 		ct.aoespam[117418] = true	-- Fists of Fury
 	end
-elseif T.class == "DEATHKNIGHT" then
+elseif T.myclass == "DEATHKNIGHT" then
 	if C.combattext.mergeaoespam then
 		ct.aoespam[55095] = true	-- Frost Fever
 		ct.aoespam[55078] = true	-- Blood Plague
@@ -234,7 +248,7 @@ elseif T.class == "DEATHKNIGHT" then
 		ct.aoespam[45902] = true	-- Blood Strike MH
 		ct.aoespam[66215] = 45902	-- Blood Strike OH
 	end
-elseif T.class == "ROGUE" then
+elseif T.myclass == "ROGUE" then
 	if C.combattext.mergeaoespam then
 		ct.aoespam[51723] = true	-- Fan of Knives
 		ct.aoespam[2818] = true		-- Deadly Poison

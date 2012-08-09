@@ -60,9 +60,9 @@ do
 		if( C["unitframes"].unitcastbar == true ) then
 
 			local mover = CreateFrame("Frame", "TukuiPlayerCastbarMover", UIParent)
-			mover:Width(241)
-			mover:Height(20)
-			mover:Point("BOTTOM", TukuiBar1, "BOTTOM", -1, 60)
+			mover:Height(C.castbar.pcheight)
+			mover:Width(C.castbar.pcwidth)
+			mover:Point("BOTTOM", UIParent, "BOTTOM", 0, 160)
 			mover:SetTemplate()
 			mover:SetBackdropBorderColor(1,0,0)
 			mover:SetClampedToScreen(true)
@@ -77,28 +77,28 @@ do
 			G.UnitFrames.Player.Castbar:ClearAllPoints()
 			G.UnitFrames.Player.Castbar:SetPoint("CENTER", mover)
 			G.UnitFrames.Player.Castbar:SetTemplate()
-			G.UnitFrames.Player.Castbar:Width(241)
-			G.UnitFrames.Player.Castbar:Height(20)
+			G.UnitFrames.Player.Castbar:Height(C.castbar.pcheight)
+			G.UnitFrames.Player.Castbar:Width(C.castbar.pcwidth)
 			G.UnitFrames.Player.Castbar.Text:Point("LEFT", G.UnitFrames.Player.Castbar, "LEFT", 3, -1)
 			G.UnitFrames.Player.Castbar.Text:SetFont(C.media.pixelfont, 10, "MONOCHROMEOUTLINE")
 			G.UnitFrames.Player.Castbar.Text:SetShadowOffset(0,0)
 			G.UnitFrames.Player.Castbar.Time:Point("RIGHT", G.UnitFrames.Player.Castbar, "RIGHT", -3, -1)
 			G.UnitFrames.Player.Castbar.Time:SetFont(C.media.pixelfont, 10, "MONOCHROMEOUTLINE")
 			G.UnitFrames.Player.Castbar.Time:SetShadowOffset(0,0)
-			G.UnitFrames.Player.Castbar.button:Kill()
 			G.UnitFrames.Player.Castbar:CreateBorder(false, true)
-			if C.actionbar.bar4 then
-				mover:ClearAllPoints()
-				mover:Point("BOTTOM", TukuiBar4, "TOP", 0, 3)
-				G.UnitFrames.Player.Castbar:Width(TukuiBar4:GetWidth()-8)
-			elseif C.actionbar.b2bottom then
-				mover:ClearAllPoints()
-				mover:Point("BOTTOM", TukuiBar4, "TOP", 0, 35)
-				G.UnitFrames.Player.Castbar:Width(TukuiBar4:GetWidth()-8)
+			
+		if( C["unitframes"].cbicons == true) then
+				G.UnitFrames.Player.Castbar.button:ClearAllPoints()
+				G.UnitFrames.Player.Castbar.button:SetPoint("BOTTOMRIGHT", G.UnitFrames.Player.Castbar, "BOTTOMLEFT", -3, 0)
+				G.UnitFrames.Player.Castbar.button:Size(C.castbar.pcheight-1)
+				G.UnitFrames.Player.Castbar.button:SetTemplate()
+				G.UnitFrames.Player.Castbar.button:CreateBorder(false, true)
+				G.UnitFrames.Player.Castbar.icon:Point("TOPLEFT", G.UnitFrames.Player.Castbar.button, 0, -0)
+				G.UnitFrames.Player.Castbar.icon:Point("BOTTOMRIGHT", G.UnitFrames.Player.Castbar.button, -0, 0)
 			end
 		end
 	end
-	
+
 --------------------------------------------------------------
 -- portraits
 --------------------------------------------------------------

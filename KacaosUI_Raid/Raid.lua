@@ -91,6 +91,8 @@ self.Power:Kill()
 self.RaidDebuffs:Kill()
 self.AuraWatch:Kill()
 
+self:SetFrameLevel(1)
+
 ------------------------------------------------------
 -- names
 ------------------------------------------------------
@@ -111,11 +113,13 @@ if C.unitframes.minigrid == false then
 	self.Health:Width(25)
 	self.Health:CreateBorder(false, true)
 	self.Health.value:Kill()
+	self.Health:SetFrameLevel(1)
 else
 	self.Health:Height(20)
 	self.Health:Width(60)
 	self.Health:CreateBorder(false, true)
 	self.Health.value:Kill()
+	self.Health:SetFrameLevel(1)
 end
 
 --------------------------------------------------------

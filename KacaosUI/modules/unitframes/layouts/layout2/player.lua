@@ -84,8 +84,8 @@ do
 	do
 		if( C["unitframes"].unitcastbar == true) then
 			local mover = CreateFrame("Frame", "TukuiPlayerCastbarMover", UIParent)
-			mover:Height(8)
-			mover:Width(200)
+			mover:Height(C.castbar.pcheight)
+			mover:Width(C.castbar.pcwidth)
 			mover:Point("BOTTOM", TukuiPlayer, "BOTTOM", 0, -16)
 			mover:SetTemplate()
 			mover:SetBackdropBorderColor(1,0,0)
@@ -99,8 +99,8 @@ do
 			tinsert(T.AllowFrameMoving, mover)
 
 		G.UnitFrames.Player.Castbar:ClearAllPoints()
-		G.UnitFrames.Player.Castbar:Height(8)
-		G.UnitFrames.Player.Castbar:Width(200)
+		G.UnitFrames.Player.Castbar:Height(C.castbar.pcheight)
+		G.UnitFrames.Player.Castbar:Width(C.castbar.pcwidth)
 		G.UnitFrames.Player.Castbar:SetTemplate("Transparent")
 		G.UnitFrames.Player.Castbar:SetPoint("CENTER", mover)
 		G.UnitFrames.Player.Castbar:CreateBorder(false, true)

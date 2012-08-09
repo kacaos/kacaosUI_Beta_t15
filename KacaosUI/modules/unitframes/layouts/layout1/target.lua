@@ -55,8 +55,8 @@ do
 
 		-- castbar
 		local mover = CreateFrame("Frame", "TukuiTargetCastbarMover", UIParent)
-		mover:Width(280)
-		mover:Height(20)
+		mover:Height(C.castbar.tcheight)
+		mover:Width(C.castbar.tcwidth)
 		mover:Point("CENTER", UIParent, "CENTER", 0, 140)
 		mover:SetTemplate()
 		mover:SetBackdropBorderColor(1,0,0)
@@ -72,16 +72,25 @@ do
 		G.UnitFrames.Target.Castbar:ClearAllPoints()
 		G.UnitFrames.Target.Castbar:SetPoint("CENTER", mover)
 		G.UnitFrames.Target.Castbar:SetTemplate()
-		G.UnitFrames.Target.Castbar:Width(280)
-		G.UnitFrames.Target.Castbar:Height(20)
+		G.UnitFrames.Target.Castbar:Height(C.castbar.tcheight)
+		G.UnitFrames.Target.Castbar:Width(C.castbar.tcwidth)
 		G.UnitFrames.Target.Castbar.Text:Point("LEFT", G.UnitFrames.Target.Castbar, "LEFT", 3, -1)
 		G.UnitFrames.Target.Castbar.Text:SetFont(C.media.pixelfont, 10, "MONOCHROMEOUTLINE")
 		G.UnitFrames.Target.Castbar.Text:SetShadowOffset(0,0)
 		G.UnitFrames.Target.Castbar.Time:Point("RIGHT", G.UnitFrames.Target.Castbar, "RIGHT", -3, -1)
 		G.UnitFrames.Target.Castbar.Time:SetFont(C.media.pixelfont, 10, "MONOCHROMEOUTLINE")
 		G.UnitFrames.Target.Castbar.Time:SetShadowOffset(0,0)
-		G.UnitFrames.Target.Castbar.button:Kill()
 		G.UnitFrames.Target.Castbar:CreateBorder(false, true)
+		
+		if( C["unitframes"].cbicons == true) then
+				G.UnitFrames.Target.Castbar.button:ClearAllPoints()
+				G.UnitFrames.Target.Castbar.button:SetPoint("RIGHT", G.UnitFrames.Target.Castbar, "LEFT", -3, 0)
+				G.UnitFrames.Target.Castbar.button:Size(C.castbar.tcheight-1)
+				G.UnitFrames.Target.Castbar.button:SetTemplate()
+				G.UnitFrames.Target.Castbar.button:CreateBorder(false, true)
+				G.UnitFrames.Target.Castbar.icon:Point("TOPLEFT", G.UnitFrames.Target.Castbar.button, 0, -0)
+				G.UnitFrames.Target.Castbar.icon:Point("BOTTOMRIGHT", G.UnitFrames.Target.Castbar.button, -0, 0)
+			end
 		end
 	end
 	

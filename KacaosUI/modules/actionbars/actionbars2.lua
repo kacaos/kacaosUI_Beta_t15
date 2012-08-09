@@ -46,8 +46,8 @@ TukuiBar2:ClearAllPoints()
 TukuiBar2:SetPoint("TOPRIGHT", ActionButton7, "TOPLEFT", -10, 3)
 
 -- kill some buttons for bar4
-TukuiBar4:Kill()
-
+TukuiBar4:Size(0.001, 0.001)
+TukuiBar4:SetAlpha(0)
 
 --------------------------------------------------------------
 -- make tukuibar1 2x6

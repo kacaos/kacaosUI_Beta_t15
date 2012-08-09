@@ -37,7 +37,7 @@ ns.Filger_Spells = {
 			Interval = 3,
 			Mode = "ICON",
 			setPoint = { "LEFT", FilgerPlayerBuffsMover, "LEFT", 0, 0 },
-
+			
 			-- Zensphäre
 			{ spellID = 124081, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Tigeraugengebräu
@@ -52,7 +52,10 @@ ns.Filger_Spells = {
 			{ spellID = 115295, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Flüchtiges Gebräu
 			{ spellID = 128939, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-
+			-- Dancing Steel
+			{ spellID = 120032, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Windsong
+			{ spellID = 104509, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 
 		},
 		{
@@ -347,6 +350,8 @@ ns.Filger_Spells = {
 			{ spellID = 117896, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Backlash
 			{ spellID = 108563, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- PVP Trinket
+			{ spellID = 126683, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",
@@ -458,7 +463,7 @@ ns.Filger_Spells = {
 			Mode = "ICON",
 			setPoint = { "LEFT", FilgerPlayerProccsMover, "LEFT", 0, 0 },
 
-			-- Eclipse (Lunar)
+		-- Eclipse (Lunar)
 			{ spellID = 48518, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Eclipse (Solar)
 			{ spellID = 48517, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
@@ -476,6 +481,18 @@ ns.Filger_Spells = {
 			{ spellID = 29166, size = C.filger.iconsize, unitId = "player", caster = "all", filter = "BUFF" },
 			-- Barkskin
 			{ spellID = 22812, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Incarnation
+			{ spellID = 102560, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Nature's Vigil
+			{ spellID = 124974, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Solar Empowerment
+			{ spellID = 129633, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Lunar Empowerment
+			{ spellID = 129632, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Astral Empowerment
+			{ spellID = 130238, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Celestial Alignment
+			{ spellID = 112071, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",
@@ -509,7 +526,23 @@ ns.Filger_Spells = {
 			-- Faerie Fire
 			{ spellID = 770, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
 		},
-	},
+		
+			Name = "Cooldown",
+			Direction = C.filger.cd,
+			Interval = 4,
+			Mode = "ICON",
+			setPoint = { "LEFT", FilgerPlayerCDMover, "LEFT", 0, 0 },
+
+			-- Celestial Alignment
+			{ spellID = 112071, size = C.filger.iconsize, filter = "CD" },
+			-- Incarnation
+			{ spellID = 102560, size = C.filger.iconsize, filter = "CD" },
+			-- Nature's Vigil
+			{ spellID = 124974, size = C.filger.iconsize, filter = "CD" },
+			-- Force of Nature
+			{ spellID = 33831, size = C.filger.iconsize, filter = "CD" },
+		},
+
 	["HUNTER"] = { -------------------------------------------------------------------------------------------------------- Hunter
 		{
 			Name = "Hunter Procs",

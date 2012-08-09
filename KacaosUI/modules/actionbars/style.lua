@@ -56,7 +56,7 @@ end
 
 hooksecurefunc(T, "StyleActionBarButton", StyleActionBarButton)
 
-T.ShowHighlightActionButton = function(self)
+local function ShowHighlightActionButton(self)
 	if self.overlay then
 		self.overlay:Show()
 		ActionButton_ShowOverlayGlow(self)
@@ -64,4 +64,4 @@ T.ShowHighlightActionButton = function(self)
 	end
 end
 
-hooksecurefunc("ActionButton_ShowOverlayGlow", T.ShowHighlightActionButton)
+hooksecurefunc("ActionButton_ShowOverlayGlow", ShowHighlightActionButton)

@@ -86,6 +86,11 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarebwidth = "Set width for moonkins and monks"
 		TukuiConfigUILocalization.merchantautorepair = "Auto repair (auto-Guildrepair need to be OFF!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto guild-repair (auto-repair need to be OFF!!!)"
+		TukuiConfigUILocalization.castbar = "Castbar-Sizes"
+		TukuiConfigUILocalization.castbarpcheight = "Set Player-Castbar Height"
+		TukuiConfigUILocalization.castbarpcwidth = "Set Player-Castbar Width"
+		TukuiConfigUILocalization.castbartcheight = "Set Target-Castbar Height"
+		TukuiConfigUILocalization.castbartcwidth = "Set Target-Castbar Width"
 	end
 end	
 
@@ -174,7 +179,7 @@ if T.client == "enEN" then
     L.duffeduihelp_content1_line1 = "At first, you have the choose between two different layout for the unitframes."
     L.duffeduihelp_content1_line2 = "You can change them in the ingameconfig under Unitframes Unitframestyle. Already said. They're these styles:\n1 and 2."
     L.duffeduihelp_content1_line3 = "Under the unitframe option you find many things you can change in your unitframes. Some are only available in some specific layouts (Number is shown then in brackets)."
-    L.duffeduihelp_content1_line4 = "The unitframes, stancebar and there castbar are all movable by the /moveui command."
+    L.duffeduihelp_content1_line4 = "\nYou can scale the castbars in the ingameconfig at the Castbar-Size button.\n\nThe unitframes, stancebar and there castbar are all movable by the /moveui command."
    
     L.duffeduihelp_content6_title = "|cff1E90FFCommands|r"
     L.duffeduihelp_content6_line1 = "|cff1E90FF/kuihelp|r => Open this panel\n|cff1E90FF/resetui|r => Resets the completly framepositions to the default.\n|cff1E90FF/install|r => Shows the installation frame and you can completly install the interface new."

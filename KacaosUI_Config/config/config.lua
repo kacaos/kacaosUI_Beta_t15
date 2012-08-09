@@ -74,6 +74,13 @@ C.unitframes = {
 	minigrid = true,								-- enable minimalistic grid
 }
 
+C.castbar = {
+	pcheight = 5,									-- set player-castbar height
+	pcwidth = 200,									-- set player-castbar width
+	tcheight = 5,									-- set target-castbar height
+	tcwidth = 200,									-- set target-castbar width
+}
+
 C.classbar = {
     warlock = true,									-- enable warlock classbar
 	deathknight = true,								-- enable deathknight classbar
@@ -113,6 +120,7 @@ C.misc = {
 
 C.auras = {
 	buffsfadeout = false,							-- fadeout playerbuffs infight
+	classictimer = true,							-- enable classictimer instead of bars
 }
 
 C.tooltip = {
