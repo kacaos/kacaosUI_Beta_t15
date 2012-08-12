@@ -23,6 +23,10 @@ do
 			G.UnitFrames["Boss"..i].Health:SetFrameLevel(5)
 			G.UnitFrames["Boss"..i].Health:CreateBorder(false, true) 
 			G.UnitFrames["Boss"..i].Health.bg:SetTexture(0.6, 0.6, 0.6)
+		
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames["Boss"..i].Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 
 			G.UnitFrames["Boss"..i].Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 			G.UnitFrames["Boss"..i].Name:SetShadowOffset(1.25, -1.25)
@@ -66,13 +70,12 @@ do
 
 				if(C["unitframes"].cbicons == true) then
 					G.UnitFrames["Boss"..i].Castbar.button:ClearAllPoints()
-					G.UnitFrames["Boss"..i].Castbar.button:SetPoint("LEFT", G.UnitFrames["Boss" .. i], "RIGHT", 5, -8)
-					G.UnitFrames["Boss"..i].Castbar.button:Size(29)
-					G.UnitFrames["Boss"..i].Castbar.button:SetTemplate("Default")
+					G.UnitFrames["Boss"..i].Castbar.button:Point("BOTTOMLEFT", G.UnitFrames["Boss"..i].Castbar, "BOTTOMRIGHT", 5, -1)
+					G.UnitFrames["Boss"..i].Castbar.button:SetTemplate()
 					G.UnitFrames["Boss"..i].Castbar.button:CreateBorder(false, true)
-					
-					G.UnitFrames["Boss"..i].Castbar.icon:SetPoint("TOPLEFT", G.UnitFrames["Boss" .. i].Castbar.button, 0, 0)
-					G.UnitFrames["Boss"..i].Castbar.icon:SetPoint("TOPLEFT", G.UnitFrames["Boss" .. i].Castbar.button, 0, 0)
+					G.UnitFrames["Boss"..i].Castbar.button:Size(28)
+					G.UnitFrames["Boss"..i].Castbar.icon:Point("TOPLEFT", G.UnitFrames["Boss"..i].Castbar.button, 0, -0)
+					G.UnitFrames["Boss"..i].Castbar.icon:Point("BOTTOMRIGHT", G.UnitFrames["Boss"..i].Castbar.button, -0, 0)
 				else
 					G.UnitFrames["Boss"..i].Castbar.button:Kill()
 				end
@@ -83,10 +86,45 @@ do
 -- buffs, debuffs
 --------------------------------------------------------------
 		do
-			G.UnitFrames["Boss"..i].Debuffs:Kill()
+			G.UnitFrames["Boss" .. i].Debuffs:SetHeight(19)
+			G.UnitFrames["Boss" .. i].Debuffs:SetWidth(200)
+			G.UnitFrames["Boss" .. i].Debuffs.size = 19
+			G.UnitFrames["Boss" .. i].Debuffs.num = 3
+			G.UnitFrames["Boss" .. i].Debuffs.spacing = 1
 
-			G.UnitFrames["Boss"..i].Buffs:Kill()
+			G.UnitFrames["Boss" .. i].Debuffs:ClearAllPoints()
+			G.UnitFrames["Boss" .. i].Debuffs:Point( "LEFT", G.UnitFrames["Boss" .. i], "RIGHT", 3, -3)
+			G.UnitFrames["Boss" .. i].Debuffs.ClearAllPoints = T.dummy
+			G.UnitFrames["Boss" .. i].Debuffs.SetPoint = T.dummy
 
+			G.UnitFrames["Boss" .. i].Buffs:SetHeight(19)
+			G.UnitFrames["Boss" .. i].Buffs:SetWidth(200)
+			G.UnitFrames["Boss" .. i].Buffs.size = 19
+			G.UnitFrames["Boss" .. i].Buffs.num = 3
+			G.UnitFrames["Boss" .. i].Buffs.spacing = 1
+
+			G.UnitFrames["Boss" .. i].Buffs:ClearAllPoints()
+			G.UnitFrames["Boss" .. i].Buffs:Point( "RIGHT", G.UnitFrames["Boss" .. i], "LEFT", -3, -3)
+			G.UnitFrames["Boss" .. i].Buffs.ClearAllPoints = T.dummy
+			G.UnitFrames["Boss" .. i].Buffs.SetPoint = T.dummy
+
+			G.UnitFrames["Boss" .. i].Debuffs.initialAnchor = "LEFT"
+			G.UnitFrames["Boss" .. i].Debuffs["growth-x"] = "RIGHT"
+
+			G.UnitFrames["Boss" .. i].Buffs.initialAnchor = "RIGHT"
+			G.UnitFrames["Boss" .. i].Buffs["growth-x"] = "LEFT"
+
+			if( G.UnitFrames["Boss" .. i].Debuffs or G.UnitFrames["Boss" .. i].Buffs ) then
+				for _, frames in pairs( { G.UnitFrames["Boss" .. i].Debuffs, G.UnitFrames["Boss" .. i].Buffs } ) do
+					if( not frames ) then return end
+
+					frames:Size(200, 19)
+					frames.size = 19
+					frames.num = 3
+
+					hooksecurefunc( frames, "PostCreateIcon", T.SkinAura )
+				end
+			end
 		end
 
 --------------------------------------------------------------

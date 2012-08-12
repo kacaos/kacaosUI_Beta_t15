@@ -7,7 +7,7 @@ if not C.auras.enable == false then return end
 -- move the player buffs at the topright corner
 TukuiAurasPlayerBuffs:ClearAllPoints()
 TukuiAurasPlayerBuffs:Point("TOPRIGHT", UIParent, "TOPRIGHT", -4, -2)
-TukuiAurasPlayerBuffs:SetAttribute("wrapYOffset", -36)
+TukuiAurasPlayerBuffs:SetAttribute("wrapYOffset", -31)
 if C.auras.classictimer == false then
 	TukuiAurasPlayerBuffs:SetAttribute("xOffset", -42)
 else

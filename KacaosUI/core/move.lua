@@ -1,5 +1,9 @@
 local T, C, L = unpack(Tukui)
 
+--------------------------------------------------------
+-- moveui
+--------------------------------------------------------
+
 local ENABLE_MOVE = false --Used for MoveUI
 
 local function MoveUI()
@@ -72,10 +76,9 @@ end
 	
 hooksecurefunc(_G.SlashCmdList, "MOVING", MoveUI)
 
-
-
-
+-----------------------------------------------------
 -- make some elements moveable
+-----------------------------------------------------
 TukuiBags:SetMovable(true)
 TukuiBags:SetScript("OnMouseDown", function() TukuiBags:ClearAllPoints() TukuiBags:StartMoving() end)
 TukuiBags:SetScript("OnMouseUp", function() TukuiBags:StopMovingOrSizing() end)

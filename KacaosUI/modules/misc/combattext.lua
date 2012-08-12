@@ -54,6 +54,8 @@ if T.myclass == "WARLOCK" then
 		ct.aoespam[115422] = true 	-- Void Ray 
 		ct.aoespam[115832] = true	-- Wrathstorm 
 		ct.aoespam[115625] = true	-- Mortal Cleave 
+		ct.aoespam[104318] = true	-- Wild Imps
+		ct.aoespam[112092] = true	-- Shadowbolt (glyphed)
 	end
 	if C.combattext.healing then
 		ct.healfilter[28176] = true	-- Fel Armor

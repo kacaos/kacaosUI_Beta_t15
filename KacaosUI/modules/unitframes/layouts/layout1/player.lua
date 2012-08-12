@@ -25,6 +25,11 @@ do
 		G.UnitFrames.Player.Power:Height(2)
 		G.UnitFrames.Player.Power:SetFrameLevel(3)
 		G.UnitFrames.Player.Power:AddBorder()
+		G.UnitFrames.Player.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames.Player.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 		
 		G.UnitFrames.Player.Health.value = T.SetFontString(G.UnitFrames.Player.Health, C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		G.UnitFrames.Player.Health.value:SetShadowOffset(0,0)
@@ -87,18 +92,32 @@ do
 			G.UnitFrames.Player.Castbar.Time:SetShadowOffset(0,0)
 			G.UnitFrames.Player.Castbar:CreateBorder(false, true)
 			
-		if( C["unitframes"].cbicons == true) then
-				G.UnitFrames.Player.Castbar.button:ClearAllPoints()
-				G.UnitFrames.Player.Castbar.button:SetPoint("BOTTOMRIGHT", G.UnitFrames.Player.Castbar, "BOTTOMLEFT", -3, 0)
-				G.UnitFrames.Player.Castbar.button:Size(C.castbar.pcheight-1)
-				G.UnitFrames.Player.Castbar.button:SetTemplate()
-				G.UnitFrames.Player.Castbar.button:CreateBorder(false, true)
-				G.UnitFrames.Player.Castbar.icon:Point("TOPLEFT", G.UnitFrames.Player.Castbar.button, 0, -0)
-				G.UnitFrames.Player.Castbar.icon:Point("BOTTOMRIGHT", G.UnitFrames.Player.Castbar.button, -0, 0)
-			end
+			G.UnitFrames.Player.Castbar.button:Kill()
+			
+			G.UnitFrames.Player.Castbar.PostCastStart = T.PostCastStart
+			G.UnitFrames.Player.Castbar.PostChannelStart = T.PostCastStart
+
 		end
 	end
+	
+--------------------------------------------------------------
+-- classicons
+--------------------------------------------------------------
+	do
+		if( C["unitframes"].classicons == true ) then
+			local classicon = CreateFrame( "Frame", G.UnitFrames.Player:GetName() .. "_ClassIconBorder", G.UnitFrames.Player )
+			classicon:SetTemplate("Default")
+			classicon:Size(27, 27)
+			classicon:Point("TOPRIGHT", G.UnitFrames.Player.Health, "TOPLEFT", -3, 1)
+			local class = classicon:CreateTexture( G.UnitFrames.Player:GetName() .. "_ClassIcon", "ARTWORK" )
+			class:Point( "TOPLEFT", 1, -1)
+			class:Point( "BOTTOMRIGHT", -1, 1)
+			G.UnitFrames.Player.ClassIcon = class
 
+			G.UnitFrames.Player:EnableElement("ClassIcon")
+		end
+	end
+	
 --------------------------------------------------------------
 -- portraits
 --------------------------------------------------------------

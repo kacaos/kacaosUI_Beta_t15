@@ -208,20 +208,3 @@ end
 
 	object = EnumerateFrames(object)
 end
-
--- kill some frames
--- local Kill = CreateFrame( "Frame" )
--- Kill:RegisterEvent( "PLAYER_LOGIN" )
--- Kill:RegisterEvent( "PLAYER_ENTERING_WORLD" )
--- Kill:SetScript( "OnEvent", function( self, event )
-	-- if( event == "PLAYER_LOGIN" or event == "PLAYER_ENTERING_WORLD" ) then
-		-- InterfaceOptionsFrameCategoriesButton10:SetScale( 0.00001 )
-		-- InterfaceOptionsFrameCategoriesButton10:SetAlpha( 0 )		
-		-- InterfaceOptionsFrameCategoriesButton11:SetScale( 0.00001 )
-		-- InterfaceOptionsFrameCategoriesButton11:SetAlpha( 0 )
-		-- CompactRaidFrameManager:UnregisterAllEvents()
-		-- CompactRaidFrameManager:Hide()
-		-- CompactRaidFrameContainer:UnregisterAllEvents()
-		-- CompactRaidFrameContainer:Hide()
-	-- end
--- end )

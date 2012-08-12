@@ -20,6 +20,11 @@ do
 		G.UnitFrames.FocusTarget.Health:Height(12)
 		G.UnitFrames.FocusTarget.Health:SetFrameLevel(5)
 		G.UnitFrames.FocusTarget.Health:CreateBorder(false, true)
+		G.UnitFrames.FocusTarget.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames.FocusTarget.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 		
 		G.UnitFrames.FocusTarget.Health.value:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		G.UnitFrames.FocusTarget.Health.value:SetShadowOffset(0,0)
@@ -91,7 +96,31 @@ do
 -- buffs & debuffs
 --------------------------------------------------------------
 	do
-		G.UnitFrames.FocusTarget.Debuffs:Kill()
+		G.UnitFrames.FocusTarget.Debuffs:SetHeight(19)
+		G.UnitFrames.FocusTarget.Debuffs:SetWidth(200)
+		G.UnitFrames.FocusTarget.Debuffs.size = 19
+		G.UnitFrames.FocusTarget.Debuffs.num = 3
+		G.UnitFrames.FocusTarget.Debuffs.spacing = 1
+
+		G.UnitFrames.FocusTarget.Debuffs:ClearAllPoints()
+		G.UnitFrames.FocusTarget.Debuffs:Point( "LEFT", G.UnitFrames.FocusTarget, "RIGHT", 3, -2)
+		G.UnitFrames.FocusTarget.Debuffs.ClearAllPoints = T.dummy
+		G.UnitFrames.FocusTarget.Debuffs.SetPoint = T.dummy
+
+		G.UnitFrames.FocusTarget.Debuffs.initialAnchor = "LEFT"
+		G.UnitFrames.FocusTarget.Debuffs["growth-x"] = "RIGHT"
+
+		if( G.UnitFrames.FocusTarget.Debuffs ) then
+			for _, frames in pairs( { G.UnitFrames.FocusTarget.Debuffs } ) do
+				if( not frames ) then return end
+
+				frames:Size(200, 19)
+				frames.size = 19
+				frames.num = 3
+
+				hooksecurefunc( frames, "PostCreateIcon", T.SkinAura )
+			end
+		end
 	end
 	
 --------------------------------------------------------------

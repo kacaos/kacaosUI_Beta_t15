@@ -19,6 +19,11 @@ do
 	do
 		G.UnitFrames.Target.Health:Height(12)
 		G.UnitFrames.Target.Health:CreateBorder(false, true)
+		G.UnitFrames.Target.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames.Target.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 		
 		if C.unitframes.hpshowp then
 			G.UnitFrames.Target.Health.value = T.SetFontString(G.UnitFrames.Target.Health, C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
@@ -61,6 +66,24 @@ do
 			G.UnitFrames.Target.Health:SetPoint("TOPLEFT", 0, 0)
 			G.UnitFrames.Target.Health:SetPoint("TOPRIGHT")
 			G.UnitFrames.Target.Portrait:SetFrameLevel(G.UnitFrames.Target.Health:GetFrameLevel())
+		end
+	end
+
+--------------------------------------------------------------
+-- classicons
+--------------------------------------------------------------
+	do
+		if( C["unitframes"].classicons == true ) then
+			local classicon = CreateFrame( "Frame", G.UnitFrames.Target:GetName() .. "_ClassIconBorder", G.UnitFrames.Target )
+			classicon:SetTemplate("Default")
+			classicon:Size(18, 18)
+			classicon:Point("TOPLEFT", G.UnitFrames.Target.Health, "TOPRIGHT", 3, 1)
+			local class = classicon:CreateTexture( G.UnitFrames.Target:GetName() .. "_ClassIcon", "ARTWORK" )
+			class:Point( "TOPLEFT", 1, -1 )
+			class:Point( "BOTTOMRIGHT", -1, 1)
+			G.UnitFrames.Target.ClassIcon = class
+
+			G.UnitFrames.Target:EnableElement( "ClassIcon" )
 		end
 	end
 	
@@ -121,28 +144,30 @@ do
 -- buffs, debuffs
 --------------------------------------------------------------
 	do
-		--if( C["unitframes"].targetauras == true ) then
-			if C.unitframes.showdb then
-				G.UnitFrames.Target.Debuffs:ClearAllPoints()
-				G.UnitFrames.Target.Debuffs:Point("BOTTOMRIGHT", G.UnitFrames.Target.Health, "BOTTOMRIGHT", 2, 52)
-				G.UnitFrames.Target.Debuffs.size = 21
-				G.UnitFrames.Target.Debuffs:Width(193)
-				G.UnitFrames.Target.Debuffs.num = 14
-				G.UnitFrames.Target.Debuffs.spacing = 2
-				G.UnitFrames.Target.Debuffs.PostCreateIcon = T.PostCreateAura
-				G.UnitFrames.Target.Debuffs.PostUpdateIcon = T.PostUpdateAura
-		else
-				G.UnitFrames.Target.Debuffs:Hide()
-		end
+		if( C["unitframes"].targetauras == true ) then
 				G.UnitFrames.Target.Buffs:ClearAllPoints()
-				G.UnitFrames.Target.Buffs:SetPoint("BOTTOMLEFT", G.UnitFrames.Target.Health, "TOPLEFT", -1, 17)
+				G.UnitFrames.Target.Buffs:SetPoint("BOTTOMLEFT", G.UnitFrames.Target.Health, "TOPLEFT", 0, 20)
 				G.UnitFrames.Target.Buffs:SetHeight(21)
-				G.UnitFrames.Target.Buffs:SetWidth(193)
-				G.UnitFrames.Target.Buffs.size = 21
-				G.UnitFrames.Target.Buffs.num = 9
-				G.UnitFrames.Target.Buffs.spacing = 2
+				G.UnitFrames.Target.Buffs:SetWidth(194)
+				G.UnitFrames.Target.Buffs.size = 24
+				G.UnitFrames.Target.Buffs.num = 8
+				G.UnitFrames.Target.Buffs.numRow = 8
+				G.UnitFrames.Target.Buffs.spacing = 1
 				G.UnitFrames.Target.Buffs.PostCreateIcon = T.PostCreateAura
 				G.UnitFrames.Target.Buffs.PostUpdateIcon = T.PostUpdateAura
+			
+			if C.unitframes.showdb then
+				G.UnitFrames.Target.Debuffs:ClearAllPoints()
+				G.UnitFrames.Target.Debuffs:Point("BOTTOMRIGHT", G.UnitFrames.Target.Health, "BOTTOMRIGHT", 0, 55)
+				G.UnitFrames.Target.Debuffs.size = 24
+				G.UnitFrames.Target.Debuffs:Width(194)
+				G.UnitFrames.Target.Debuffs.num = 14
+				G.UnitFrames.Target.Debuffs.spacing = 1
+				G.UnitFrames.Target.Debuffs.PostCreateIcon = T.PostCreateAura
+				G.UnitFrames.Target.Debuffs.PostUpdateIcon = T.PostUpdateAura
+			else
+				G.UnitFrames.Target.Debuffs:Hide()
+			end
 		
 		G.UnitFrames.Target.Buffs.ClearAllPoints = T.dummy
 		G.UnitFrames.Target.Buffs.SetPoint = T.dummy
@@ -150,7 +175,8 @@ do
 		G.UnitFrames.Target.Debuffs.ClearAllPoints = T.dummy
 		G.UnitFrames.Target.Debuffs.SetPoint = T.dummy
 		G.UnitFrames.Target.Debuffs.Point = T.dummy
-	end	
+		end	
+	end
 --------------------------------------------------------------
 -- name
 --------------------------------------------------------------

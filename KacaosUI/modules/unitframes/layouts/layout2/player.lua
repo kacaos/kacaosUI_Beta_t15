@@ -19,6 +19,11 @@ do
 	do
 		G.UnitFrames.Player.Health:Height(12)
 		G.UnitFrames.Player.Health:CreateBorder(false, true)
+		G.UnitFrames.Player.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames.Player.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 		
 		if C.unitframes.hpshowp then
 			G.UnitFrames.Player.Health.value = T.SetFontString(G.UnitFrames.Player.Health, C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
@@ -75,6 +80,24 @@ do
 			G.UnitFrames.Player.Health:SetPoint("TOPLEFT", 0, 0)
 			G.UnitFrames.Player.Health:SetPoint("TOPRIGHT")
 			G.UnitFrames.Player.Portrait:SetFrameLevel(G.UnitFrames.Player.Health:GetFrameLevel())
+		end
+	end
+	
+--------------------------------------------------------------
+-- classicons
+--------------------------------------------------------------
+	do
+		if( C["unitframes"].classicons == true ) then
+			local classicon = CreateFrame( "Frame", G.UnitFrames.Player:GetName() .. "_ClassIconBorder", G.UnitFrames.Player )
+			classicon:SetTemplate("Default")
+			classicon:Size(18, 18)
+			classicon:Point("TOPRIGHT", G.UnitFrames.Player.Health, "TOPLEFT", -3, 1)
+			local class = classicon:CreateTexture( G.UnitFrames.Player:GetName() .. "_ClassIcon", "ARTWORK" )
+			class:Point( "TOPLEFT", 1, -1)
+			class:Point( "BOTTOMRIGHT", -1, 1)
+			G.UnitFrames.Player.ClassIcon = class
+
+			G.UnitFrames.Player:EnableElement("ClassIcon")
 		end
 	end
 

@@ -56,12 +56,12 @@ end
 
 hooksecurefunc(T, "StyleActionBarButton", StyleActionBarButton)
 
-local function ShowHighlightActionButton(self)
-	if self.overlay then
-		self.overlay:Show()
-		ActionButton_ShowOverlayGlow(self)
-		self.backdrop:SetBackdropBorderColor(0, 0, 0)
-	end
-end
+-- local function ShowHighlightActionButton(self)
+	-- if self.overlay then
+		-- self.overlay:Show()
+		-- ActionButton_ShowOverlayGlow(self)
+		-- self.backdrop:SetBackdropBorderColor(0, 0, 0)
+	-- end
+-- end
 
-hooksecurefunc("ActionButton_ShowOverlayGlow", ShowHighlightActionButton)
+-- hooksecurefunc("ActionButton_ShowOverlayGlow", ShowHighlightActionButton)

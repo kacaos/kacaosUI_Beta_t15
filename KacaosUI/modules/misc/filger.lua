@@ -380,6 +380,12 @@ ns.Filger_Spells = {
 			{ spellID = 108683, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- demonsoul
 			{ spellID = 113858, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- DS: Knowledge
+			{ spellID = 113861, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Molten Core
+			{ spellID = 122355, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Dark Bargain
+			{ spellID = 110913, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",
@@ -406,6 +412,8 @@ ns.Filger_Spells = {
 			{ spellID = 603, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },	
 			-- Seed of Corruption
 			{ spellID = 27243, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- Shadowflame
+			{ spellID = 47960, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },	
 		},
         {
 			Name = "Cooldown",
@@ -434,6 +442,14 @@ ns.Filger_Spells = {
 			{ spellID = 108359, size = C.filger.iconsize, filter = "CD" },
 			-- AV
 			{ spellID = 108505, size = C.filger.iconsize, filter = "CD" },
+			-- DS: Knowledge
+			{ spellID = 113861, size = C.filger.iconsize,filter = "CD"},
+			-- Hand of Gul'dan
+			{ spellID = 105174, size = C.filger.iconsize, filter = "CD"},
+			-- Dark Bargain
+			{ spellID = 110913, size = C.filger.iconsize, filter = "CD"},
+			-- Wild Imps
+			{ spellID = 104316, size = C.filger.iconsize, filter = "CD"},
 		},
 	},
 	["DRUID"] = { -------------------------------------------------------------------------------------------------------- Druid
@@ -852,8 +868,6 @@ ns.Filger_Spells = {
 			{ spellID = 117436, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
 			-- Defiled Ground
 			{ spellID = 118091, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
-			-- Touch of Sha
-			{ spellID = 117519, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },			
 			-- Shadow Breath
 			{ spellID = 122752, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Spray
@@ -862,6 +876,8 @@ ns.Filger_Spells = {
 			{ spellID = 119985, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Penetrating Bolt
 			{ spellID = 119086, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Voodoodoll
+			{ spellID = 122151, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
 		},
 	},
 }

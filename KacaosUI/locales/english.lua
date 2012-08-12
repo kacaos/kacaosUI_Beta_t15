@@ -10,6 +10,8 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.unitframeshpshowp = "Show HP/MP value on Player (only in layout2)"
 		TukuiConfigUILocalization.unitframesshowdb = "Show debuffs on target (only layout2)"
 		TukuiConfigUILocalization.unitframesminigrid = "Enable minimalistic Grid (only in /dps)"
+		TukuiConfigUILocalization.unitframeshealthBgColor = "Choose backgroundcolor of healtbars"
+		TukuiConfigUILocalization.unitframesclassicons = "Enable Classicons"
 		TukuiConfigUILocalization.actionbarstyle = "Actionbarlayout 1 or 2"
 		TukuiConfigUILocalization.actionbarallbars = "Show AllBars (only in actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarbar4 = "Activate 2 bars at the bottom (only in actionbarlayout1)"

@@ -20,7 +20,7 @@ FramePositions:SetScript("OnEvent", function(self, event, addon)
 
 	G.UnitFrames.TargetTarget:SetPoint("RIGHT", G.UnitFrames.Target, 0, 15)
 	G.UnitFrames.Pet:SetPoint("RIGHT", G.UnitFrames.Player, 0, 15)
-	G.UnitFrames.Focus:SetPoint("CENTER", UIParent, -400, -150)
+	G.UnitFrames.Focus:SetPoint("CENTER", UIParent, "CENTER", -400, -150)
 	G.UnitFrames.FocusTarget:SetPoint("CENTER", TukuiFocus.Health, 0, 40)
 
 	for i = 1, MAX_BOSS_FRAMES do

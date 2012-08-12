@@ -21,17 +21,9 @@ do
 		G.UnitFrames.Focus.Health:SetFrameLevel( 5 )
 		G.UnitFrames.Focus.Health:AddBorder()
 		G.UnitFrames.Focus.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
-
+		
 		if( C["unitframes"].unicolor == true ) then
-			G.UnitFrames.Focus.Health.colorTapping = false
-			G.UnitFrames.Focus.Health.colorDisconnected = false
-			G.UnitFrames.Focus.Health.colorClass = false
-			G.UnitFrames.Focus.Health:SetStatusBarColor(.3, .3, .3, 1)
-		else
-			G.UnitFrames.Focus.Health.colorDisconnected = true
-			G.UnitFrames.Focus.Health.colorTapping = true
-			G.UnitFrames.Focus.Health.colorClass = true
-			G.UnitFrames.Focus.Health.colorReaction = true
+			G.UnitFrames.Focus.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
 		end
 
 		G.UnitFrames.Focus.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
@@ -75,10 +67,12 @@ do
 			G.UnitFrames.Focus.Castbar.bg:SetVertexColor( 0.05, 0.05, 0.05 )
 
 			G.UnitFrames.Focus.Castbar.Time = T.SetFontString( G.UnitFrames.Focus.Castbar,C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
-			G.UnitFrames.Focus.Castbar.Time:Point( "RIGHT", G.UnitFrames.Focus.Castbar, "RIGHT", -4, 1 )
-
+			G.UnitFrames.Focus.Castbar.Time:Point( "RIGHT", G.UnitFrames.Focus.Castbar, "RIGHT", -4, 0)
+			G.UnitFrames.Focus.Castbar.Time:SetShadowOffset(0,0)
+			
 			G.UnitFrames.Focus.Castbar.Text = T.SetFontString( G.UnitFrames.Focus.Castbar,C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
-			G.UnitFrames.Focus.Castbar.Text:Point( "LEFT", G.UnitFrames.Focus.Castbar, "LEFT", 4, 1 )
+			G.UnitFrames.Focus.Castbar.Text:Point( "LEFT", G.UnitFrames.Focus.Castbar, "LEFT", 4, 0)
+			G.UnitFrames.Focus.Castbar.Text:SetShadowOffset(0,0)
 
 			G.UnitFrames.Focus.Castbar.PostCastStart = T.PostCastStart
 			G.UnitFrames.Focus.Castbar.PostChannelStart = T.PostCastStart

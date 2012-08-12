@@ -20,7 +20,7 @@ local function AddTooltipIcon(self, icon)
 end
 
 --------------------------------------------------------
--- Hyperlink (mouseover tooltip in chat
+-- Hyperlink
 --------------------------------------------------------
 local function hookItem(tip)
 	tip:HookScript("OnTooltipSetItem", function(self, ...)

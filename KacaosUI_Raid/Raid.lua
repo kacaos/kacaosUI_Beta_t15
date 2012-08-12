@@ -3,7 +3,7 @@ local T, C, L, G = unpack( Tukui )
 --Header
 --------------------------------------------------------------
 local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, columnSpacing, columnAnchorPoint
-if C.unitframes.minigrid == false then
+if C.unitframes.minigrid == true then
 	width = 25
 	height = 25
 	showParty = true
@@ -93,6 +93,9 @@ self.AuraWatch:Kill()
 
 self:SetFrameLevel(1)
 
+local color = RAID_CLASS_COLORS[T.myclass]
+self:HighlightUnit(color.r,color.g,color.b,1)
+
 ------------------------------------------------------
 -- names
 ------------------------------------------------------
@@ -101,14 +104,14 @@ self.Name:ClearAllPoints()
 self.Name:SetPoint("CENTER", self.Health, "CENTER", 1, -1)
 self.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 self.Name:SetShadowOffset(0,0,0,0)
-if C.unitframes.minigrid == false then
+if C.unitframes.minigrid == true then
 self:Tag(self.Name, '[Tukui:getnamecolor][Tukui:namemini]')	
 end
 
 -------------------------------------------------------
 -- health
 -------------------------------------------------------
-if C.unitframes.minigrid == false then
+if C.unitframes.minigrid == true then
 	self.Health:Height(25)
 	self.Health:Width(25)
 	self.Health:CreateBorder(false, true)
@@ -121,6 +124,12 @@ else
 	self.Health.value:Kill()
 	self.Health:SetFrameLevel(1)
 end
+
+	self.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+	if( C["unitframes"].unicolor == true ) then
+		self.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+	end
 
 --------------------------------------------------------
 -- icons
@@ -152,8 +161,8 @@ end
 			
 			-- Raid Debuffs (big middle icon)
 			local RaidDebuffs = CreateFrame('Frame', nil, self)
-			RaidDebuffs:Height(18)
-			RaidDebuffs:Width(18)
+			RaidDebuffs:Height(16)
+			RaidDebuffs:Width(16)
 			RaidDebuffs:Point('CENTER', self.Health, 1,0)
 			RaidDebuffs:SetFrameStrata(self.Health:GetFrameStrata())
 			RaidDebuffs:SetFrameLevel(self.Health:GetFrameLevel() + 2)

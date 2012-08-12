@@ -7,7 +7,6 @@ C.general = {
 	blizzardreskin = true,							-- to set alpha go to tukui/core/api.lua and set balpha
 	backdropcolor = {.06,.06,.06},					-- backdrop color of all panel
 	bordercolor = {0,0,0},							-- border color of all panel
-	tinydpsreskin = false,                          -- reskin tinydps
 }
 
 C.datatext = {
@@ -46,38 +45,40 @@ C.actionbar = {
 	allbars = true,									-- get 1bottom bar with 14buttons and 3 sidebars								
 	bar4 = true,									-- activate 2 bottombars and 3 sidebars
 	buttonspacing = 3,								-- buttonspacing of actionbars
-	petbuttonsize = 18,								-- buttonsize of petbar
-	buttonsize = 24,
+	petbuttonsize = 18,								-- size of petactionbarbuttons
+	buttonsize = 24,								-- size of all actionbarbuttons
 	sidebar1mouseover = true,						-- rightbar1 on mouseover
 	sidebar2mouseover = true,						-- rightbar2 on mouseover
 	sidebar3mouseover = true,						-- rightbar3 on mouseover
 	b2bottom = true,								-- enable 3 bottomrows (only useable together with 2bottombars option)
-	hpetbar = true,									-- enable vertical petbar
+	hpetbar = true,									-- enable vertical petbar (only in layout2)
 	hideshapeshift = true,							-- hide shapeshift or totembar because it was a lot requested.
 }
 
 C.unitframes = {
 	style = 2,										-- change unitframe style 1 and 2
-	showdb = false,									-- show debuffs on target (only layout 3)
+	showdb = false,									-- show debuffs on target (only layout2)
 	onlyselfdebuffs = false,						-- track only your debuffs on target
 	hpshowp = false,								-- show hp/mp on player and target (only at style 2)
-	charportrait = true,							-- show portrait on healthbar
 	totshow = true,									-- show target of target
 	petshow = true,									-- show pet
 	combatfeedback = false,							-- enable combattext on player and target
 	unicolor = true,								-- enable unicolortheme
 	charportrait = true,							-- enable portraits on unitframes
 	movecombobar = false,							-- display the new combo bar (t14+) from target to player (ROGUE ONLY)
+	classicons = true,								-- enable classicons
 	
-	mouseoverhighlight = true,						-- mouseoverhiglight at raidframes layout2
+	mouseoverhighlight = true,						-- mouseoverhiglight on raidframe
 	showraidpets = false,							-- enable raidpets
-	minigrid = true,								-- enable minimalistic grid
+	minigrid = true,								-- enable minimalistic grid (only dps layout)
+	
+	healthBgColor = { .5, 0.1, 0.1 },				-- choose healthbackground colors
 }
 
 C.castbar = {
-	pcheight = 5,									-- set player-castbar height
+	pcheight = 8,									-- set player-castbar height
 	pcwidth = 200,									-- set player-castbar width
-	tcheight = 5,									-- set target-castbar height
+	tcheight = 8,									-- set target-castbar height
 	tcwidth = 200,									-- set target-castbar width
 }
 
@@ -89,6 +90,7 @@ C.classbar = {
 	priest = true,									-- enable priest classbar
 	druid = true,									-- enable druid classabr
 	monk = true,									-- enable monk classbar
+	mage = true,									-- enable mage classbar
 	combopoints = true,								-- enable combopoints for rogue an druid (in catform)
 	height = 8,										-- choose height of classbars
 	width = 35,										-- choose width of each rune/shard/chi etc.
@@ -121,6 +123,7 @@ C.misc = {
 C.auras = {
 	buffsfadeout = false,							-- fadeout playerbuffs infight
 	classictimer = true,							-- enable classictimer instead of bars
+	consolidate = false,							-- enable consolidate buffs
 }
 
 C.tooltip = {
@@ -150,7 +153,7 @@ C.filger = {
 C.combattext = {
 	enable = true,							-- Global enable combat text
 	blizzheadnumbers = false,				-- Use blizzard damage/healing output(above mob/player head)
-	damagestyle = true,					-- Change default damage/healing font above mobs/player heads(you need to restart WoW to see changes)
+	damagestyle = true,						-- Change default damage/healing font above mobs/player heads(you need to restart WoW to see changes)
 	damage = true,							-- Show outgoing damage in it's own frame
 	healing = true,							-- Show outgoing healing in it's own frame
 	showhots = false,						-- Show periodic healing effects in healing frame

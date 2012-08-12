@@ -47,6 +47,7 @@ T.PostUpdateRaidUnit = function( self )
 -- kill some frames
 self.panel:Kill()
 self:SetFrameLevel(1)
+
 local color = RAID_CLASS_COLORS[T.myclass]
 self:HighlightUnit(color.r,color.g,color.b,1)
 		
@@ -70,6 +71,12 @@ self.Health.value:ClearAllPoints()
 self.Health.value:Point("TOP", self.Health, 0, -1)
 self.Health.value:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 self.Health.value:SetShadowOffset(0,0,0,0)
+
+self.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+	if( C["unitframes"].unicolor == true ) then
+		self.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+	end
 
 -------------------------------------------------------
 -- power

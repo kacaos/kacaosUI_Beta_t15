@@ -1,5 +1,8 @@
 local T, C, L, G = unpack(Tukui)
 
+-------------------------------------------------------
+-- Change raidlayout popup
+-------------------------------------------------------
 StaticPopupDialogs["KACAOSUIDISABLE_RAID"] = {
 	text = L.popup_2raidactive,
 	button1 = "DPS - TANK",

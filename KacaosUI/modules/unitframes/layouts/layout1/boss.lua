@@ -24,17 +24,9 @@ do
 			G.UnitFrames["Boss" .. i].Health:AddBorder()
 			G.UnitFrames["Boss" .. i].Health.bg:SetTexture( 0.6, 0.6, 0.6 )
 
-			if( C["unitframes"].unicolor == true ) then
-				G.UnitFrames["Boss" .. i].Health.colorTapping = false
-				G.UnitFrames["Boss" .. i].Health.colorDisconnected = false
-				G.UnitFrames["Boss" .. i].Health.colorClass = false
-				G.UnitFrames["Boss" .. i].Health:SetStatusBarColor(.3, .3, .3, 1)
-			else
-				G.UnitFrames["Boss" .. i].Health.colorDisconnected = true
-				G.UnitFrames["Boss" .. i].Health.colorTapping = true
-				G.UnitFrames["Boss" .. i].Health.colorClass = true
-				G.UnitFrames["Boss" .. i].Health.colorReaction = true
-			end
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames["Boss"..i].Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 
 			G.UnitFrames["Boss" .. i].Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 			G.UnitFrames["Boss" .. i].Name:SetShadowOffset( 1.25, -1.25 )
@@ -75,10 +67,12 @@ do
 				G.UnitFrames["Boss" .. i].Castbar.bg:SetVertexColor( 0.05, 0.05, 0.05 )
 
 				G.UnitFrames["Boss" .. i].Castbar.Time = T.SetFontString( G.UnitFrames["Boss" .. i].Castbar,C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
-				G.UnitFrames["Boss" .. i].Castbar.Time:Point( "RIGHT", G.UnitFrames["Boss" .. i].Castbar, "RIGHT", -4, 1 )
-
+				G.UnitFrames["Boss" .. i].Castbar.Time:Point( "RIGHT", G.UnitFrames["Boss" .. i].Castbar, "RIGHT", -4, 0)
+				G.UnitFrames["Boss" .. i].Castbar.Time:SetShadowOffset(0,0)
+				
 				G.UnitFrames["Boss" .. i].Castbar.Text = T.SetFontString( G.UnitFrames["Boss" .. i].Castbar,C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
-				G.UnitFrames["Boss" .. i].Castbar.Text:Point( "LEFT", G.UnitFrames["Boss" .. i].Castbar, "LEFT", 4, 1 )
+				G.UnitFrames["Boss" .. i].Castbar.Text:Point( "LEFT", G.UnitFrames["Boss" .. i].Castbar, "LEFT", 4, 0)
+				G.UnitFrames["Boss" .. i].Castbar.Text:SetShadowOffset(0,0)
 
 				G.UnitFrames["Boss" .. i].Castbar.PostCastStart = T.PostCastStart
 				G.UnitFrames["Boss" .. i].Castbar.PostChannelStart = T.PostCastStart
@@ -96,8 +90,8 @@ do
 			G.UnitFrames["Boss" .. i].Debuffs:SetHeight( 20 )
 			G.UnitFrames["Boss" .. i].Debuffs:SetWidth( 175 )
 			G.UnitFrames["Boss" .. i].Debuffs.size = 20
-			G.UnitFrames["Boss" .. i].Debuffs.num = 5
-			G.UnitFrames["Boss" .. i].Debuffs.spacing = 3
+			G.UnitFrames["Boss" .. i].Debuffs.num = 3
+			G.UnitFrames["Boss" .. i].Debuffs.spacing = 1
 
 			G.UnitFrames["Boss" .. i].Debuffs:ClearAllPoints()
 			G.UnitFrames["Boss" .. i].Debuffs:Point( "LEFT", G.UnitFrames["Boss" .. i], "RIGHT", 5, 0 )
@@ -107,8 +101,8 @@ do
 			G.UnitFrames["Boss" .. i].Buffs:SetHeight( 20 )
 			G.UnitFrames["Boss" .. i].Buffs:SetWidth( 175 )
 			G.UnitFrames["Boss" .. i].Buffs.size = 20
-			G.UnitFrames["Boss" .. i].Buffs.num = 5
-			G.UnitFrames["Boss" .. i].Buffs.spacing = 3
+			G.UnitFrames["Boss" .. i].Buffs.num = 3
+			G.UnitFrames["Boss" .. i].Buffs.spacing = 1
 
 			G.UnitFrames["Boss" .. i].Buffs:ClearAllPoints()
 			G.UnitFrames["Boss" .. i].Buffs:Point( "RIGHT", G.UnitFrames["Boss" .. i], "LEFT", -5, 0 )
@@ -127,7 +121,7 @@ do
 
 					frames:Size( 175, 20 )
 					frames.size = 20
-					frames.num = 5
+					frames.num = 3
 
 					hooksecurefunc( frames, "PostCreateIcon", T.SkinAura )
 				end

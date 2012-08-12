@@ -22,18 +22,10 @@ do
 			G.UnitFrames["Arena" .. i].Health:SetFrameLevel( 5 )
 			G.UnitFrames["Arena" .. i].Health:AddBorder()
 			G.UnitFrames["Arena" .. i].Health.bg:SetTexture( 0.6, 0.6, 0.6 )
-
-			if( C["unitframes"].unicolor == true ) then
-				G.UnitFrames["Arena" .. i].Health.colorTapping = false
-				G.UnitFrames["Arena" .. i].Health.colorDisconnected = false
-				G.UnitFrames["Arena" .. i].Health.colorClass = false
-				G.UnitFrames["Arena" .. i].Health:SetStatusBarColor(.3, .3, .3, 1)
-			else
-				G.UnitFrames["Arena" .. i].Health.colorDisconnected = true
-				G.UnitFrames["Arena" .. i].Health.colorTapping = true
-				G.UnitFrames["Arena" .. i].Health.colorClass = true
-				G.UnitFrames["Arena" .. i].Health.colorReaction = true
-			end
+			
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames["Arena" .. i].Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 
 			G.UnitFrames["Arena" .. i].Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 			G.UnitFrames["Arena" .. i].Name:SetShadowOffset( 1.25, -1.25 )

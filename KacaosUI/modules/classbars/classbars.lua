@@ -35,6 +35,7 @@ tinsert(T.AllowFrameMoving, mover)
 					G.UnitFrames.Player.WarlockSpecBars:Size((tbWidth*4)+3, tbHeight)
 					G.UnitFrames.Player.WarlockSpecBars:SetFrameStrata("LOW")
 					G.UnitFrames.Player.WarlockSpecBars:CreateBorder(false, true)
+												
 					for i = 1, 4  do
 
 						if i == 1 then
@@ -45,7 +46,7 @@ tinsert(T.AllowFrameMoving, mover)
 							G.UnitFrames.Player.WarlockSpecBars[i]:Size(tbWidth*4, tbHeight)
 						end
 					end	
-				local wlPowerStatus = CreateFrame("StatusBar", "wlPowerStatus", G.UnitFrames.Player.WarlockSpecBars)
+			local wlPowerStatus = CreateFrame("StatusBar", "wlPowerStatus", G.UnitFrames.Player.WarlockSpecBars)
 					wlPowerStatus:Point("TOPLEFT", G.UnitFrames.Player.WarlockSpecBars, "TOPLEFT", 2, -2)
 					wlPowerStatus:Point("BOTTOMRIGHT", G.UnitFrames.Player.WarlockSpecBars, "BOTTOMRIGHT", -2, 2)
 					wlPowerStatus.t = wlPowerStatus:CreateFontString(nil, "OVERLAY")
@@ -320,3 +321,31 @@ if( T.myclass == "ROGUE" or "DRUID") then
 					end	
 			end
 		end
+		
+-------------------------------------------------------
+-- Mage
+-------------------------------------------------------
+
+if( T.myclass == "MAGE" ) then
+	if( C["classbar"].mage ~= true ) then
+		G.UnitFrames.Player.ArcaneChargeBar:Kill()
+	else
+		G.UnitFrames.Player.ArcaneChargeBar:ClearAllPoints()
+		G.UnitFrames.Player.ArcaneChargeBar:SetPoint("CENTER", mover)
+		G.UnitFrames.Player.ArcaneChargeBar:Size((tbWidth*6)+5, tbHeight)
+		G.UnitFrames.Player.ArcaneChargeBar:CreateBorder(false, true)
+
+		for i = 1, 6 do
+			if( i == 1 ) then
+				G.UnitFrames.Player.ArcaneChargeBar[i]:SetPoint( "TOPLEFT", G.UnitFrames.Player.ArcaneChargeBar, "BOTTOMLEFT", 0, tbHeight)
+				G.UnitFrames.Player.ArcaneChargeBar[i]:Size(tbWidth, tbHeight)
+			elseif i == 5 then
+				G.UnitFrames.Player.ArcaneChargeBar[i]:Point( "LEFT", G.UnitFrames.Player.ArcaneChargeBar[i - 1], "RIGHT", 1, 0 )
+				G.UnitFrames.Player.ArcaneChargeBar[i]:Size(tbWidth, tbHeight)
+			else
+				G.UnitFrames.Player.ArcaneChargeBar[i]:Point( "LEFT", G.UnitFrames.Player.ArcaneChargeBar[i - 1], "RIGHT", 1, 0 )
+				G.UnitFrames.Player.ArcaneChargeBar[i]:Size(tbWidth, tbHeight)
+			end
+		end
+	end
+end

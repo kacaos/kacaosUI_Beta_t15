@@ -27,6 +27,11 @@ do
 		G.UnitFrames.Target.Power:Height(2)
 		G.UnitFrames.Target.Power:SetFrameLevel(3)
 		G.UnitFrames.Target.Power:AddBorder()
+		G.UnitFrames.Target.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames.Target.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 		
 		G.UnitFrames.Target.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		G.UnitFrames.Target.Name:ClearAllPoints()
@@ -82,15 +87,10 @@ do
 		G.UnitFrames.Target.Castbar.Time:SetShadowOffset(0,0)
 		G.UnitFrames.Target.Castbar:CreateBorder(false, true)
 		
-		if( C["unitframes"].cbicons == true) then
-				G.UnitFrames.Target.Castbar.button:ClearAllPoints()
-				G.UnitFrames.Target.Castbar.button:SetPoint("RIGHT", G.UnitFrames.Target.Castbar, "LEFT", -3, 0)
-				G.UnitFrames.Target.Castbar.button:Size(C.castbar.tcheight-1)
-				G.UnitFrames.Target.Castbar.button:SetTemplate()
-				G.UnitFrames.Target.Castbar.button:CreateBorder(false, true)
-				G.UnitFrames.Target.Castbar.icon:Point("TOPLEFT", G.UnitFrames.Target.Castbar.button, 0, -0)
-				G.UnitFrames.Target.Castbar.icon:Point("BOTTOMRIGHT", G.UnitFrames.Target.Castbar.button, -0, 0)
-			end
+		G.UnitFrames.Target.Castbar.button:Kill()
+		
+		G.UnitFrames.Target.Castbar.PostCastStart = T.PostCastStart
+		G.UnitFrames.Target.Castbar.PostChannelStart = T.PostCastStart
 		end
 	end
 	
@@ -107,6 +107,24 @@ do
 			G.UnitFrames.Target.Health:SetPoint( "TOPLEFT", 0, 0 )
 			G.UnitFrames.Target.Health:SetPoint( "TOPRIGHT" )
 			G.UnitFrames.Target.Portrait:SetFrameLevel( G.UnitFrames.Target.Health:GetFrameLevel() )
+		end
+	end
+
+--------------------------------------------------------------
+-- classicons
+--------------------------------------------------------------
+	do
+		if( C["unitframes"].classicons == true ) then
+			local classicon = CreateFrame( "Frame", G.UnitFrames.Target:GetName() .. "_ClassIconBorder", G.UnitFrames.Target )
+			classicon:SetTemplate("Default")
+			classicon:Size(27, 27)
+			classicon:Point("TOPLEFT", G.UnitFrames.Target.Health, "TOPRIGHT", 3, 1)
+			local class = classicon:CreateTexture( G.UnitFrames.Target:GetName() .. "_ClassIcon", "ARTWORK" )
+			class:Point( "TOPLEFT", 1, -1 )
+			class:Point( "BOTTOMRIGHT", -1, 1)
+			G.UnitFrames.Target.ClassIcon = class
+
+			G.UnitFrames.Target:EnableElement( "ClassIcon" )
 		end
 	end
 	

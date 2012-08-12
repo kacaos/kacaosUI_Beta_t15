@@ -17,6 +17,11 @@ do
 	do
 		G.UnitFrames.Pet.Health:Height(12)
 		G.UnitFrames.Pet.Health:SetTemplate("Default")
+		G.UnitFrames.Pet.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+		
+		if( C["unitframes"].unicolor == true ) then
+			G.UnitFrames.Pet.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
+		end
 	end
 
 --------------------------------------------------------------
