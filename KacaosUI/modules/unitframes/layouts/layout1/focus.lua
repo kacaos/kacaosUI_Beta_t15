@@ -86,14 +86,14 @@ do
 -- buffs, debuffs
 --------------------------------------------------------------
 	do
-		G.UnitFrames.Focus.Debuffs:SetHeight( 20 )
-		G.UnitFrames.Focus.Debuffs:SetWidth( 175 )
-		G.UnitFrames.Focus.Debuffs.size = 20
-		G.UnitFrames.Focus.Debuffs.num = 5
-		G.UnitFrames.Focus.Debuffs.spacing = 3
+		G.UnitFrames.Focus.Debuffs:SetHeight(27)
+		G.UnitFrames.Focus.Debuffs:SetWidth(175)
+		G.UnitFrames.Focus.Debuffs.size = 27
+		G.UnitFrames.Focus.Debuffs.num = 3
+		G.UnitFrames.Focus.Debuffs.spacing = 1
 
 		G.UnitFrames.Focus.Debuffs:ClearAllPoints()
-		G.UnitFrames.Focus.Debuffs:Point( "LEFT", G.UnitFrames.Focus, "RIGHT", 5, 0 )
+		G.UnitFrames.Focus.Debuffs:Point( "TOPLEFT", G.UnitFrames.Focus.Health, "TOPRIGHT", 3, 1)
 		G.UnitFrames.Focus.Debuffs.ClearAllPoints = T.dummy
 		G.UnitFrames.Focus.Debuffs.SetPoint = T.dummy
 
@@ -104,9 +104,9 @@ do
 			for _, frames in pairs( { G.UnitFrames.Focus.Debuffs } ) do
 				if( not frames ) then return end
 
-				frames:Size( 175, 20 )
-				frames.size = 20
-				frames.num = 5
+				frames:Size(175, 27)
+				frames.size = 27
+				frames.num = 3
 
 				hooksecurefunc( frames, "PostCreateIcon", T.SkinAura )
 			end

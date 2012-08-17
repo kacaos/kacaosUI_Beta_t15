@@ -87,25 +87,25 @@ do
 -- buffs, debuffs
 --------------------------------------------------------------
 		do
-			G.UnitFrames["Boss" .. i].Debuffs:SetHeight( 20 )
-			G.UnitFrames["Boss" .. i].Debuffs:SetWidth( 175 )
-			G.UnitFrames["Boss" .. i].Debuffs.size = 20
+			G.UnitFrames["Boss" .. i].Debuffs:SetHeight(27)
+			G.UnitFrames["Boss" .. i].Debuffs:SetWidth(175)
+			G.UnitFrames["Boss" .. i].Debuffs.size = 27
 			G.UnitFrames["Boss" .. i].Debuffs.num = 3
 			G.UnitFrames["Boss" .. i].Debuffs.spacing = 1
 
 			G.UnitFrames["Boss" .. i].Debuffs:ClearAllPoints()
-			G.UnitFrames["Boss" .. i].Debuffs:Point( "LEFT", G.UnitFrames["Boss" .. i], "RIGHT", 5, 0 )
+			G.UnitFrames["Boss" .. i].Debuffs:Point( "TOPLEFT", G.UnitFrames["Boss" .. i], "TOPRIGHT", 3, 1)
 			G.UnitFrames["Boss" .. i].Debuffs.ClearAllPoints = T.dummy
 			G.UnitFrames["Boss" .. i].Debuffs.SetPoint = T.dummy
 
-			G.UnitFrames["Boss" .. i].Buffs:SetHeight( 20 )
-			G.UnitFrames["Boss" .. i].Buffs:SetWidth( 175 )
-			G.UnitFrames["Boss" .. i].Buffs.size = 20
+			G.UnitFrames["Boss" .. i].Buffs:SetHeight(27)
+			G.UnitFrames["Boss" .. i].Buffs:SetWidth(175)
+			G.UnitFrames["Boss" .. i].Buffs.size = 27
 			G.UnitFrames["Boss" .. i].Buffs.num = 3
 			G.UnitFrames["Boss" .. i].Buffs.spacing = 1
 
 			G.UnitFrames["Boss" .. i].Buffs:ClearAllPoints()
-			G.UnitFrames["Boss" .. i].Buffs:Point( "RIGHT", G.UnitFrames["Boss" .. i], "LEFT", -5, 0 )
+			G.UnitFrames["Boss" .. i].Buffs:Point( "TOPRIGHT", G.UnitFrames["Boss" .. i].Health, "TOPLEFT", -3, 1)
 			G.UnitFrames["Boss" .. i].Buffs.ClearAllPoints = T.dummy
 			G.UnitFrames["Boss" .. i].Buffs.SetPoint = T.dummy
 
@@ -119,8 +119,8 @@ do
 				for _, frames in pairs( { G.UnitFrames["Boss" .. i].Debuffs, G.UnitFrames["Boss" .. i].Buffs } ) do
 					if( not frames ) then return end
 
-					frames:Size( 175, 20 )
-					frames.size = 20
+					frames:Size(175, 27)
+					frames.size = 27
 					frames.num = 3
 
 					hooksecurefunc( frames, "PostCreateIcon", T.SkinAura )

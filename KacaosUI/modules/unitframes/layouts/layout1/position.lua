@@ -15,14 +15,13 @@ FramePositions:SetScript( "OnEvent", function( self, event, addon )
 	G.UnitFrames.Focus:ClearAllPoints()
 	G.UnitFrames.FocusTarget:ClearAllPoints()
 	
-	if C.actionbar.b2bottom then
-		G.UnitFrames.Player:SetPoint( "TOP", UIParent, "BOTTOM", -257, 150)
-	end
-	G.UnitFrames.Target:SetPoint( "TOP", UIParent, "BOTTOM", 257, 150)
+
+	G.UnitFrames.Player:SetPoint( "TOP", UIParent, "BOTTOM", -228, -201)
+	G.UnitFrames.Target:SetPoint( "TOP", UIParent, "BOTTOM", 228, -201)
 
 	G.UnitFrames.TargetTarget:SetPoint( "TOPRIGHT", G.UnitFrames.Target, "BOTTOMRIGHT", 0, -10)
 	G.UnitFrames.Pet:SetPoint( "TOPLEFT", G.UnitFrames.Player, "BOTTOMLEFT", 0, -10)
-	G.UnitFrames.Focus:SetPoint( "CENTER", UIParent, "CENTER", -400, -150)
+	G.UnitFrames.Focus:SetPoint( "CENTER", UIParent, "CENTER", -600, -120)
 	G.UnitFrames.FocusTarget:SetPoint( "TOP", G.UnitFrames.Focus.Health, "BOTTOM", 0 , -43 )
 
 	for i = 1, MAX_BOSS_FRAMES do

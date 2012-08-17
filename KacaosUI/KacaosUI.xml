@@ -42,13 +42,14 @@
 	<Script file="modules\misc\merchant.lua"/>
 	<Script file="modules\misc\raidcd.lua"/>
 	<Script file="modules\misc\mail.lua"/>
+	<Script file="modules\misc\markbar.lua"/>
 	
 	<Script file="modules\nameplates\nameplates.lua"/>
 	
 	<Script file="modules\classbars\classbars.lua"/>
 	
 	<Script file="modules\skins\blizzard.lua"/>
-	
+	<Script file="modules\unitframes\plugins\cbticks.lua"/>
 	<Script file="modules\unitframes\plugins\exp_rep.lua"/>	
 	<Script file="modules\unitframes\plugins\classicons.lua"/>
 	<Script file="modules\unitframes\tags\tag.lua"/>

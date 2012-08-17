@@ -67,7 +67,7 @@ do
 			local mover = CreateFrame("Frame", "TukuiPlayerCastbarMover", UIParent)
 			mover:Height(C.castbar.pcheight)
 			mover:Width(C.castbar.pcwidth)
-			mover:Point("BOTTOM", UIParent, "BOTTOM", 0, 160)
+			mover:Point("TOP", UIParent, "BOTTOM", 0, -201)
 			mover:SetTemplate()
 			mover:SetBackdropBorderColor(1,0,0)
 			mover:SetClampedToScreen(true)
@@ -96,6 +96,8 @@ do
 			
 			G.UnitFrames.Player.Castbar.PostCastStart = T.PostCastStart
 			G.UnitFrames.Player.Castbar.PostChannelStart = T.PostCastStart
+			G.UnitFrames.Player.Castbar.CustomTimeText = T.CustomCastTimeText
+			G.UnitFrames.Player.Castbar.CustomDelayText = T.CustomCastDelayText
 
 		end
 	end

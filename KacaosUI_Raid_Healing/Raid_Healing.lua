@@ -47,9 +47,16 @@ T.PostUpdateRaidUnit = function( self )
 -- kill some frames
 self.panel:Kill()
 self:SetFrameLevel(1)
+self.panel:Kill()
+local panel = CreateFrame("Frame", nil, self)
+panel:SetTemplate()
+panel:Point("TOPRIGHT", self, "TOPRIGHT", 1, 1)
+panel:Point("BOTTOMLEFT", self, "BOTTOMLEFT", -1, -1)
+panel:SetFrameLevel(2)
+panel:SetFrameStrata("MEDIUM")
+self.panel = panel
 
-local color = RAID_CLASS_COLORS[T.myclass]
-self:HighlightUnit(color.r,color.g,color.b,1)
+self:HighlightUnit(1,1,1,1)
 		
 ------------------------------------------------------
 -- names
@@ -155,6 +162,13 @@ self.Power:SetFrameLevel(8)
 		ResurrectIcon:SetAllPoints()
 		ResurrectIcon:SetDrawLayer("OVERLAY", 7)
 		self.ResurrectIcon = ResurrectIcon
+		
+		if C["unitframes"].aggro == true then
+			table.insert(self.__elements, T.UpdateThreat)
+			self:RegisterEvent('PLAYER_TARGET_CHANGED', T.UpdateThreat)
+			self:RegisterEvent('UNIT_THREAT_LIST_UPDATE', T.UpdateThreat)
+			self:RegisterEvent('UNIT_THREAT_SITUATION_UPDATE', T.UpdateThreat)
+		end
 
 ------------------------------------------------------------
 --MouseOver Highlight (Thx Hydra)

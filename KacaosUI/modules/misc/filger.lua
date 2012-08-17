@@ -352,6 +352,8 @@ ns.Filger_Spells = {
 			{ spellID = 108563, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- PVP Trinket
 			{ spellID = 126683, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Scrarifice
+			{ spellID = 108503, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "Buffs and Debuffs",
@@ -450,114 +452,116 @@ ns.Filger_Spells = {
 			{ spellID = 110913, size = C.filger.iconsize, filter = "CD"},
 			-- Wild Imps
 			{ spellID = 104316, size = C.filger.iconsize, filter = "CD"},
+			-- Scrarifice
+			{ spellID = 108503, size = C.filger.iconsize, filter = "CD"},
 		},
 	},
-	["DRUID"] = { -------------------------------------------------------------------------------------------------------- Druid
-		{
-			Name = "Buffs and Debuffs",
-			Direction = C.filger.buffs,
-			Interval = 3,
-			Mode = "ICON",
-			setPoint = { "LEFT", FilgerPlayerBuffsMover, "LEFT", 0, 0 },
+	-- ["DRUID"] = { -------------------------------------------------------------------------------------------------------- Druid
+		-- {
+			-- Name = "Buffs and Debuffs",
+			-- Direction = C.filger.buffs,
+			-- Interval = 3,
+			-- Mode = "ICON",
+			-- setPoint = { "LEFT", FilgerPlayerBuffsMover, "LEFT", 0, 0 },
 
-			-- Lifebloom
-			{ spellID = 33763, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
-			-- Rejuvenation
-			{ spellID = 774, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
-			-- Regrowth
-			{ spellID = 8936, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
-			-- Wild Growth
-			{ spellID = 48438, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
-		},
+			-- -- Lifebloom
+			-- { spellID = 33763, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
+			-- -- Rejuvenation
+			-- { spellID = 774, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
+			-- -- Regrowth
+			-- { spellID = 8936, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
+			-- -- Wild Growth
+			-- { spellID = 48438, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "BUFF" },
+		-- },
 
 
 
-		{
-			Name = "Druid Procs",
-			Direction = C.filger.proccs,
-			Interval = 4,
-			Mode = "ICON",
-			setPoint = { "LEFT", FilgerPlayerProccsMover, "LEFT", 0, 0 },
+		-- {
+			-- Name = "Druid Procs",
+			-- Direction = C.filger.proccs,
+			-- Interval = 4,
+			-- Mode = "ICON",
+			-- setPoint = { "LEFT", FilgerPlayerProccsMover, "LEFT", 0, 0 },
 
-		-- Eclipse (Lunar)
-			{ spellID = 48518, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Eclipse (Solar)
-			{ spellID = 48517, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Shooting Stars
-			{ spellID = 93400, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Savage Roar
-			{ spellID = 52610, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Survival Instincts
-			{ spellID = 61336, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Tree of Life
-			{ spellID = 33891, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Clearcasting
-			{ spellID = 16870, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Innervate
-			{ spellID = 29166, size = C.filger.iconsize, unitId = "player", caster = "all", filter = "BUFF" },
-			-- Barkskin
-			{ spellID = 22812, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Incarnation
-			{ spellID = 102560, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Nature's Vigil
-			{ spellID = 124974, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Solar Empowerment
-			{ spellID = 129633, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Lunar Empowerment
-			{ spellID = 129632, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Astral Empowerment
-			{ spellID = 130238, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Celestial Alignment
-			{ spellID = 112071, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-		},
-		{
-			Name = "Buffs and Debuffs",
-			Direction = C.filger.debuffs,
-			Interval = 3,
-			Mode = "ICON",
-			setPoint = { "LEFT", FilgerPlayerDebuffsMover, "LEFT", 0, 0 },
+		-- -- Eclipse (Lunar)
+			-- { spellID = 48518, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Eclipse (Solar)
+			-- { spellID = 48517, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Shooting Stars
+			-- { spellID = 93400, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Savage Roar
+			-- { spellID = 52610, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Survival Instincts
+			-- { spellID = 61336, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Tree of Life
+			-- { spellID = 33891, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Clearcasting
+			-- { spellID = 16870, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Innervate
+			-- { spellID = 29166, size = C.filger.iconsize, unitId = "player", caster = "all", filter = "BUFF" },
+			-- -- Barkskin
+			-- { spellID = 22812, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Incarnation
+			-- { spellID = 102560, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Nature's Vigil
+			-- { spellID = 124974, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Solar Empowerment
+			-- { spellID = 129633, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Lunar Empowerment
+			-- { spellID = 129632, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Astral Empowerment
+			-- { spellID = 130238, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- -- Celestial Alignment
+			-- { spellID = 112071, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+		-- },
+		-- {
+			-- Name = "Buffs and Debuffs",
+			-- Direction = C.filger.debuffs,
+			-- Interval = 3,
+			-- Mode = "ICON",
+			-- setPoint = { "LEFT", FilgerPlayerDebuffsMover, "LEFT", 0, 0 },
 
-			-- Hibernate
-			{ spellID = 2637, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
-			-- Entangling Roots
-			{ spellID = 339, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
-			-- Cyclone
-			{ spellID = 33786, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
-			-- Moonfire
-			{ spellID = 8921, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Sunfire
-			{ spellID = 93402, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Insect Swarm
-			{ spellID = 5570, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Rake
-			{ spellID = 1822, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Rip
-			{ spellID = 1079, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Lacerate
-			{ spellID = 33745, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Pounce Bleed
-			{ spellID = 9007, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Mangle
-			{ spellID = 33876, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
-			-- Faerie Fire
-			{ spellID = 770, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
-		},
+			-- -- Hibernate
+			-- { spellID = 2637, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
+			-- -- Entangling Roots
+			-- { spellID = 339, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
+			-- -- Cyclone
+			-- { spellID = 33786, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
+			-- -- Moonfire
+			-- { spellID = 8921, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Sunfire
+			-- { spellID = 93402, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Insect Swarm
+			-- { spellID = 5570, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Rake
+			-- { spellID = 1822, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Rip
+			-- { spellID = 1079, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Lacerate
+			-- { spellID = 33745, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Pounce Bleed
+			-- { spellID = 9007, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Mangle
+			-- { spellID = 33876, size = C.filger.iconsize, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- -- Faerie Fire
+			-- { spellID = 770, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
+		-- },
 		
-			Name = "Cooldown",
-			Direction = C.filger.cd,
-			Interval = 4,
-			Mode = "ICON",
-			setPoint = { "LEFT", FilgerPlayerCDMover, "LEFT", 0, 0 },
+			-- Name = "Cooldown",
+			-- Direction = C.filger.cd,
+			-- Interval = 4,
+			-- Mode = "ICON",
+			-- setPoint = { "LEFT", FilgerPlayerCDMover, "LEFT", 0, 0 },
 
-			-- Celestial Alignment
-			{ spellID = 112071, size = C.filger.iconsize, filter = "CD" },
-			-- Incarnation
-			{ spellID = 102560, size = C.filger.iconsize, filter = "CD" },
-			-- Nature's Vigil
-			{ spellID = 124974, size = C.filger.iconsize, filter = "CD" },
-			-- Force of Nature
-			{ spellID = 33831, size = C.filger.iconsize, filter = "CD" },
-		},
+			-- -- Celestial Alignment
+			-- { spellID = 112071, size = C.filger.iconsize, filter = "CD" },
+			-- -- Incarnation
+			-- { spellID = 102560, size = C.filger.iconsize, filter = "CD" },
+			-- -- Nature's Vigil
+			-- { spellID = 124974, size = C.filger.iconsize, filter = "CD" },
+			-- -- Force of Nature
+			-- { spellID = 33831, size = C.filger.iconsize, filter = "CD" },
+		-- },
 
 	["HUNTER"] = { -------------------------------------------------------------------------------------------------------- Hunter
 		{
@@ -878,6 +882,10 @@ ns.Filger_Spells = {
 			{ spellID = 119086, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Voodoodoll
 			{ spellID = 122151, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Schreckensangst
+			{ spellID = 122768, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Focused Energy
+			{ spellID = 116829, size = 60, unitId = "player", caster = "all", filter = "DEBUFF" },
 		},
 	},
 }
@@ -970,7 +978,7 @@ function Update(self)
 					bar.count = _G[bar.count:GetName()]
 				else
 					bar.count = bar.cooldown:CreateFontString("$parentCount", "OVERLAY")
-					bar.count:SetFont(C.media.font, 12, "MONOCHROMEOUTLINE")
+					bar.count:SetFont(C.media.font, 15, "MONOCHROMEOUTLINE")
 					bar.count:Point("TOPLEFT", 1, -1)
 					bar.count:SetJustifyH("CENTER")
 				end

@@ -56,7 +56,7 @@ C.actionbar = {
 }
 
 C.unitframes = {
-	style = 2,										-- change unitframe style 1 and 2
+	style = 1,										-- change unitframe style 1 and 2
 	showdb = false,									-- show debuffs on target (only layout2)
 	onlyselfdebuffs = false,						-- track only your debuffs on target
 	hpshowp = false,								-- show hp/mp on player and target (only at style 2)
@@ -67,11 +67,12 @@ C.unitframes = {
 	charportrait = true,							-- enable portraits on unitframes
 	movecombobar = false,							-- display the new combo bar (t14+) from target to player (ROGUE ONLY)
 	classicons = true,								-- enable classicons
+	targetpowerpvponly = false,						-- enable power text on pvp target only
 	
 	mouseoverhighlight = true,						-- mouseoverhiglight on raidframe
 	showraidpets = false,							-- enable raidpets
 	minigrid = true,								-- enable minimalistic grid (only dps layout)
-	
+							
 	healthBgColor = { .5, 0.1, 0.1 },				-- choose healthbackground colors
 }
 
@@ -80,6 +81,10 @@ C.castbar = {
 	pcwidth = 200,									-- set player-castbar width
 	tcheight = 8,									-- set target-castbar height
 	tcwidth = 200,									-- set target-castbar width
+	ticks = true,									-- enable ticks
+	classcolor = true,								-- enable classcolor
+	castbarcolor = {1, 1, 1,1},						-- color if classcolor = false
+	nointerruptcolor = {1,.2,.2,1},				 	-- color of casts which can't be interrupted
 }
 
 C.classbar = {

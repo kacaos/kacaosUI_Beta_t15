@@ -56,12 +56,29 @@ end
 
 hooksecurefunc(T, "StyleActionBarButton", StyleActionBarButton)
 
--- local function ShowHighlightActionButton(self)
-	-- if self.overlay then
-		-- self.overlay:Show()
-		-- ActionButton_ShowOverlayGlow(self)
-		-- self.backdrop:SetBackdropBorderColor(0, 0, 0)
-	-- end
--- end
+T.ShowHighlightActionButton = function(self)
+	if self.overlay then
+		local color = RAID_CLASS_COLORS[T.myclass]
+		self.overlay:Hide()
+		ActionButton_HideOverlayGlow(self)
+		self.shine = SpellBook_GetAutoCastShine();
+        self.shine:Show();
+        self.shine:SetParent(self);
+        self.shine:SetPoint("CENTER", self, "CENTER");
+        AutoCastShine_AutoCastStart(self.shine, color.r, color.g, color.b);
 
--- hooksecurefunc("ActionButton_ShowOverlayGlow", ShowHighlightActionButton)
+	for _, sparkle in next, self.shine.sparkles do
+		sparkle:SetHeight(sparkle:GetHeight() * 2)
+		sparkle:SetWidth(sparkle:GetWidth() * 2)
+    end
+	end
+end
+
+T.HideHighlightActionButton = function(self)
+	if self.shine then
+		AutoCastShine_AutoCastStop(self.shine);
+	end
+end
+
+hooksecurefunc("ActionButton_ShowOverlayGlow", T.ShowHighlightActionButton)
+hooksecurefunc("ActionButton_HideOverlayGlow", T.HideHighlightActionButton)

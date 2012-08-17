@@ -6,7 +6,7 @@ if C.unitframes.petshow == false then
 	
 		G.UnitFrames.Pet:Hide()
 else
-		
+
 --------------------------------------------------------------
 -- Pet
 --------------------------------------------------------------
@@ -38,6 +38,8 @@ do
 		G.UnitFrames.Pet.Name:SetShadowOffset( 1.25, -1.25 )
 		G.UnitFrames.Pet.Power:Kill()
 	end
+		G.UnitFrames.Pet.Castbar:ClearAllPoints()
+		G.UnitFrames.Pet.Castbar:SetParent(TukUIHider)
 --------------------------------------------------------------
 -- size
 --------------------------------------------------------------

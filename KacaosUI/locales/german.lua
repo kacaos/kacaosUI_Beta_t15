@@ -90,9 +90,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarpriest = "Aktiviere Priester Klassenleiste"
 		TukuiConfigUILocalization.classbardruid = "Aktiviere Druiden Klassenleiste"
 		TukuiConfigUILocalization.classbarmonk = "Aktiviere Mönch Klassenleiste"
+		TukuiConfigUILocalization.classbarmage = "Aktiviere Magier Klassenleiste"
 		TukuiConfigUILocalization.classbarcombopoints = "Aktiviere Klassenleiste für Schurken und für Druiden(in Katzengestalt)"
 		TukuiConfigUILocalization.classbarheight = "Setze Höhe der Klassenleiste"
-		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste (shards/runen etc.)"
+		TukuiConfigUILocalization.classbarwidth = "Setze Breite der Klassenleiste (shards/runen/pilze etc.)"
 		TukuiConfigUILocalization.classbarebwidth = "Setze Breite für Moonkins und Monks"
 		TukuiConfigUILocalization.merchantautorepair = "Auto Reparieren (Auto-Gildenreparieren muss AUS sein!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto Gildenreparieren (Auto-Repair muss AUS sein!!!)"
@@ -101,6 +102,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.castbarpcwidth = "Setze Spieler-Zauberleisten Breite"
 		TukuiConfigUILocalization.castbartcheight = "Setze Ziel-Zauberleisten Höhe"
 		TukuiConfigUILocalization.castbartcwidth = "Setze Ziel-Zauberleisten Breite"
+		TukuiConfigUILocalization.castbarticks = "Aktiviere Zauberleisten-Ticks"
+		TukuiConfigUILocalization.castbarclasscolor = "Aktiviere Zauberleiste in Klassenfarbe"
+		TukuiConfigUILocalization.castbarcastbarcolor = "Setze Zauberleistenfarbe - wenn die Klassenfarben deaktiviert sind"
+		TukuiConfigUILocalization.castbarnointerruptcolor = "Farbe, wenn der Zauber nicht unterbrochen werden kann"
 	end
 end	
 

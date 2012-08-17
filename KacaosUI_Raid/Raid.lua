@@ -90,11 +90,18 @@ self.panel:Kill()
 self.Power:Kill()
 self.RaidDebuffs:Kill()
 self.AuraWatch:Kill()
+self.panel:Kill()
+local panel = CreateFrame("Frame", nil, self)
+panel:SetTemplate()
+panel:Point("TOPRIGHT", self, "TOPRIGHT", 1, 1)
+panel:Point("BOTTOMLEFT", self, "BOTTOMLEFT", -1, -1)
+panel:SetFrameLevel(2)
+panel:SetFrameStrata("MEDIUM")
+self.panel = panel
 
 self:SetFrameLevel(1)
 
-local color = RAID_CLASS_COLORS[T.myclass]
-self:HighlightUnit(color.r,color.g,color.b,1)
+self:HighlightUnit(1,1,1,1)
 
 ------------------------------------------------------
 -- names
@@ -134,6 +141,19 @@ end
 --------------------------------------------------------
 -- icons
 --------------------------------------------------------
+		local leader = self.Health:CreateTexture( nil, "OVERLAY" )
+		leader:Height(15)
+		leader:Width(15)
+		leader:SetPoint("TOPRIGHT", 0,6)
+		self.Leader = leader
+
+		local MasterLooter = self.Health:CreateTexture( nil, "OVERLAY" )
+		MasterLooter:Height(15)
+		MasterLooter:Width(15)
+		MasterLooter:SetPoint("TOPRIGHT", -18,8)
+		self.MasterLooter = MasterLooter
+		self:RegisterEvent("PARTY_LEADER_CHANGED", T.MLAnchorUpdate)
+		self:RegisterEvent("PARTY_MEMBERS_CHANGED", T.MLAnchorUpdate)
 
 		local LFDRole = self.Health:CreateTexture( nil, "OVERLAY" )
 		LFDRole:Height(15)
@@ -151,6 +171,13 @@ end
 		ResurrectIcon:SetAllPoints()
 		ResurrectIcon:SetDrawLayer("OVERLAY", 7)
 		self.ResurrectIcon = ResurrectIcon
+		
+		if C["unitframes"].aggro == true then
+			table.insert(self.__elements, T.UpdateThreat)
+			self:RegisterEvent('PLAYER_TARGET_CHANGED', T.UpdateThreat)
+			self:RegisterEvent('UNIT_THREAT_LIST_UPDATE', T.UpdateThreat)
+			self:RegisterEvent('UNIT_THREAT_SITUATION_UPDATE', T.UpdateThreat)
+		end
 		
 --------------------------------------------------------------
 -- debuffs

@@ -24,13 +24,3 @@ hooksecurefunc(T, "PostNamePosition", function(self)
 		self.Name:SetPoint("LEFT", self.Health, "LEFT", 1, -25)
 	end
 end)
-
-T.PostCastStart = function(self, unit, name, rank, castid)
-	if unit == "vehicle" then unit = "player" end
-
-	if self.interrupt and UnitCanAttack("player", unit) then
-		self:SetStatusBarColor(1,.2,.2,1)
-	else
-		self:SetStatusBarColor(1, 1, 1,1)	
-	end
-end

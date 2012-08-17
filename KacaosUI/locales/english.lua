@@ -2,7 +2,7 @@ local T, C, L = unpack(Tukui)
 T.kacaosrelease = GetAddOnMetadata("KacaosUI", "Version")
 
 if TukuiConfigUILocalization then
-	if T.client == "enEN" then
+	if T.client ~= "deDE" then
 		TukuiConfigUILocalization.unitframesmouseoverhighlight = "Activate mouseover higlight at raidframes layout2"
 		TukuiConfigUILocalization.unitframesstyle = "Unitframestyle choose 1 or 2"
 		TukuiConfigUILocalization.unitframestotshow = "Show Target of Target"
@@ -82,9 +82,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarpriest = "Enable Priest Classbars"
 		TukuiConfigUILocalization.classbardruid = "Enable Druid Classbars"
 		TukuiConfigUILocalization.classbarmonk = "Enable Monk Classbars"
-		TukuiConfigUILocalization.classbarcombopoints = "Enable combopoints for rogue and druid (in catform) "
+		TukuiConfigUILocalization.classbarcombopoints = "Enable combopoints for rogue and druid (in catform)"
+		TukuiConfigUILocalization.classbarmage = "Enable Mage Classbars"
 		TukuiConfigUILocalization.classbarheight = "Set Height of classbars"
-		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (shards/runes etc.)"
+		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (shards/runes/mushrooms etc.)"
 		TukuiConfigUILocalization.classbarebwidth = "Set width for moonkins and monks"
 		TukuiConfigUILocalization.merchantautorepair = "Auto repair (auto-Guildrepair need to be OFF!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto guild-repair (auto-repair need to be OFF!!!)"
@@ -93,6 +94,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.castbarpcwidth = "Set Player-Castbar Width"
 		TukuiConfigUILocalization.castbartcheight = "Set Target-Castbar Height"
 		TukuiConfigUILocalization.castbartcwidth = "Set Target-Castbar Width"
+		TukuiConfigUILocalization.castbarticks = "Enable Castbarticks"
+		TukuiConfigUILocalization.castbarclasscolor = "Enable classcolored castbars"
+		TukuiConfigUILocalization.castbarcastbarcolor = "Classbarcolor if classcolored is disabled"
+		TukuiConfigUILocalization.castbarnointerruptcolor = "Color if spell cant interrupt"
 	end
 end	
 
