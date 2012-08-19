@@ -12,7 +12,6 @@ local function style(self)
 
 	local Count = _G[name.."Count"]
 	local HotKey = _G[name.."HotKey"]
-	local Border = _G[name.."Panel"]
 	local Icon = _G[name.."Icon"]
 
 	Count:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
@@ -22,19 +21,14 @@ local function style(self)
 
     Icon:Point("TOPLEFT", 1, -1)
 	Icon:Point("BOTTOMRIGHT", -1, 1)
-	
-	--Border:SetBackdropColor(0,0,0,0.5)
 end
 hooksecurefunc("ActionButton_Update", style)
 
 local function StyleActionBarPetAndShiftButton(normal, button, icon, name, pet)
 	local Icon = _G[name.."Icon"]
-	local Border = _G[name.."Panel"]
 	
     Icon:Point("TOPLEFT", 1, -1)
 	Icon:Point("BOTTOMRIGHT", -1, 1)
-	
-	--Border:SetBackdropColor(0,0,0,0.5)
 	
 end
 
@@ -43,14 +37,11 @@ hooksecurefunc(T, "StyleActionBarPetAndShiftButton", StyleActionBarPetAndShiftBu
 local function StyleActionBarButton(self)
 	local name = self:GetName()
 	local Icon = _G[name.."Icon"]
-	local Border = _G[name.."Panel"]
 
 	if name:match("MultiCast") or name:match("ExtraActionButton") then return end
 
     Icon:Point("TOPLEFT", 1, -1)
 	Icon:Point("BOTTOMRIGHT", -1, 1)
-	
-	--Border:SetBackdropColor(0,0,0,0.5)
 	
 end
 

@@ -26,6 +26,7 @@ if C["unitframes"].raidunitdebuffwatch == true then
 				{1044, "BOTTOMRIGHT", {0.89, 0.45, 0}, true},	-- Hand of Freedom
 				{1038, "BOTTOMRIGHT", {0.93, 0.75, 0}, true},	-- Hand of Salvation
 				{6940, "BOTTOMRIGHT", {0.89, 0.1, 0.1}, true},	-- Hand of Sacrifice
+				{65148, "BOTTOMLEFT", {0.89, 0.1, 0.1}},		-- Sacred Shield
 			},
 			SHAMAN = {
 				{61295, "TOPRIGHT", {0.7, 0.3, 0.7}},			-- Riptide 
@@ -66,68 +67,89 @@ if C["unitframes"].raidunitdebuffwatch == true then
 		end
 
 		T.debuffids = {
-		-----------------------------------------------------------------
-		-- Pandaria
-		-----------------------------------------------------------------
-		-- Heart of Fear
-			-- Imperial Vizier Zor'lok
-			SpellName(122761),		-- Exhale
-			SpellName(122760), 		-- Exhale
-			SpellName(122740),		-- Convert
-			SpellName(123812),		-- Pheromones of Zeal
-			-- Blade Lord Ta'yak
-			SpellName(123180),		-- Wind Step
-			SpellName(123474),		-- Overwhelming Assault
-			-- Garalon
-			SpellName(122835),		-- Pheromones
-			SpellName(123081),		-- Pungency
-			-- Wind Lord Mel'jarak
-			SpellName(122125),		-- Corrosive Resin Pool
-			SpellName(121885), 		-- Amber Prison (10 Men)
-			-- Amber-Shaper Un'sok
-			SpellName(121949),		-- Parasitic Growth
-			-- Grand Empress Shek'zeer
-		-- Mogu'shan Vaults
-			-- The Stone Guard
-			SpellName(116281),		-- Cobalt Mine Blast
-			-- Feng the Accursed
-			SpellName(116784),		-- Wildfire Spark
-			SpellName(116417),		-- Arcane Resonance
-			SpellName(116942),		-- Flaming Spear
-			-- Gara'jal the Spiritbinder
-			SpellName(116161),		-- Crossed Over
-			-- The Spirit Kings
-			SpellName(117708),		-- Maddening Shout
-			SpellName(118303),		-- Fixate
-			SpellName(118048),		-- Pillaged
-			SpellName(118135),		-- Pinned Down
-			-- Elegon
-			SpellName(117878),		-- Overcharged
-			SpellName(117949),		-- Closed Circuit
-			-- Will of the Emperor
-			SpellName(116835),		-- Devastating Arc
-			SpellName(116778),		-- Focused Defense
-			SpellName(116525),		-- Focused Assault
-		-- Terrace of Endless Spring
-			-- Protectors of the Endless
-			SpellName(117436),		-- Lightning Prison
-			SpellName(118091),		-- Defiled Ground
-			SpellName(117519),		-- Touch of Sha
-			-- Sha of Anger
-			-- Salyis's Warband
-			-- Tsulong
-			SpellName(122752),		-- Shadow Breath
-			SpellName(123011),		-- Terrorize
-			SpellName(116161),		-- Crossed Over
-			-- Lei Shi
-			SpellName(123121),		-- Spray
-			-- Sha of Fear
-			SpellName(119985),		-- Dread Spray
-			SpellName(119086),		-- Penetrating Bolt
-			SpellName(119775),		-- Reaching Attack
-			
-			SpellName(6788),
-		}
+-----------------------------------------------------------------
+-- Kun-Lai Summit
+-----------------------------------------------------------------
+		-- Sha of Anger
+		SpellName(119626),	-- Aggressive Behavior
+		SpellName(119488),	-- Unleashed Wrath
+
+-----------------------------------------------------------------
+-- Mogu'shan Vaults
+-----------------------------------------------------------------
+		-- The Stone Guard
+		SpellName(116281),	-- Cobalt Mine Blast
+		
+		-- Feng the Accursed
+		SpellName(116784),	-- Wildfire Spark
+		SpellName(116417),	-- Arcane Resonance
+		SpellName(116942),	-- Flaming Spear
+		
+		-- Gara'jal the Spiritbinder
+		SpellName(116161),	-- Crossed Over
+
+		-- The Spirit Kings
+		SpellName(117708),	-- Maddening Shout
+		SpellName(118303),	-- Fixate
+		SpellName(118048),	-- Pillaged
+		SpellName(118135),	-- Pinned Down
+		
+		-- Elegon
+		SpellName(117878),	-- Overcharged
+		SpellName(117949),	-- Closed Circuit
+		
+		-- Will of the Emperor
+		SpellName(116835),	-- Devastating Arc
+		SpellName(116778),	-- Focused Defense
+		SpellName(116525),	-- Focused Assault
+		
+-----------------------------------------------------------------
+-- Heart of Fear
+-----------------------------------------------------------------
+		-- Imperial Vizier Zor'lok
+		SpellName(122761),	-- Exhale
+		SpellName(122760), -- Exhale
+		SpellName(122740),	-- Convert
+		SpellName(123812),	-- Pheromones of Zeal
+		
+		-- Blade Lord Ta'yak
+		SpellName(123180),	-- Wind Step
+		SpellName(123474),	-- Overwhelming Assault
+		
+		-- Garalon
+		SpellName(122835),	-- Pheromones
+		SpellName(123081),	-- Pungency
+		
+		-- Wind Lord Mel'jarak
+		SpellName(122125),	-- Corrosive Resin Pool
+		SpellName(121885), -- Amber Prison
+		
+		-- Amber-Shaper Un'sok
+		SpellName(121949),	-- Parasitic Growth
+		
+		-- Grand Empress Shek'zeer
+
+-----------------------------------------------------------------
+-- Terrace of Endless Spring
+-----------------------------------------------------------------
+		-- Protectors of the Endless
+		SpellName(117436),	-- Lightning Prison
+		SpellName(118091),	-- Defiled Ground
+		SpellName(117519),	-- Touch of Sha
+
+		-- Tsulong
+		SpellName(122752),	-- Shadow Breath
+		SpellName(123011),	-- Terrorize
+		SpellName(116161),	-- Crossed Over
+		
+		-- Lei Shi
+		SpellName(123121),	-- Spray
+		
+		-- Sha of Fear
+		SpellName(119985),	-- Dread Spray
+		SpellName(119086),	-- Penetrating Bolt
+		SpellName(119775),	-- Reaching Attack
+}
 
 		T.ReverseTimer = {
 

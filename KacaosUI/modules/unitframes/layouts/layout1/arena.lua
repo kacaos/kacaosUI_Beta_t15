@@ -17,7 +17,7 @@ do
 -- health
 --------------------------------------------------------------
 		do
-			G.UnitFrames["Arena" .. i].Health:Size( 175, 20 )
+			G.UnitFrames["Arena" .. i].Health:Size(175, 20)
 			G.UnitFrames["Arena" .. i].Health:SetStatusBarTexture(C["media"].normTex)
 			G.UnitFrames["Arena" .. i].Health:SetFrameLevel( 5 )
 			G.UnitFrames["Arena" .. i].Health:AddBorder()
@@ -39,7 +39,7 @@ do
 -- power
 --------------------------------------------------------------
 		do
-			G.UnitFrames["Arena" .. i].Power:Size( 175, 2 )
+			G.UnitFrames["Arena" .. i].Power:Size(175, 2)
 			G.UnitFrames["Arena" .. i].Power:SetStatusBarTexture(C["media"].normTex)
 			G.UnitFrames["Arena" .. i].Power:ClearAllPoints()
 			G.UnitFrames["Arena" .. i].Power:Point( "TOPRIGHT", G.UnitFrames["Arena" .. i].Health, "BOTTOMRIGHT", 0, -3 )
@@ -76,33 +76,30 @@ do
 				G.UnitFrames["Arena" .. i].Castbar.PostCastStart = T.PostCastStart
 				G.UnitFrames["Arena" .. i].Castbar.PostChannelStart = T.PostCastStart
 
-				if( C["unitframes"].cbicons == true ) then
-					G.UnitFrames["Arena" .. i].Castbar:Width( 173 )
-
-					G.UnitFrames["Arena" .. i].Castbar.button:ClearAllPoints()
-					G.UnitFrames["Arena" .. i].Castbar.button:SetPoint( "RIGHT", G.UnitFrames["Arena" .. i].Castbar, "LEFT", -5, 0 )
-					G.UnitFrames["Arena" .. i].Castbar.button:Size( 24 )
-					G.UnitFrames["Arena" .. i].Castbar.button:CreateShadow( "Default" )
-				else
-					G.UnitFrames["Arena" .. i].Castbar:Width( 175 )
-
-					G.UnitFrames["Arena" .. i].Castbar.button:Kill()
+				G.UnitFrames["Arena" .. i].Castbar:Width( 175 )
+				G.UnitFrames["Arena" .. i].Castbar.button:Kill()
 				end
 			end
+		do
+			G.UnitFrames["Arena" .. i].PVPSpecIcon:ClearAllPoints()
+			G.UnitFrames["Arena" .. i].PVPSpecIcon:Point( "TOPLEFT", G.UnitFrames["Arena" .. i], "TOPRIGHT", 3, 1)
+			G.UnitFrames["Arena" .. i].PVPSpecIcon:Size(27)
+			G.UnitFrames["Arena" .. i].PVPSpecIcon:CreateShadow(nil)
 		end
+		
 
 --------------------------------------------------------------
 -- buffs, debuffs
 --------------------------------------------------------------
 		do
-			G.UnitFrames["Arena" .. i].Debuffs:SetHeight( 20 )
-			G.UnitFrames["Arena" .. i].Debuffs:SetWidth( 175 )
-			G.UnitFrames["Arena" .. i].Debuffs.size = 20
-			G.UnitFrames["Arena" .. i].Debuffs.num = 5
-			G.UnitFrames["Arena" .. i].Debuffs.spacing = 3
+			G.UnitFrames["Arena" .. i].Debuffs:SetHeight(27)
+			G.UnitFrames["Arena" .. i].Debuffs:SetWidth(175)
+			G.UnitFrames["Arena" .. i].Debuffs.size = 27
+			G.UnitFrames["Arena" .. i].Debuffs.num = 3
+			G.UnitFrames["Arena" .. i].Debuffs.spacing = 1
 
 			G.UnitFrames["Arena" .. i].Debuffs:ClearAllPoints()
-			G.UnitFrames["Arena" .. i].Debuffs:Point( "LEFT", G.UnitFrames["Arena" .. i], "RIGHT", 5, 0 )
+			G.UnitFrames["Arena" .. i].Debuffs:Point( "TOPLEFT", G.UnitFrames["Arena" .. i], "TOPRIGHT", 3, 1 )
 			G.UnitFrames["Arena" .. i].Debuffs.ClearAllPoints = T.dummy
 			G.UnitFrames["Arena" .. i].Debuffs.SetPoint = T.dummy
 
@@ -113,9 +110,9 @@ do
 				for _, frames in pairs( { G.UnitFrames["Arena" .. i].Debuffs } ) do
 					if( not frames ) then return end
 
-					frames:Size( 175, 20 )
-					frames.size = 20
-					frames.num = 5
+					frames:Size(175, 27)
+					frames.size = 27
+					frames.num = 3
 
 					hooksecurefunc( frames, "PostCreateIcon", T.SkinAura )
 				end
@@ -125,13 +122,17 @@ do
 --------------------------------------------------------------
 -- trinket
 --------------------------------------------------------------
-		do
-			G.UnitFrames["Arena" .. i].Trinketbg:ClearAllPoints()
-			G.UnitFrames["Arena" .. i].Trinketbg:Point( "RIGHT", G.UnitFrames["Arena" .. i], "LEFT", -5, 0 )
-			G.UnitFrames["Arena" .. i].Trinketbg:Size( 20 )
-			G.UnitFrames["Arena" .. i].Trinketbg:CreateShadow( "Default" )
-		end
+	do
+		G.UnitFrames["Arena" .. i].Trinket:ClearAllPoints()
+		G.UnitFrames["Arena" .. i].Trinket:Point( "TOPRIGHT", G.UnitFrames["Arena" .. i], "TOPLEFT", -3, 1)
+		G.UnitFrames["Arena" .. i].Trinket:Size(27)
+	end
 
+		TukuiPrepArena1:CreateBackdrop("Default")
+		TukuiPrepArena2:CreateBackdrop("Default")
+		TukuiPrepArena3:CreateBackdrop("Default")
+		TukuiPrepArena4:CreateBackdrop("Default")
+		TukuiPrepArena5:CreateBackdrop("Default")
 		------------------------------
 		-- size
 		------------------------------
