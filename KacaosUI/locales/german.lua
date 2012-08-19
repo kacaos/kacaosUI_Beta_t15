@@ -42,6 +42,7 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.miscraidbuffreminder = "Aktiviere den Raidbuffreminder (anzeige wichtiger spells im raid)"
 		TukuiConfigUILocalization.mischyperlink = "Itemlinks im Chat per Mouseover"
 		TukuiConfigUILocalization.miscinfobottom = "Aktiviere das Panel am unteren Bildschirmrand"
+		TukuiConfigUILocalization.miscdatapanels = "Aktiviere die 5 Datapanels in der oberen rechten Ecke"
 		TukuiConfigUILocalization.aurasbuffsfadeout = "Blende die Spielerbuffs im Kampf aus"
 		TukuiConfigUILocalization.tooltipilvl = "Aktiviere ilvl im Tooltip"
 		TukuiConfigUILocalization.filger = "Filger"
@@ -167,7 +168,7 @@ if T.client == "deDE" then
 	L.duffeduihelp_content8_line4 = ""
 
 	L.duffeduihelp_content3_title = "|cff1E90FFVerschiedenes|r"
-	L.duffeduihelp_content3_line1 = "Dort hast du einige Optionen welche ich dir hier kurz aufliste:\n\nAktiviere den Raidbuffreminder (Ein Panel welches am oberen Rand des Bildschirm ist. Um zu sehen welche Buffs man besitzt und welche noch fehlen).\n\nDie Bedrohungsleiste ein- und auszuschalten\n\nEine AFK-Spin-Cam zu aktivieren (Drehen des Bildschirms wenn du als AFK geflaged wirst).\n\nDas Itemlevel im Charakterfenster sowie die Haltbarkeit anzuzeigen\n\nItemlinks im Chat per Mouseover anzeigen zu lassen\n\nDas Panel am unteren Rand aktivieren (siehe Layouts)."
+	L.duffeduihelp_content3_line1 = "Dort hast du einige Optionen welche ich dir hier kurz aufliste:\n\nAktiviere den Raidbuffreminder (Ein Panel welches am oberen Rand des Bildschirm ist. Um zu sehen welche Buffs man besitzt und welche noch fehlen).\n\nDie Bedrohungsleiste ein- und auszuschalten\n\nEine AFK-Spin-Cam zu aktivieren (Drehen des Bildschirms wenn du als AFK geflaged wirst).\n\nDas Itemlevel im Charakterfenster sowie die Haltbarkeit anzuzeigen\n\nItemlinks im Chat per Mouseover anzeigen zu lassen\n\nDas Panel am unteren Rand aktivieren (siehe Layouts).\n\nDie 5 Datapanels in der oberen rechten Ecke zu aktivieren."
 	L.duffeduihelp_content3_line3 = ""
 	L.duffeduihelp_content3_line4 = ""
 
@@ -180,7 +181,7 @@ if T.client == "deDE" then
 	L.duffeduihelp_content5_title = "|cff1E90FFLayouts|r"
 	L.duffeduihelp_content5_line1 = "Hier kannst du zwischen Zwei Panellayouts w\195\164hlen.\n\nDu kannst in der Ingame Config unter - Verschiedenes die Option - Aktiviere das Panel am unteren Bildschirmrand - ausw\195\164hlen."
 	L.duffeduihelp_content5_line2 = "Hast du das getan, dann hast du unten ein Panel in welches du mit Hilfe der Option von den Infotexten in der Config, dir die f\195\188r dich wichtigsten Datatexte einstellen kannst.\n\nDu hast insgesamt 6 Datatexte zur Auswahl, da es nur diese 6 eingestellten Pl\195\164tze gibt."
-	L.duffeduihelp_content5_line3 = "Nun Liste ich die einzelnen Positionen der Ankerpunkte f\195\188r die Datatexte auf:\n\nLinks unten der 1. = 7\nLinks unten der 2. = 8\nLinks unten der 3. = 9\n\nRechts unten der 1. = 6\nRechts unten der 2. = 5\nRechts unten der 3. = 4"
+	L.duffeduihelp_content5_line3 = "Nun Liste ich die einzelnen Positionen der Ankerpunkte f\195\188r die Datatexte auf:\n\nLinks unten der 1. = 7\nLinks unten der 2. = 8\nLinks unten der 3. = 9\n\nRechts unten der 1. = 6\nRechts unten der 2. = 5\nRechts unten der 3. = 4\n\n1.Datapanel = 15\n2.Datapanel = 16\n3.Datapanel = 17\n4.Datapanel = 18\n5.Datapanel = 19"
 	L.duffeduihelp_content5_line4 = "\nAußerdem kannst du über den Button neben dem Chat ein Controlpanel aufrufen. Dort findest du weitere Optionen / UIButtons."
 
 	L.duffeduihelp_content7_title = "|cff1E90FFChat|r"

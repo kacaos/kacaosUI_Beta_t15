@@ -74,10 +74,6 @@ do
 				G.UnitFrames["Boss" .. i].Castbar.Text:Point( "LEFT", G.UnitFrames["Boss" .. i].Castbar, "LEFT", 4, 0)
 				G.UnitFrames["Boss" .. i].Castbar.Text:SetShadowOffset(0,0)
 
-				G.UnitFrames["Boss" .. i].Castbar.PostCastStart = T.PostCastStart
-				G.UnitFrames["Boss" .. i].Castbar.PostChannelStart = T.PostCastStart
-
-
 				G.UnitFrames["Boss" .. i].Castbar:Width(175)
 				G.UnitFrames["Boss" .. i].Castbar.button:Kill()
 			end

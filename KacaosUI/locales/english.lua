@@ -34,6 +34,7 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.miscspecialbuff = "Set Specialbuff im Raidbuffreminder"
 		TukuiConfigUILocalization.mischyperlink = "Show itemlinks in chat on mouseover"
 		TukuiConfigUILocalization.miscinfobottom = "Activate the bottom panel"
+		TukuiConfigUILocalization.miscdatapanels = "Activate the 5 datapanels in the upper-right corner"
 		TukuiConfigUILocalization.aurasbuffsfadeout = "Fadeout Playerbuffs infight"
 		TukuiConfigUILocalization.tooltipilvl = "Show ilvl in tooltip"
 		TukuiConfigUILocalization.filger = "Filger"
@@ -159,7 +160,7 @@ if T.client == "enEN" then
     L.duffeduihelp_content8_line4 = ""
    
     L.duffeduihelp_content3_title = "|cff1E90FFMiscellaneous|r"
-    L.duffeduihelp_content3_line1 = "There you have some options which I want to list now:\n\nActivate the RaidBuffReminder (A panel which is placed at the top edge of the screen. It helps you detect which buffs are given in a raid or not(f.e. Arcane Brilliance).\n\nTo enable or disable the threatbar.\n\nTo enable or disable a AFK-Spincam (rotates the screen slowly when youre flagged as AFK).\n\nTo display the itemlevel and the durability in the Characterpanel.\n\nShow the items linked in the chat with just mouseover (normally by clicking)\n\nEnable a Bottompanel (see layouts)."
+    L.duffeduihelp_content3_line1 = "There you have some options which I want to list now:\n\nActivate the RaidBuffReminder (A panel which is placed at the top edge of the screen. It helps you detect which buffs are given in a raid or not(f.e. Arcane Brilliance).\n\nTo enable or disable the threatbar.\n\nTo enable or disable a AFK-Spincam (rotates the screen slowly when youre flagged as AFK).\n\nTo display the itemlevel and the durability in the Characterpanel.\n\nShow the items linked in the chat with just mouseover (normally by clicking)\n\nEnable a Bottompanel (see layouts).\n\nEnable the 5 datapanels in the upper-right corner."
     L.duffeduihelp_content3_line3 = ""
     L.duffeduihelp_content3_line4 = ""
    
@@ -172,7 +173,7 @@ if T.client == "enEN" then
     L.duffeduihelp_content5_title = "|cff1E90FFLayouts|r"
     L.duffeduihelp_content5_line1 = "Here you can choose between 2 panellayouts.\n\nIn the ingameconfig under miscellaneous you can activate the panel at the bottom of the screen."
     L.duffeduihelp_content5_line2 = "When you did that you have a panel at the bottom of the screen where you can place 6 datatexts which the datatexts you want."
-    L.duffeduihelp_content5_line3 = "Now I list the anchorpoints for the datatexts:\n\nThere are 3 in the bottom right and 3 in the bottom left. In the bottom left we have the datatexts |cff1E90FF7,8,9|r from the ingameconfig and in the bottom right we have the datatexts |cff1E90FF4,5,6|r from the ingameconfig."
+    L.duffeduihelp_content5_line3 = "Now I list the anchorpoints for the datatexts:\n\nThere are 3 in the bottom right and 3 in the bottom left. In the bottom left we have the datatexts |cff1E90FF7,8,9|r from the ingameconfig and in the bottom right we have the datatexts |cff1E90FF4,5,6|r from the ingameconfig. The datatextpoints for the datatexts are |cff1E90FF15, 16, 17, 18, 19|r from top to bottom."
     L.duffeduihelp_content5_line4 = "\nIf you click the button next to the chat, you will be able to open an controlpanel. This controlpanel have some options / uibuttons."
    
     L.duffeduihelp_content7_title = "|cff1E90FFChat|r"

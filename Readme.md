@@ -5,7 +5,7 @@ This is the Beta-version of KacaosUI.
 At this time all works fine. Some little changes i need to do.
 
 
-![placeholder img](http://dl.dropbox.com/u/53632790/WoWScrnShot_080412_004441.jpg)              
+![placeholder img](https://dl.dropbox.com/u/53632790/WoWScrnShot_081912_183108.jpg)              
 
 
 

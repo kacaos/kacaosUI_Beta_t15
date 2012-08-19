@@ -122,6 +122,7 @@ C.misc = {
 	raidbuffreminder = false,						-- raidbuffreminder at the top of the screen
 	ilvlr = true,									-- show ilvl and durability in charakterframe
 	infobottom = false,								-- show infopanel at the bottom of you screen
+	datapanels = true,								-- enable 5 datapanels in topleft
 }
 
 C.auras = {
