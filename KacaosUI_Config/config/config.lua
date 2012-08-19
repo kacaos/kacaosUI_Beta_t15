@@ -42,7 +42,6 @@ C.datatext = {
 
 C.actionbar = {
 	style = 2,										-- change between styl 1 and 2
-	allbars = true,									-- get 1bottom bar with 14buttons and 3 sidebars								
 	bar4 = true,									-- activate 2 bottombars and 3 sidebars
 	buttonspacing = 3,								-- buttonspacing of actionbars
 	petbuttonsize = 18,								-- size of petactionbarbuttons
@@ -51,8 +50,8 @@ C.actionbar = {
 	sidebar2mouseover = true,						-- rightbar2 on mouseover
 	sidebar3mouseover = true,						-- rightbar3 on mouseover
 	b2bottom = true,								-- enable 3 bottomrows (only useable together with 2bottombars option)
-	hpetbar = true,									-- enable vertical petbar (only in layout2)
-	hideshapeshift = true,							-- hide shapeshift or totembar because it was a lot requested.
+	hpetbar = true,									-- enable vertical petbar
+	hideshapeshift = true,							-- hide shapeshift or totembar
 }
 
 C.unitframes = {
@@ -77,9 +76,9 @@ C.unitframes = {
 }
 
 C.castbar = {
-	pcheight = 8,									-- set player-castbar height
+	pcheight = 15,									-- set player-castbar height
 	pcwidth = 200,									-- set player-castbar width
-	tcheight = 8,									-- set target-castbar height
+	tcheight = 15,									-- set target-castbar height
 	tcwidth = 200,									-- set target-castbar width
 	ticks = true,									-- enable ticks
 	classcolor = true,								-- enable classcolor

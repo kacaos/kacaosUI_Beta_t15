@@ -67,7 +67,7 @@ do
 			local mover = CreateFrame("Frame", "TukuiPlayerCastbarMover", UIParent)
 			mover:Height(C.castbar.pcheight)
 			mover:Width(C.castbar.pcwidth)
-			mover:Point("TOP", UIParent, "BOTTOM", 0, -201)
+			mover:Point("CENTER", UIParent, "CENTER", 0, -201)
 			mover:SetTemplate()
 			mover:SetBackdropBorderColor(1,0,0)
 			mover:SetClampedToScreen(true)

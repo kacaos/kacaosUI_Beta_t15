@@ -13,7 +13,6 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.unitframeshealthBgColor = "Choose backgroundcolor of healtbars"
 		TukuiConfigUILocalization.unitframesclassicons = "Enable Classicons"
 		TukuiConfigUILocalization.actionbarstyle = "Actionbarlayout 1 or 2"
-		TukuiConfigUILocalization.actionbarallbars = "Show AllBars (only in actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarbar4 = "Activate 2 bars at the bottom (only in actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarb2bottom = "Activate 2 bars at the bottom (only useable with activated option Activate 2 bars at the bottom and Actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarsidebar1mouseover = "Bar 5 on mouseover"

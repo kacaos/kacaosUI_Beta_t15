@@ -10,7 +10,7 @@ local ebWidth = C.classbar.ebwidth
 local mover = CreateFrame("Frame", "tbMover", TukuiBar1)
 mover:Width(tbWidth)
 mover:Height(tbHeight+3)
-mover:Point("BOTTOM", UIParent, "CENTER", 1, -200)
+mover:Point("BOTTOM", UIParent, "CENTER", 1, -250)
 mover:SetTemplate()
 mover:SetBackdropBorderColor(1,0,0)
 mover:SetClampedToScreen(true)

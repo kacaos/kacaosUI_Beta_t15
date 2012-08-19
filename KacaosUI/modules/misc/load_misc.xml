@@ -1,0 +1,16 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="uibuttons.lua"/>
+	<Script file="addonmanager.lua"/>
+	<Script file="afkcam.lua"/>
+	<Script file="ilvlr.lua"/>
+	<Script file="threatbar.lua"/>
+	<Script file="altpowerbar.lua"/>
+	<Script file="raidbuffreminder.lua"/>
+	<Script file="filger.lua"/>
+	<Script file="combattext.lua"/>
+	<Script file="wlexecut.lua"/>
+	<Script file="merchant.lua"/>
+	<Script file="raidcd.lua"/>
+	<Script file="mail.lua"/>
+	<Script file="markbar.lua"/>
+</Ui>

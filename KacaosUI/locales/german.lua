@@ -22,7 +22,6 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.unitframeshealthBgColor = "Setze Hintergrundfarbe der Gesundheitsleiste"
 		TukuiConfigUILocalization.unitframesclassicons = "Aktiviere Klassensymbole"
 		TukuiConfigUILocalization.actionbarstyle = "Aktionsleistenstyle 1 oder 2"
-		TukuiConfigUILocalization.actionbarallbars = "Aktiviere alle Bars (nur in Aktionsleistenlayout1)"
 		TukuiConfigUILocalization.actionbarbar4 = "Aktiviere 2 Bars unten (nur in Aktionsleistenlayout1)"
 		TukuiConfigUILocalization.actionbarb2bottom = "Aktiviere 3 Bars unten (funktioniert nur mit Aktiviere 2 Bars unten und Aktionsleistenlayout1)"
 		TukuiConfigUILocalization.actionbarsidebar1mouseover = "Bar 5 auf mouseover"
@@ -176,7 +175,7 @@ if T.client == "deDE" then
 	L.duffeduihelp_content2_line1 = "Du hast zwei unterschiedliche Aktionleistenlayouts zwischen den du w\195\164hlen kannst."
 	L.duffeduihelp_content2_line2 = "Du kannst einmal das Layout1 benutzen, in welchem du alle deine Bars unten in der mitte und rechts am Rand hast. Oder du nutzt das Layout2 in welchem du eine Splitbar in der Mitte des Bildschirms hast."
 	L.duffeduihelp_content2_line3 = "Bei dem Layout1 hast du die wahl:\n\n3x12 Bottombars + 2x12 Rightbars\n2x12 Bottombars + 3x12 Rightbars\n1x14 Bottombar + 3x12 Rightbars\n\nIn dem Layout2 hast du in der Mitte:\n\n2x6 + Splitbar Links u. Rechts 2x6 Bars + 2x12 Rightbars."
-	L.duffeduihelp_content2_line4 = "In dem 2. Layout kann man die Petbar horzitonal und vertikal einstellen. Ausserdem sind die Aktionsleisten mit dem Befehl moveui bewegbar :)"
+	L.duffeduihelp_content2_line4 = "In beiden layouts kann man sich die Petbar horzitonal und vertikal anzeigen lassen. Ausserdem sind die Aktionsleisten mit dem Befehl moveui bewegbar :)"
 
 	L.duffeduihelp_content5_title = "|cff1E90FFLayouts|r"
 	L.duffeduihelp_content5_line1 = "Hier kannst du zwischen Zwei Panellayouts w\195\164hlen.\n\nDu kannst in der Ingame Config unter - Verschiedenes die Option - Aktiviere das Panel am unteren Bildschirmrand - ausw\195\164hlen."

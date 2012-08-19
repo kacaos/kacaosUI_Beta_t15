@@ -11,7 +11,6 @@ do
 		G.UnitFrames.Focus:SetBackdropColor( 0, 0, 0 )
 		G.UnitFrames.Focus.shadow:Kill()
 	end
-
 --------------------------------------------------------------
 -- health
 --------------------------------------------------------------

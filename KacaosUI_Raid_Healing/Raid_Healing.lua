@@ -46,7 +46,7 @@ T.PostUpdateRaidUnit = function( self )
 		
 -- kill some frames
 self.panel:Kill()
-self:SetFrameLevel(1)
+
 self.panel:Kill()
 local panel = CreateFrame("Frame", nil, self)
 panel:SetTemplate()
@@ -55,6 +55,8 @@ panel:Point("BOTTOMLEFT", self, "BOTTOMLEFT", -1, -1)
 panel:SetFrameLevel(2)
 panel:SetFrameStrata("MEDIUM")
 self.panel = panel
+
+self:SetFrameLevel(1)
 
 self:HighlightUnit(1,1,1,1)
 		
@@ -71,7 +73,7 @@ self.Name:SetShadowOffset(0,0,0,0)
 -- health
 -------------------------------------------------------
 self.Health:Height(45)
-self.Health:Width(80)
+self.Health:Width(60)
 self.Health:CreateBorder(false, true)
 self.Health:SetFrameLevel(1)
 self.Health.value:ClearAllPoints()
