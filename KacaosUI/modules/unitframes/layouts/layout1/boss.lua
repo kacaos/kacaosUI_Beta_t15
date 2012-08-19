@@ -30,7 +30,7 @@ do
 
 			G.UnitFrames["Boss" .. i].Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 			G.UnitFrames["Boss" .. i].Name:SetShadowOffset( 1.25, -1.25 )
-			G.UnitFrames["Boss" .. i].Name:Point( "CENTER", G.UnitFrames["Boss" .. i].Health, "CENTER", 0, 0 )
+			G.UnitFrames["Boss" .. i].Name:Point( "LEFT", G.UnitFrames["Boss" .. i].Power, "LEFT", 2, -9)
 
 			G.UnitFrames["Boss" .. i].Health.value = T.SetFontString( G.UnitFrames["Boss" .. i].Health, C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 			G.UnitFrames["Boss" .. i].Health.value:Point( "RIGHT", G.UnitFrames["Boss" .. i].Health, "RIGHT", -4, 0 )

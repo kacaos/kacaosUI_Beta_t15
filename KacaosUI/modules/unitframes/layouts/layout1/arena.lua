@@ -29,7 +29,7 @@ do
 
 			G.UnitFrames["Arena" .. i].Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 			G.UnitFrames["Arena" .. i].Name:SetShadowOffset( 1.25, -1.25 )
-			G.UnitFrames["Arena" .. i].Name:Point( "CENTER", G.UnitFrames["Arena" .. i].Health, "CENTER", 0, 1 )
+			G.UnitFrames["Arena" .. i].Name:Point( "LEFT", G.UnitFrames["Arena" .. i].Power, "LEFT", 2, -9)
 
 			G.UnitFrames["Arena" .. i].Health.value = T.SetFontString( G.UnitFrames["Arena" .. i].Health,C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 			G.UnitFrames["Arena" .. i].Health.value:Point( "RIGHT", G.UnitFrames["Arena" .. i].Health, "RIGHT", -4, 1 )

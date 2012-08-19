@@ -28,7 +28,7 @@ do
 
 		G.UnitFrames.FocusTarget.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		G.UnitFrames.FocusTarget.Name:SetShadowOffset( 1.25, -1.25 )
-		G.UnitFrames.FocusTarget.Name:Point( "CENTER", G.UnitFrames.FocusTarget.Health, "CENTER", 0, 1 )
+		G.UnitFrames.FocusTarget.Name:Point("LEFT", G.UnitFrames.FocusTarget.Power, "LEFT", 2, -9)
 
 		G.UnitFrames.FocusTarget.Health.value = T.SetFontString( G.UnitFrames.FocusTarget.Health,C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		G.UnitFrames.FocusTarget.Health.value:Point( "RIGHT", G.UnitFrames.FocusTarget.Health, "RIGHT", -4, 1 )

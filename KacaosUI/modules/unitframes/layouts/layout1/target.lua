@@ -35,7 +35,7 @@ do
 		
 		G.UnitFrames.Target.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		G.UnitFrames.Target.Name:ClearAllPoints()
-		G.UnitFrames.Target.Name:SetPoint("LEFT", G.UnitFrames.Player.Power, "LEFT", 4, -70)
+		G.UnitFrames.Target.Name:SetPoint("LEFT", G.UnitFrames.Target.Power, "LEFT", 4, -9)
 		G.UnitFrames.Target.Name:SetShadowOffset( 1.25, -1.25 )
 		
 		G.UnitFrames.Target.Health.value = T.SetFontString(G.UnitFrames.Target.Health, C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
@@ -46,6 +46,8 @@ do
 		G.UnitFrames.Target.Power.value:SetShadowOffset(0,0)
 		G.UnitFrames.Target.Power.value:SetPoint("RIGHT", G.UnitFrames.Target.Health, -1, 0)
 		
+		G.UnitFrames.Target.Name.ClearAllPoints = T.dummy
+		G.UnitFrames.Target.Name.SetPoint = T.dummy	
 		G.UnitFrames.Target.Health.value.ClearAllPoints = T.dummy
 		G.UnitFrames.Target.Health.value.SetPoint = T.dummy
 		G.UnitFrames.Target.Power.value.ClearAllPoints = T.dummy
