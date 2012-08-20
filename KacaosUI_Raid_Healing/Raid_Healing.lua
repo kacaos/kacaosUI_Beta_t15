@@ -218,9 +218,3 @@ RaidPosition:SetScript("OnEvent", function(self, event)
 	raid:ClearAllPoints()
 	raid:SetPoint("CENTER", UIParent, "CENTER", -500, -135)
 end)
-
-
-
-
-
-

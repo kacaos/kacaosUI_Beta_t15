@@ -9,7 +9,7 @@ for i = 1, 5 do
 	data[i] = CreateFrame("Frame", "data"..i, UIParent)
 	data[i]:SetTemplate("Default")
 	data[i]:Height(15)
-	data[i]:Width(80)
+	data[i]:Width(90)
 	if i == 1 then
 		data[i]:Point("TOPLEFT", UIParent, "TOPLEFT", 3, -3)
 	elseif i == 2 then

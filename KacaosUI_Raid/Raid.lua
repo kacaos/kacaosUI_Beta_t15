@@ -122,13 +122,19 @@ if C.unitframes.minigrid == true then
 	self.Health:Height(25)
 	self.Health:Width(25)
 	self.Health:CreateBorder(false, true)
-	self.Health.value:Kill()
+self.Health.value:ClearAllPoints()
+self.Health.value:Point("TOP", self.Health, 0, -1)
+self.Health.value:SetFont(C.media.pixelfont, 7, "MONOCHROMEOUTLINE")
+self.Health.value:SetShadowOffset(0,0,0,0)
 	self.Health:SetFrameLevel(1)
 else
 	self.Health:Height(20)
 	self.Health:Width(60)
 	self.Health:CreateBorder(false, true)
-	self.Health.value:Kill()
+self.Health.value:ClearAllPoints()
+self.Health.value:Point("TOP", self.Health, 1, -2)
+self.Health.value:SetFont(C.media.pixelfont, 7, "MONOCHROMEOUTLINE")
+self.Health.value:SetShadowOffset(0,0,0,0)
 	self.Health:SetFrameLevel(1)
 end
 
@@ -242,5 +248,5 @@ RaidPosition:SetScript("OnEvent", function(self, event)
 	local raid = G.UnitFrames.RaidUnits
 	local pets = G.UnitFrames.RaidPets
 	raid:ClearAllPoints()
-	raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 8)
+	raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 10)
 end)

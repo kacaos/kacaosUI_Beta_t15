@@ -135,6 +135,14 @@ do
 			G.UnitFrames.Player.Portrait:SetFrameLevel( G.UnitFrames.Player.Health:GetFrameLevel() )
 		end
 	end
+	
+--------------------------------------------------------------
+-- combat icon
+--------------------------------------------------------------
+	do
+		G.UnitFrames.Player.Combat:ClearAllPoints()
+		G.UnitFrames.Player.Combat:Point("CENTER", G.UnitFrames.Player.Health, "CENTER")
+	end	
 --------------------------------------------------------------
 -- size
 --------------------------------------------------------------
