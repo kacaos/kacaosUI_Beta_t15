@@ -1,13 +1,13 @@
 ## Interface: 50001
 ## Title: |cff1E90FFkacaosUI|r
-## Version: 2.0
+## Version: 2.0.0
 ## Credits: Tukz, Pat, Swordyy, Sinaris, Merith, Elv, Smelly, Saft, Ex, Sniffles, Gszus, JerichoHM, Nisha and some other people who helped or inspired me  =)
 ## Notes: Kacaos edit of Tukui.
-## Author: Kacaos (Jâspar - EU Frostwolf)
+## Author: Kacaos (Jâsparjones - EU-Blackmoore)
 ## SavedVariables: TukuiData
 ## SavedVariablesPerCharacter: KacaosUISaved
 ## RequiredDeps: KacaosUI_Config, Tukui
-## OptionalDeps: Blizzard_CombatText
+## OptionalDeps: Blizzard_CombatText, !ClassColors, Clique, DBM-Core, Omen, Recount, Skada, TinyDPS
 ## X-oUF: oUFTukui
 
 KacaosUI.xml

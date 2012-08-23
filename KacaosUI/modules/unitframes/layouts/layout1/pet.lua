@@ -17,7 +17,6 @@ do
 		G.UnitFrames.Pet:SetBackdropColor( 0, 0, 0 )
 		G.UnitFrames.Pet.shadow:Kill()
 		G.UnitFrames.Pet.panel:Kill()
-		G.UnitFrames.Pet:Point("BOTTOM", UIParent, -257, 98)
 	end
 
 --------------------------------------------------------------
@@ -34,6 +33,7 @@ do
 			G.UnitFrames.Pet.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
 		end
 
+		G.UnitFrames.Pet.Name:Point("CENTER", 0, 0)
 		G.UnitFrames.Pet.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 		G.UnitFrames.Pet.Name:SetShadowOffset( 1.25, -1.25 )
 		G.UnitFrames.Pet.Power:Kill()

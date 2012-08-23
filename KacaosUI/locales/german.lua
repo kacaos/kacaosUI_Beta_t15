@@ -18,7 +18,6 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.unitframespetshow = "Aktiviere Begleiteranzeige"
 		TukuiConfigUILocalization.unitframeshpshowp = "Zeige HP/MP auf dem Spieler und Ziel (nur in layout2)"
 		TukuiConfigUILocalization.unitframesshowdb = "Zeige Debuffs auf dem Ziel (nur in Layout2)"
-		TukuiConfigUILocalization.unitframesminigrid = "Aktiviere minimalistisches Grid (nur in /dps)"
 		TukuiConfigUILocalization.unitframeshealthBgColor = "Setze Hintergrundfarbe der Gesundheitsleiste"
 		TukuiConfigUILocalization.unitframesclassicons = "Aktiviere Klassensymbole"
 		TukuiConfigUILocalization.actionbarstyle = "Aktionsleistenstyle 1 oder 2"
@@ -28,6 +27,8 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.actionbarsidebar2mouseover = "Bar 3 auf mouseover (nur in Aktionsleistenlayout1)"
 		TukuiConfigUILocalization.actionbarsidebar3mouseover = "Bar 2 auf mouesover (nur in Aktionsleistenlayout1)"
 		TukuiConfigUILocalization.actionbarhpetbar = "Aktiviere Horizontale Petbar"
+		TukuiConfigUILocalization.actionbarmicromenu = "Aktiviere das Mirkomenü"
+		TukuiConfigUILocalization.actionbarmicromenumouseover = "Micromenü per Mouseover"
 		TukuiConfigUILocalization.chatchattab = "Aktiviere das Panel über dem Chat"
 		TukuiConfigUILocalization.chatchatbackground = "Aktiviere den Chatbackground"
 		TukuiConfigUILocalization.chatchattabshow = "Zeige Chattabs"
@@ -43,8 +44,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.mischyperlink = "Itemlinks im Chat per Mouseover"
 		TukuiConfigUILocalization.miscinfobottom = "Aktiviere das Panel am unteren Bildschirmrand"
 		TukuiConfigUILocalization.miscdatapanels = "Aktiviere die 5 Datapanels in der oberen rechten Ecke"
+		TukuiConfigUILocalization.miscrepbar = "Enable reputationbar"
 		TukuiConfigUILocalization.aurasbuffsfadeout = "Blende die Spielerbuffs im Kampf aus"
 		TukuiConfigUILocalization.tooltipilvl = "Aktiviere ilvl im Tooltip"
+		TukuiConfigUILocalization.tooltiptalent = "Aktiviere die Talentspezialisierung im Tooltip"
 		TukuiConfigUILocalization.filger = "Filger"
 		TukuiConfigUILocalization.filgerenable = "Aktiviere Filger"
 		TukuiConfigUILocalization.filgerfilgerconfig = "Aktiviere Configmodus"
@@ -106,6 +109,12 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.castbarclasscolor = "Aktiviere Zauberleiste in Klassenfarbe"
 		TukuiConfigUILocalization.castbarcastbarcolor = "Setze Zauberleistenfarbe - wenn die Klassenfarben deaktiviert sind"
 		TukuiConfigUILocalization.castbarnointerruptcolor = "Farbe, wenn der Zauber nicht unterbrochen werden kann"
+		TukuiConfigUILocalization.skin = "Skins"
+		TukuiConfigUILocalization.skinskadareskin = "TukUI Skin für Skada" 
+		TukuiConfigUILocalization.skinrecountreskin = "TukUI Skin für Recount" 
+		TukuiConfigUILocalization.skinomenreskin = "TukUI Skin für Omen" 
+		TukuiConfigUILocalization.skinbigwigsreskin = "TukUI Skin für BigWigs" 
+		TukuiConfigUILocalization.skindbmreskin = "TukUI Skin für DBM" 
 	end
 end	
 
@@ -214,5 +223,10 @@ if T.client == "deDE" then
 	L.COMBATTEXTPOPUP = "Um die Kampftext Fensterpositionen zu sichern muss das Interface neu geladen werden."
 	L.COMBATTEXTUNSAVED = "Kampftext Fensterpositionen nicht gespeichert, vergiss nicht das Interface neu zu laden."
 	L.COMBATTEXTUNLOCKED = "Kampftext freigegeben."
-
+	
+	L.Tooltip_LOADING_TALENT = "Lade Talente..."
+	L.Tooltip_NO_TALENTS = "Keine Talente"
+	L.Tooltip_ITEMID = "Item ID:"
+	
+	L.popupsettingsdbm =  "Die Position der Elemente von DBM müssen geändert werden."
 end

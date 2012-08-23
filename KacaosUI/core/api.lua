@@ -39,7 +39,7 @@ end
 oUF.Tags.Events['Tukui:namemini'] = 'UNIT_NAME_UPDATE'
 oUF.Tags.Methods['Tukui:namemini'] = function(unit)
 	local name = UnitName(unit)
-	return utf7sub(name, 3, false)
+	return utf7sub(name, 10, false)
 end
 --------------------------------------------------------
 -- Api

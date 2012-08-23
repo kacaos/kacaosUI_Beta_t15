@@ -23,7 +23,7 @@ do
 		G.UnitFrames.Target.Health:AddBorder()
 		G.UnitFrames.Target.Power:ClearAllPoints()
 		G.UnitFrames.Target.Power:Point("BOTTOM", G.UnitFrames.Target.Health, 0,-5)
-		G.UnitFrames.Target.Power:Width(175)
+		G.UnitFrames.Target.Power:Width(172)
 		G.UnitFrames.Target.Power:Height(2)
 		G.UnitFrames.Target.Power:SetFrameLevel(3)
 		G.UnitFrames.Target.Power:AddBorder()
@@ -137,23 +137,23 @@ do
 		if( C["unitframes"].targetauras == true ) then
 			G.UnitFrames.Target.Debuffs:SetHeight(21)
 			G.UnitFrames.Target.Debuffs:SetWidth(168)
-			G.UnitFrames.Target.Debuffs.size = 21
+			G.UnitFrames.Target.Debuffs.size = 24
 			G.UnitFrames.Target.Debuffs.num = 14
-			G.UnitFrames.Target.Debuffs.spacing = 3
+			G.UnitFrames.Target.Debuffs.spacing = 1
 
 			G.UnitFrames.Target.Buffs:SetHeight(21)
 			G.UnitFrames.Target.Buffs:SetWidth(168)
-			G.UnitFrames.Target.Buffs.size = 21
-			G.UnitFrames.Target.Buffs.num = 8
-			G.UnitFrames.Target.Buffs.spacing = 3
+			G.UnitFrames.Target.Buffs.size = 24
+			G.UnitFrames.Target.Buffs.num = 7
+			G.UnitFrames.Target.Buffs.spacing = 1
 
 			G.UnitFrames.Target.Buffs:ClearAllPoints()
-			G.UnitFrames.Target.Buffs:Point( "BOTTOMLEFT", G.UnitFrames.Target, "TOPLEFT", -1, 3)
+			G.UnitFrames.Target.Buffs:Point( "BOTTOMLEFT", G.UnitFrames.Target.Health, "TOPLEFT", -1, 5)
 			G.UnitFrames.Target.Buffs.ClearAllPoints = T.dummy
 			G.UnitFrames.Target.Buffs.SetPoint = T.dummy
 
 			G.UnitFrames.Target.Debuffs:ClearAllPoints()
-			G.UnitFrames.Target.Debuffs:Point( "BOTTOMRIGHT", G.UnitFrames.Target.Buffs, "TOPRIGHT", 7, 3 )
+			G.UnitFrames.Target.Debuffs:Point( "BOTTOMRIGHT", G.UnitFrames.Target.Health, "TOPRIGHT", 1, 30)
 			G.UnitFrames.Target.Debuffs.ClearAllPoints = T.dummy
 			G.UnitFrames.Target.Debuffs.SetPoint = T.dummy
 
@@ -161,12 +161,12 @@ do
 				for _, frames in pairs( { G.UnitFrames.Target.Buffs, G.UnitFrames.Target.Debuffs } ) do
 					if( not frames ) then return end
 				if G.UnitFrames.Target.DeBuffs then
-					frames:Size( 168, 21)
-					frames.size = 21
+					frames:Size( 169, 24)
+					frames.size = 24
 					frames.num = 8
 				elseif G.UnitFrames.Target.buffs then
-					frames:Size( 168, 21)
-					frames.size = 21
+					frames:Size( 169, 24)
+					frames.size = 24
 					frames.num = 8					
 				end
 					hooksecurefunc( frames, "PostCreateIcon", T.SkinAura )
@@ -178,6 +178,6 @@ do
 -- size
 --------------------------------------------------------------
 	do
-		G.UnitFrames.Target:Size( 175, 20 )
+		G.UnitFrames.Target:Size( 172, 20 )
 	end
 end

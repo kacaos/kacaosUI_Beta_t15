@@ -1,0 +1,7 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="omen.lua"/>
+	<Script file="skada.lua"/>
+	<Script file="dbm.lua"/>
+	<Script file="recount.lua"/>
+	<Script file="big wigs.lua"/>
+</Ui>

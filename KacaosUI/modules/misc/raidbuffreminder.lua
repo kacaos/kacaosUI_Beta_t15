@@ -169,15 +169,14 @@ local function OnAuraChange(self, event, arg1, unit)
 	end	
 end
 
-local fsize = 171
+local fsize = TukuiMinimap:GetHeight()
 local bsize = ((fsize - 9) / 6)
 
 --Create the Main bar
 local raidbuff_reminder = CreateFrame("Frame", "RaidBuffReminder", UIParent)
---raidbuff_reminder:CreatePanel("Default", fsize, bsize + 4, "TOP", UIParent, "TOP", 0, -25)
-raidbuff_reminder:Height(bsize+4)
-raidbuff_reminder:Width(fsize)
-raidbuff_reminder:Point("TOP", UIParent, "TOP", 0, -25)
+raidbuff_reminder:Height(fsize)
+raidbuff_reminder:Width(bsize+1)
+raidbuff_reminder:Point("TOPRIGHT", TukuiMinimap, "TOPLEFT", -1, 0)
 raidbuff_reminder:SetTemplate("Default")
 raidbuff_reminder:SetFrameLevel(Minimap:GetFrameLevel() + 2)
 raidbuff_reminder:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
@@ -195,24 +194,22 @@ raidbuff_reminder:SetScript("OnEvent", OnAuraChange)
 local function CreateButton(name, relativeTo, firstbutton)
 	local button = CreateFrame("Frame", name, RaidBuffReminder)
 	if firstbutton == true then
-		--button:CreatePanel("Default", bsize, bsize, "LEFT", relativeTo, "LEFT", 2, 0)
 		button:Height(bsize)
 		button:Width(bsize)
-		button:Point("LEFT", relativeTo, "LEFT", 2, 0)
+		button:Point("TOP", relativeTo, "TOP", 0, 0)
 		button:SetTemplate("Default")
 	else
-		--button:CreatePanel("Default", bsize, bsize, "LEFT", relativeTo, "RIGHT", 1, 0)
 		button:Height(bsize)
 		button:Width(bsize)
-		button:Point("LEFT", relativeTo, "RIGHT", 1, 0)
+		button:Point("TOP", relativeTo, "BOTTOM", 0, -1)
 		button:SetTemplate("Default")
 	end
 	button:SetFrameLevel(RaidBuffReminder:GetFrameLevel() + 2)
 	
 	button.t = button:CreateTexture(name..".t", "OVERLAY")
 	button.t:SetTexCoord(0.1, 0.9, 0.1, 0.9)
-	button.t:Point("TOPLEFT", 2, -2)
-	button.t:Point("BOTTOMRIGHT", -2, 2)
+	button.t:Point("TOPLEFT", 1, -1)
+	button.t:Point("BOTTOMRIGHT", -1, 1)
 end
 
 --Create Buttons

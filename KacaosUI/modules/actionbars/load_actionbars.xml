@@ -1,5 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Script file="style.lua" />
+	<Script file="micromenu.lua"/>
 	<Include file="layout1\load_ab1.xml"/>
 	<Include file="layout2\load_ab2.xml"/>
 </Ui>	

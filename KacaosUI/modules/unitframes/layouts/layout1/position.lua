@@ -19,8 +19,8 @@ FramePositions:SetScript( "OnEvent", function( self, event, addon )
 	G.UnitFrames.Player:SetPoint( "CENTER", UIParent, "CENTER", -228, -201)
 	G.UnitFrames.Target:SetPoint( "CENTER", UIParent, "CENTER", 228, -201)
 
-	G.UnitFrames.TargetTarget:SetPoint( "TOPRIGHT", G.UnitFrames.Target, "BOTTOMRIGHT", 0, -10)
-	G.UnitFrames.Pet:SetPoint( "TOPLEFT", G.UnitFrames.Player, "BOTTOMLEFT", 0, -10)
+	G.UnitFrames.TargetTarget:SetPoint( "TOPRIGHT", G.UnitFrames.Target, "BOTTOMRIGHT", 0, -18)
+	G.UnitFrames.Pet:SetPoint( "TOPLEFT", G.UnitFrames.Player, "BOTTOMLEFT", 0, -18)
 	G.UnitFrames.Focus:SetPoint( "CENTER", UIParent, "CENTER", -600, -120)
 	G.UnitFrames.FocusTarget:SetPoint( "TOP", G.UnitFrames.Focus.Health, "BOTTOM", 0 , -43 )
 

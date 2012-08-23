@@ -27,8 +27,9 @@ markbarbutton_tex:SetPoint("BOTTOMRIGHT", markbarbutton, "BOTTOMRIGHT", 1, 1)
 
 local MarkBarBG = CreateFrame("Frame", "MarkBarAnchor", PetBattleHider)
 MarkBarBG:SetTemplate("Transparent")
-MarkBarBG:CreateBorder(false, true)
+--MarkBarBG:CreateBorder(false, true)
 MarkBarBG:SetBackdropBorderColor(0,0,0,0)
+MarkBarBG:SetBackdropColor(0,0,0,0)
 MarkBarBG:Size((button_size * 5) + 15, (button_size * 2) + 6)
 MarkBarBG:Point("BOTTOMLEFT", markbarbutton, "BOTTOMRIGHT", 18, 22)
 MarkBarBG:SetFrameLevel(0)
@@ -43,14 +44,24 @@ for i = 0, 8 do
 	mark[i]:SetBackdropBorderColor(0,0,0,0)
 	mark[i]:Size(button_size-1, button_size-1)
 	if i == 1 then
-		mark[i]:SetPoint("TOPLEFT", MarkBarBG, "TOPLEFT", 3, -3)
+		mark[i]:SetPoint("TOPLEFT", MarkBarBG, "TOPLEFT", 3, -9)
+	elseif i == 2 then
+		mark[i]:SetPoint("BOTTOM", mark1, "TOP", 0, 3)
+	elseif i == 3 then
+		mark[i]:SetPoint("TOPLEFT", mark2, "TOPRIGHT", 3, 0)
+	elseif i == 4 then
+		mark[i]:SetPoint("TOP", mark3, "BOTTOM", 0, -3)
 	elseif i == 5 then
-		mark[i]:SetPoint("TOP", mark[1], "BOTTOM", 0, -3)
-	else
-		mark[i]:SetPoint("LEFT", mark[i-1], "RIGHT", 3, 0)
+		mark[i]:SetPoint("TOP", mark4, "BOTTOM", 0, -3)
+	elseif i == 6 then
+		mark[i]:SetPoint("TOP", mark1, "BOTTOM", 0, -3)
+	elseif i == 7 then
+		mark[i]:SetPoint("TOPLEFT", mark3, "TOPRIGHT", 3, 0)
+	elseif i == 8 then
+		mark[i]:SetPoint("TOP", mark7, "BOTTOM", 0, -3)
 	end
-	mark[0]:SetPoint("TOPLEFT", mark[4], "TOPRIGHT", 3, 0)
-	mark[0]:Size(button_size, (button_size*2))
+	mark[0]:SetPoint("TOP", mark8, "BOTTOM", 0, -2)
+	mark[0]:Size(button_size, button_size)
 	mark[0]:SetScript("OnMouseUp", function()
 		if MarkBarBG:IsVisible() then
 			MarkBarBG:Hide()
@@ -77,6 +88,9 @@ for i = 0, 8 do
 	end
 	icon[i]:Size(button_size - 5, button_size - 5)
 	icon[i]:Point("CENTER", mark[i])
+	icon[i]:CreateBorder(false, true)
+	icon[i]:SetBackdropColor(0,0,0)
+	icon[i]:SetTemplate("Default")
 
 	-- Set up each button
 	if i == 1 then

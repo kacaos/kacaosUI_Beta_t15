@@ -568,7 +568,7 @@ for i = 1, numf do
 	if i == 1 then
 		f:SetJustifyH(ct.justify1)
 		if C.unitframes.enable == true and G.UnitFrames.Player then
-			f:SetPoint("BOTTOMLEFT", G.UnitFrames.Player, "TOPLEFT", -3, 60)
+			f:SetPoint("BOTTOMLEFT", G.UnitFrames.Player, "TOPLEFT", -30, 60)
 		else
 			f:SetPoint("CENTER", -192, -32)
 		end
@@ -590,7 +590,7 @@ for i = 1, numf do
 			f:SetHeight(150)
 		end
 		if C.unitframes.enable == true and G.UnitFrames.Target then
-			f:SetPoint("BOTTOMRIGHT", G.UnitFrames.Target, "TOPRIGHT", 2, 90)
+			f:SetPoint("BOTTOMRIGHT", G.UnitFrames.Target, "TOPRIGHT", 30, 90)
 		else
 			f:SetPoint("CENTER", 330, 0)
 		end

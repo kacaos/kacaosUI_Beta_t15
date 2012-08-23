@@ -10,7 +10,7 @@ if not C.unitframes.enable == true then return end
 --------------------------------------------------------------
 -- pet name
 --------------------------------------------------------------
-	--G.UnitFrames.Pet:Tag(G.UnitFrames.Pet.Name, "[Tukui:getnamecolor][Tukui:nameshort]")
+	G.UnitFrames.Pet:Tag(G.UnitFrames.Pet.Name, "[Tukui:getnamecolor][Tukui:namemini]")
 	
 --------------------------------------------------------------
 -- tot name

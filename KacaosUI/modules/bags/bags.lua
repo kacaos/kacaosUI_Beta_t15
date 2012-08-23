@@ -1,4 +1,4 @@
-local T, C, L = unpack(Tukui)
+local T, C, L, G = unpack(Tukui)
 
 if( C["bags"].enable ~= true ) then return end
 

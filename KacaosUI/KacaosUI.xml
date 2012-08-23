@@ -15,6 +15,7 @@
 	<Script file="modules\buffs\buff.lua"/>
 	<Script file="modules\bags\bags.lua"/>
 	<Script file="modules\tooltip\tooltip.lua"/>
+	<Script file="modules\tooltip\talent.lua"/>
 	<Script file="modules\panels\panels.lua"/>
 	<Script file="modules\panels\datapanels.lua"/>
 	<Script file="modules\map\minimap.lua"/>
@@ -30,4 +31,5 @@
 	<Include file="modules\unitframes\load_unitframes.xml"/>
 	<Include file="modules\actionbars\load_actionbars.xml"/>
 	<Include file="modules\misc\load_misc.xml"/>
+	<Include file="modules\skins\load_skins.xml"/>
 </Ui>

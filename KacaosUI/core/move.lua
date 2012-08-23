@@ -10,8 +10,8 @@ local function MoveUI()
 	if InCombatLockdown() then return end
 	if ENABLE_MOVE then ENABLE_MOVE = false else ENABLE_MOVE = true end
 	
-	local movers = {RaidCD, FilgerPlayerPvEDebuffMover, FilgerPlayerCDMover, FilgerPlayerProccsMover, FilgerPlayerDebuffsMover, FilgerPlayerBuffsMover, tbMover, TukuiTargetCastbarMover, TukuiPlayerCastbarMover, DebuffsMover, TukuiBar1Mover, TukuiBar2Mover, TukuiBar3Mover, TukuiBar4Mover, TukuiBar5Mover, TukuiPetBarMover}
-	if RaidCD or FilgerPlayerPvEDebuffMover or FilgerPlayerCDMover or FilgerPlayerProccsMover or FilgerPlayerDebuffsMover or FilgerPlayerBuffsMover or tbMover or TukuiTargetCastbarMover or TukuiPlayerCastbarMover or DebuffsMover or TukuiBar1Mover or TukuiBar2Mover or TukuiBar3Mover or TukuiBar4Mover or TukuiBar5Mover or TukuiPetBarMover then
+	local movers = {RaidCD, FilgerPlayerPvEDebuffMover, FilgerPlayerCDMover, FilgerPlayerProccsMover, FilgerPlayerDebuffsMover, FilgerPlayerBuffsMover, tbMover, TukuiTargetCastbarMover, TukuiPlayerCastbarMover, DebuffsMover, TukuiBar1Mover, TukuiBar2Mover, TukuiBar3Mover, TukuiBar4Mover, TukuiBar5Mover, TukuiPetBarMover, MicroAnchormover}
+	if RaidCD or FilgerPlayerPvEDebuffMover or FilgerPlayerCDMover or FilgerPlayerProccsMover or FilgerPlayerDebuffsMover or FilgerPlayerBuffsMover or tbMover or TukuiTargetCastbarMover or TukuiPlayerCastbarMover or DebuffsMover or TukuiBar1Mover or TukuiBar2Mover or TukuiBar3Mover or TukuiBar4Mover or TukuiBar5Mover or TukuiPetBarMover or MicroAnchormover then
 			if ENABLE_MOVE then
 				for _, panels in pairs(movers) do
 					panels:Show()

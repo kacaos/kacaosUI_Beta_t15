@@ -4,7 +4,7 @@ local C = {}
 -------------------------------------------------------------
 
 C.general = {
-	blizzardreskin = true,							-- to set alpha go to tukui/core/api.lua and set balpha
+	blizzardreskin = true,							-- reskin blizzard skins to tukui
 	backdropcolor = {.06,.06,.06},					-- backdrop color of all panel
 	bordercolor = {0,0,0},							-- border color of all panel
 }
@@ -52,6 +52,8 @@ C.actionbar = {
 	b2bottom = true,								-- enable 3 bottomrows (only useable together with 2bottombars option)
 	hpetbar = true,									-- enable vertical petbar
 	hideshapeshift = true,							-- hide shapeshift or totembar
+	micromenu = true,								-- enable micromenu
+	micromenumouseover = true,						-- bla
 }
 
 C.unitframes = {
@@ -70,8 +72,7 @@ C.unitframes = {
 	
 	mouseoverhighlight = true,						-- mouseoverhiglight on raidframe
 	showraidpets = false,							-- enable raidpets
-	minigrid = true,								-- enable minimalistic grid (only dps layout)
-							
+	
 	healthBgColor = { .5, 0.1, 0.1 },				-- choose healthbackground colors
 }
 
@@ -123,6 +124,7 @@ C.misc = {
 	ilvlr = true,									-- show ilvl and durability in charakterframe
 	infobottom = false,								-- show infopanel at the bottom of you screen
 	datapanels = true,								-- enable 5 datapanels in topleft
+	repbar = true,									-- enable reputationbar
 }
 
 C.auras = {
@@ -131,8 +133,17 @@ C.auras = {
 	consolidate = false,							-- enable consolidate buffs
 }
 
+C.skin = {
+	skadareskin = true,								-- enable tukui skin for skada
+	recountreskin = true,							-- enable tukui skin for reount
+	omenreskin = true,								-- enable tukui skin for omen
+	bigwigsreskin = true,							-- enable tukui skin for bigwigs
+	dbmreskin = true,								-- enable tukui skin for dbm
+}
+
 C.tooltip = {
 	ilvl = false,									-- activate ilvl in tooltip
+	talent = true,									-- enable talent in tooltip
 }
 
 C.nameplate = {
@@ -177,7 +188,7 @@ C.combattext = {
 	timevisible = 3,						-- Time(seconds) a single message will be visible
 	stopvespam = false,						-- Automaticly turns off healing spam for priests in shadowform
 	dkrunes = true,							-- Show deathknight rune recharge
-	killingblow = false,					-- Tells you about your killingblows
+	killingblow = true,					-- Tells you about your killingblows
 	mergeaoespam = true,					-- Merges multiple aoe damage spam into single message
 	mergeaoespamtime = 3,					-- Time in seconds aoe spell will be merged into single message(works only with ["damage"] = true)
 	dispel = true,							-- Tells you about your dispels(works only with ["damage"] = true)
@@ -197,7 +208,8 @@ C.media = {
 	normTex = [[Interface\Addons\kacaosUI\media\textures\normTex]],					-- texture for mana/health etc.
 	namealert = [[Interface\Addons\kacaosUI\media\sounds\namealert.mp3]],			-- sound for chatnamealert
 	noinset = true,																	-- inset in icons / panels / true for 1px borders
-	datatextcolor1 = {.6,.6,.6}														-- color of the datatext titles
+	datatextcolor1 = {.6,.6,.6},													-- color of the datatext titles
+	["wowlogo"] = [[Interface\Glues\Common\Glues-WoW-MPLogo.blp]],					-- afkcam
 }
 
 -- do not change or delete this!!!

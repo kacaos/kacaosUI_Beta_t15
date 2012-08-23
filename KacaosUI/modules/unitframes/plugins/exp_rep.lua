@@ -31,6 +31,7 @@ local cbWidth = C.chat.chatbackgroundwidth
 	------------------------------
 	-- reputation
 	------------------------------
+	if C.misc.repbar == true then
 		if(T.level == MAX_PLAYER_LEVEL) then
 			G.UnitFrames.Player.Reputation:ClearAllPoints()
 			G.UnitFrames.Player.Reputation:SetStatusBarColor( 0, 0.4, 1, 0.8 )
@@ -49,3 +50,4 @@ local cbWidth = C.chat.chatbackgroundwidth
 			G.UnitFrames.Player.Reputation.Text = G.UnitFrames.Player.Reputation.Text
 			G.UnitFrames.Player.Reputation.PostUpdate = T.UpdateReputationColor
 		end
+	end

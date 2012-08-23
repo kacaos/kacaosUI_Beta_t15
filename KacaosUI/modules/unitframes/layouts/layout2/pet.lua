@@ -35,7 +35,8 @@ do
 -- health
 --------------------------------------------------------------
 	do
-		G.UnitFrames.Pet.Castbar:Kill()
+		G.UnitFrames.Pet.Castbar:ClearAllPoints()
+		G.UnitFrames.Pet.Castbar:SetParent(TukUIHider)
 	end
 	
 --------------------------------------------------------------

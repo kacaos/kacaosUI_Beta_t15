@@ -21,6 +21,19 @@ G.ActionBars.BarExtra.Holder:ClearAllPoints()
 G.ActionBars.BarExtra.Holder:Point("CENTER", UIParent, "CENTER", 0, -500)
 
 -------------------------------------------
+-- move durability frame
+-------------------------------------------
+local dummydura = CreateFrame("Frame", "Testdummydura", UIParent)
+dummydura:RegisterEvent("PLAYER_ENTERING_WORLD")
+
+dummydura:SetScript("OnEvent", function(self, event)
+if(event == "PLAYER_ENTERING_WORLD") then
+			DurabilityFrame:ClearAllPoints()
+			DurabilityFrame:Point("BOTTOM", TukuiMinimap, "TOP", 0, 20)
+	end
+end)
+
+-------------------------------------------
 -- save CVars
 -------------------------------------------
 local function KacaosUICVars()

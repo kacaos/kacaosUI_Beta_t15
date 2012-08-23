@@ -43,8 +43,9 @@ uicb:ClearAllPoints()
 uicb:Size(15, 65)
 uicb:SetTemplate("Transparent")
 uicb:Point("CENTER", ChatBackgroundLeft, "CENTER", ((clWidth/2)+9), 0)
-uicb:FontString("Text", C.media.pixelfont, 8)
+uicb:FontString("Text", C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 uicb.Text:Point("CENTER", UIControlButton, "CENTER", 3, 0) 
+uicb.Text:SetShadowOffset(1, -1)
 uicb.Text:SetText("C\nO\nN\nT\nR\nO\nL")
 	uicb:HookScript("OnEnter", function(self)
 		self:SetBackdropBorderColor(1,1,1)
@@ -281,17 +282,31 @@ KacaosUI_rcd_Button:HookScript("OnEnter", function(self)
         end)
 KacaosUI_rcd_Button:HookScript("OnLeave", function(self) GameTooltip:Hide() end)
 
-	
+
 KacaosUI_Minimap_Button:SetScript("OnMouseDown", function(self)
 	if TukuiMinimap:IsShown() then
 		TukuiMinimap:Hide()
-		TukuiTooltipAnchor:ClearAllPoints()
-		TukuiTooltipAnchor:SetClampedToScreen(false)
-		TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", 118, -30)
+			if C.misc.raidbuffreminder == true then
+				TukuiTooltipAnchor:ClearAllPoints()
+				TukuiTooltipAnchor:SetClampedToScreen(false)
+				TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", 97, -30)
+				RaidBuffReminder:Point("TOPRIGHT", TukuiMinimap, "TOPLEFT", 120, 0)
+			else
+				TukuiTooltipAnchor:ClearAllPoints()
+				TukuiTooltipAnchor:SetClampedToScreen(false)
+				TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", 118, -30)
+			end
 	else
 		TukuiMinimap:Show()
-		TukuiTooltipAnchor:ClearAllPoints()
-		TukuiTooltipAnchor:SetClampedToScreen(false)
-		TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -5, -30)
+			if C.misc.raidbuffreminder == true then
+				TukuiTooltipAnchor:ClearAllPoints()
+				TukuiTooltipAnchor:SetClampedToScreen(false)
+				TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -25, -30)
+				RaidBuffReminder:Point("TOPRIGHT", TukuiMinimap, "TOPLEFT", -1, 0)
+			else
+				TukuiTooltipAnchor:ClearAllPoints()
+				TukuiTooltipAnchor:SetClampedToScreen(false)
+				TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -5, -30)
+			end
 	end 
 end)

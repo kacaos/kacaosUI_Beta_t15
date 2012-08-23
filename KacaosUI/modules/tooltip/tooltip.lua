@@ -5,7 +5,11 @@ if not C["tooltip"].enable then return end
 --------------------------------------------------------
 TukuiTooltipAnchor:ClearAllPoints()
 TukuiTooltipAnchor:SetClampedToScreen(false)
-TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -5, -30)
+if C.misc.raidbuffreminder == true then
+	TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -25, -30)
+else
+	TukuiTooltipAnchor:Point("BOTTOMRIGHT", Minimap, "BOTTOMLEFT", -5, -30)
+end
 
 --------------------------------------------------------
 -- icon on tooltip

@@ -9,7 +9,6 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.unitframespetshow = "Show Pet"
 		TukuiConfigUILocalization.unitframeshpshowp = "Show HP/MP value on Player (only in layout2)"
 		TukuiConfigUILocalization.unitframesshowdb = "Show debuffs on target (only layout2)"
-		TukuiConfigUILocalization.unitframesminigrid = "Enable minimalistic Grid (only in /dps)"
 		TukuiConfigUILocalization.unitframeshealthBgColor = "Choose backgroundcolor of healtbars"
 		TukuiConfigUILocalization.unitframesclassicons = "Enable Classicons"
 		TukuiConfigUILocalization.actionbarstyle = "Actionbarlayout 1 or 2"
@@ -19,6 +18,8 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.actionbarsidebar2mouseover = "Bar 3 on mouseover (only on actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarsidebar3mouseover = "Bar 2 on mouesover (only on actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarhpetbar = "Activate horizontal petbar"
+		TukuiConfigUILocalization.actionbarmicromenu = "Enable the micromenu"
+		TukuiConfigUILocalization.actionbarmicromenumouseover = "Micromenu on mouseover"
 		TukuiConfigUILocalization.chatchattab = "Show panel over the Chat"
 		TukuiConfigUILocalization.chatchatbackground = "Show Chatbackground"
 		TukuiConfigUILocalization.chatchattabshow = "Show Chattabs"
@@ -35,8 +36,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.mischyperlink = "Show itemlinks in chat on mouseover"
 		TukuiConfigUILocalization.miscinfobottom = "Activate the bottom panel"
 		TukuiConfigUILocalization.miscdatapanels = "Activate the 5 datapanels in the upper-right corner"
+		TukuiConfigUILocalization.miscrepbar = "Aktiviere die Rufleiste"
 		TukuiConfigUILocalization.aurasbuffsfadeout = "Fadeout Playerbuffs infight"
 		TukuiConfigUILocalization.tooltipilvl = "Show ilvl in tooltip"
+		TukuiConfigUILocalization.tooltiptalent = "Enable specc in Tooltip"
 		TukuiConfigUILocalization.filger = "Filger"
 		TukuiConfigUILocalization.filgerenable = "Enable Filger"
 		TukuiConfigUILocalization.filgerfilgerconfig = "Enable configmode"
@@ -98,6 +101,12 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.castbarclasscolor = "Enable classcolored castbars"
 		TukuiConfigUILocalization.castbarcastbarcolor = "Classbarcolor if classcolored is disabled"
 		TukuiConfigUILocalization.castbarnointerruptcolor = "Color if spell cant interrupt"
+		TukuiConfigUILocalization.skin = "Skins"
+		TukuiConfigUILocalization.skinskadareskin = "TukUI skin for skada" 
+		TukuiConfigUILocalization.skinrecountreskin = "TukUI skin for recount" 
+		TukuiConfigUILocalization.skinomenreskin = "TukUI skin for omen" 
+		TukuiConfigUILocalization.skinbigwigsreskin = "TukUI skin for BigWigs" 
+		TukuiConfigUILocalization.skindbmreskin = "TukUI skin für DBM" 
 	end
 end	
 
@@ -206,4 +215,10 @@ if T.client == "enEN" then
 	L.COMBATTEXTPOPUP = "To save combat text window positions you need to reload your UI."
 	L.COMBATTEXTUNSAVED = "Combat text window positions unsaved, don't forget to reload UI."
 	L.COMBATTEXTUNLOCKED = "Combat text unlocked."	
+	
+	L.Tooltip_LOADING_TALENT = "Load Talents..."
+	L.Tooltip_NO_TALENTS = "No Talents"
+	L.Tooltip_ITEMID = "Item ID:"
+	
+	L.popupsettingsdbm = "Need to change the position of elements DBM."
 end

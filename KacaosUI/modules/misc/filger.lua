@@ -24,10 +24,13 @@ ns.Filger_Spells = {
 			Mode = "ICON",
 			setPoint = { "LEFT", FilgerPlayerProccsMover, "LEFT", 0, 0 },
 
-			-- Combobrecher: Blackout-Tritt
+			-- Combobreaker: Blackout-Kick
 			{ spellID = 116768, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },				
-			-- Combobrecher: Tigerklaue
-			{ spellID = 118864, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Combobreaker: Tigerpalm
+			 { spellID = 118864, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			 -- Spinning Crane Kick
+			{ spellID = 101546, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+
 
 		},
 
@@ -38,24 +41,33 @@ ns.Filger_Spells = {
 			Mode = "ICON",
 			setPoint = { "LEFT", FilgerPlayerBuffsMover, "LEFT", 0, 0 },
 			
-			-- Zensphäre
+			-- Zensphere
 			{ spellID = 124081, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Tigeraugengebräu
+			-- Tigereye Brew
 			{ spellID = 125195, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Kraft des Tigers
+			-- Tiger Power
 			{ spellID = 125359, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Beinarbeit - 
+			-- Shuffle- 
 			{ spellID = 115307, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Mächtiger Schutz] - 
+			-- Might Guard 
 			{ spellID = 118636, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Schutz 
+			-- Guard
 			{ spellID = 115295, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Flüchtiges Gebräu
+			-- Elusive Brew
 			{ spellID = 128939, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Dancing Steel
 			{ spellID = 120032, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Windsong
 			{ spellID = 104509, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Fortifying Brew
+			{ spellID = 120954, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Touch of Karma
+			{spellID = 125174, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Avert Harm
+			{spellID = 115213, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Diffuse Magic
+			{spellID = 122783, size = C.filger.iconsize, unitId = "player", caster = "player", filter = "BUFF" },
+},
 
 		},
 		{
@@ -67,12 +79,20 @@ ns.Filger_Spells = {
 
 			-- Xuen
 			{ spellID = 123904, size = C.filger.iconsize, filter = "CD" },
-			-- Kharma
+			-- Touch Kharma
 			{ spellID = 115288, size = C.filger.iconsize, filter = "CD" },			
 			-- Risin Sun Kick
 			{ spellID = 107428, size = C.filger.iconsize, filter = "CD" },			
-			-- Keg
-			{ spellID = 121253, size = C.filger.iconsize, filter = "CD" },
+			-- Keg Smash
+			{ spellID = 121253, size = C.filger.iconsize, filter = "CD" },	
+			-- Spear Hand Strike
+			{ spellID = 116705, size = C.filger.iconsize, filter = "CD" },	
+			-- Zen Meditation
+			{ spellID = 115176, size = C.filger.iconsize, filter = "CD" },	
+			-- Fortifying Brew
+			{ spellID = 115203, size = C.filger.iconsize, filter = "CD" },	
+			-- Fists of Fury
+			{ spellID = 113656, size = C.filger.iconsize, filter = "CD" },
 		},
 
 		{
@@ -84,11 +104,10 @@ ns.Filger_Spells = {
 
 			-- Risin Sun Kick
 			{ spellID = 107428, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
-			-- Benebelnde Dämpfe
+			--  Dizzying Haze
 			{ spellID = 123727, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
-			-- Feueratem
+			-- Breath of Fire
 			{ spellID = 123725, size = C.filger.iconsize, unitId = "target", caster = "all", filter = "DEBUFF" },
-		}
 	},
     ["DEATHKNIGHT"] = {  -------------------------------------------------------------------------------------------------------- Deathknight
 		{

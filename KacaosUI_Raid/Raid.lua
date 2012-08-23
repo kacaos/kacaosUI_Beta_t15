@@ -3,46 +3,6 @@ local T, C, L, G = unpack( Tukui )
 --Header
 --------------------------------------------------------------
 local width, height, showParty, showRaid, showPlayer, xOffset, yOffset, point, columnSpacing, columnAnchorPoint
-if C.unitframes.minigrid == true then
-	width = 25
-	height = 25
-	showParty = true
-	showRaid = true
-	showPlayer = true
-	xOffset = T.Scale( 7 )
-	yOffset = T.Scale( 5 )
-	point = "LEFT"
-	columnSpacing = T.Scale( 6 )
-	columnAnchorPoint = "TOP"
-
-		T.RaidFrameAttributes = function()
-			return
-			"TukuiRaid",
-			nil,
-			"custom [petbattle] hide;show",
-			"oUF-initialConfigFunction", [[
-				local header = self:GetParent()
-				self:SetWidth( header:GetAttribute( "initial-width" ) )
-				self:SetHeight( header:GetAttribute( "initial-height" ) )
-			]],
-			"initial-width", (25),
-			"initial-height",(25),
-			"showParty", true,
-			"showRaid", true,
-			"showPlayer", true,
-			"showSolo", true,
-			"xoffset",(5),
-			"yOffset", (5),
-			"point", point,
-			"groupFilter", "1,2,3,4,5",
-			"groupingOrder", "1,2,3,4,5",
-			"groupBy", "GROUP",
-			"maxColumns", 5,
-			"unitsPerColumn", 5,
-			"columnSpacing", T.Scale( columnSpacing ),
-			"columnAnchorPoint", columnAnchorPoint
-		end
-else
 	width = 60
 	height = 20
 	showParty = true
@@ -80,7 +40,7 @@ else
 			"unitsPerColumn", 5,
 			"columnSpacing", T.Scale(3),
 			"columnAnchorPoint", columnAnchorPoint
-	end
+
 end
 	
 T.PostUpdateRaidUnit = function( self )
@@ -111,34 +71,21 @@ self.Name:ClearAllPoints()
 self.Name:SetPoint("CENTER", self.Health, "CENTER", 1, -1)
 self.Name:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
 self.Name:SetShadowOffset(0,0,0,0)
-if C.unitframes.minigrid == true then
-self:Tag(self.Name, '[Tukui:getnamecolor][Tukui:namemini]')	
-end
 
 -------------------------------------------------------
 -- health
 -------------------------------------------------------
-if C.unitframes.minigrid == true then
-	self.Health:Height(25)
-	self.Health:Width(25)
-	self.Health:CreateBorder(false, true)
-self.Health.value:ClearAllPoints()
-self.Health.value:Point("TOP", self.Health, 0, -1)
-self.Health.value:SetFont(C.media.pixelfont, 7, "MONOCHROMEOUTLINE")
-self.Health.value:SetShadowOffset(0,0,0,0)
-	self.Health:SetFrameLevel(1)
-else
-	self.Health:Height(20)
-	self.Health:Width(60)
-	self.Health:CreateBorder(false, true)
+self.Health:Height(20)
+self.Health:Width(60)
+self.Health:CreateBorder(false, true)
 self.Health.value:ClearAllPoints()
 self.Health.value:Point("TOP", self.Health, 1, -2)
 self.Health.value:SetFont(C.media.pixelfont, 7, "MONOCHROMEOUTLINE")
 self.Health.value:SetShadowOffset(0,0,0,0)
-	self.Health:SetFrameLevel(1)
-end
+self.Health:SetFrameLevel(1)
 
-	self.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
+
+self.Health.bg:SetTexture( 0.6, 0.6, 0.6 )
 		
 	if( C["unitframes"].unicolor == true ) then
 		self.Health.bg:SetVertexColor(unpack(C["unitframes"].healthBgColor))
@@ -248,5 +195,11 @@ RaidPosition:SetScript("OnEvent", function(self, event)
 	local raid = G.UnitFrames.RaidUnits
 	local pets = G.UnitFrames.RaidPets
 	raid:ClearAllPoints()
-	raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 10)
+	if(T.level ~= MAX_PLAYER_LEVEL) then
+		raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 10)
+	elseif C.misc.repbar == true then
+		raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 10)
+	else
+		raid:SetPoint("BOTTOMLEFT", ChatBackgroundLeft, "TOPLEFT", 2, 3)
+	end
 end)

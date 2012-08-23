@@ -1,4 +1,4 @@
-local T, C, L = unpack(Tukui)
+local T, C, L, G = unpack(Tukui)
 
 ---------------------------------------------------------------
 -- Minimap
@@ -40,3 +40,9 @@ MiniMapInstanceDifficulty:SetPoint("TOPLEFT", Minimap, "TOPLEFT", 0, -1)
 GuildInstanceDifficulty:ClearAllPoints()
 GuildInstanceDifficulty:SetParent(Minimap)
 GuildInstanceDifficulty:SetPoint("TOPLEFT", Minimap, "TOPLEFT", 0, -1)
+
+-- resize ticket button
+--TukuiTicker:ClearAllPoints()
+TukuiTicket:Point("TOP", TukuiMinimap, "BOTTOM",0, 15)
+TukuiTicket:Width(TukuiMinimap:GetWidth() -4)
+TukuiTicket:Height(14)
