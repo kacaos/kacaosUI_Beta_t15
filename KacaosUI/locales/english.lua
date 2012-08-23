@@ -1,8 +1,16 @@
 local T, C, L = unpack(Tukui)
 T.kacaosrelease = GetAddOnMetadata("KacaosUI", "Version")
 
+local wmes = CreateFrame("Frame")
+wmes:RegisterEvent("PLAYER_ENTERING_WORLD")
+wmes:SetScript("OnEvent", function(self, event)
+	self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+
+	print(L.wmes_1)
+	print(L.wmes_2)
+end )
+
 if TukuiConfigUILocalization then
-	if T.client ~= "deDE" then
 		TukuiConfigUILocalization.unitframesmouseoverhighlight = "Activate mouseover higlight at raidframes layout2"
 		TukuiConfigUILocalization.unitframesstyle = "Unitframestyle choose 1 or 2"
 		TukuiConfigUILocalization.unitframestotshow = "Show Target of Target"
@@ -106,11 +114,10 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.skinrecountreskin = "TukUI skin for recount" 
 		TukuiConfigUILocalization.skinomenreskin = "TukUI skin for omen" 
 		TukuiConfigUILocalization.skinbigwigsreskin = "TukUI skin for BigWigs" 
-		TukuiConfigUILocalization.skindbmreskin = "TukUI skin für DBM" 
+		TukuiConfigUILocalization.skindbmreskin = "TukUI skin for DBM" 
 	end
-end	
 
-if T.client == "enEN" then
+
 	
 	L.wmes_1 = "Hey, |cff1E90FF"..T.myname.."!|r Welcome to |cff1E90FFKacaosUI|r v"..T.kacaosrelease..""
 	L.wmes_2 = "Latest version at: |cff00FF33http://www.tukui.org/addons/index.php?act=view&id=49|r"
@@ -221,4 +228,3 @@ if T.client == "enEN" then
 	L.Tooltip_ITEMID = "Item ID:"
 	
 	L.popupsettingsdbm = "Need to change the position of elements DBM."
-end

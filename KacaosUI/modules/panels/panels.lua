@@ -93,18 +93,6 @@ minimapstat:Point("TOP", TukuiMinimap, "TOP", 0, 13)
 minimapstat:SetBackdropColor(0,0,0,0)
 minimapstat:SetBackdropBorderColor(0,0,0,0)
 
-local fadeout = CreateFrame("Frame")
-fadeout:RegisterEvent("PLAYER_ENTERING_WORLD")
-fadeout:RegisterEvent("PLAYER_REGEN_ENABLED")
-fadeout:RegisterEvent("PLAYER_REGEN_DISABLED")
-fadeout:SetScript("OnEvent", function(self, event)
-	if event == "PLAYER_REGEN_ENABLED" then
-			MinimapStat:Show()
-	elseif event == "PLAYER_REGEN_DISABLED" then
-			MinimapStat:Hide()
-	end
-end)
-
 if C.chat.fadeout then
 local fadeout = CreateFrame("Frame")
 fadeout:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -159,7 +147,7 @@ G.ActionBars.ExitVehicleLeft:SetTemplate("Default")
 G.ActionBars.ExitVehicleLeft:SetFrameStrata("Background")
 G.ActionBars.ExitVehicleLeft:FontString("Text", C.media.font, 28)
 G.ActionBars.ExitVehicleLeft.text:Point("CENTER", 0, 0)
-G.ActionBars.ExitVehicleLeft.text:SetText("L")
+G.ActionBars.ExitVehicleLeft.text:SetText("X")
 
 
 -- kill the right exit button

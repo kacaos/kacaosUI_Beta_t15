@@ -1,15 +1,6 @@
 ﻿local T, C, L = unpack(Tukui)
 T.kacaosrelease = GetAddOnMetadata("KacaosUI", "Version")
 
-local wmes = CreateFrame("Frame")
-wmes:RegisterEvent("PLAYER_ENTERING_WORLD")
-wmes:SetScript("OnEvent", function(self, event)
-	self:UnregisterEvent("PLAYER_ENTERING_WORLD")
-
-	print(L.wmes_1)
-	print(L.wmes_2)
-end )
-
 if TukuiConfigUILocalization then
 	if T.client == "deDE" then
 		TukuiConfigUILocalization.unitframesmouseoverhighlight = "Aktiviere aufblinken der Raidframes per Mouseover in Heallayout"
