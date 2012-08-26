@@ -94,6 +94,11 @@ fadeout:SetScript("OnEvent", function(self, event)
 end)
 end
 
+BNToastFrame:HookScript( "OnShow", function( TukuiTooltipAnchor )
+TukuiTooltipAnchor:ClearAllPoints()
+TukuiTooltipAnchor:Point( "BOTTOMLEFT", G.Panels.LeftChatBackground, "BOTTOMRIGHT", 3, 0 )
+end )
+
 --------------------------------------------------------------------------------
 --	Play sound when your name is called in chat -- credit Hydra
 --------------------------------------------------------------------------------

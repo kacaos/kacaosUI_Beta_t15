@@ -35,7 +35,7 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.mischyperlink = "Itemlinks im Chat per Mouseover"
 		TukuiConfigUILocalization.miscinfobottom = "Aktiviere das Panel am unteren Bildschirmrand"
 		TukuiConfigUILocalization.miscdatapanels = "Aktiviere die 5 Datapanels in der oberen rechten Ecke"
-		TukuiConfigUILocalization.miscrepbar = "Enable reputationbar"
+		TukuiConfigUILocalization.miscrepbar = "Aktiviere Rufleiste"
 		TukuiConfigUILocalization.aurasbuffsfadeout = "Blende die Spielerbuffs im Kampf aus"
 		TukuiConfigUILocalization.tooltipilvl = "Aktiviere ilvl im Tooltip"
 		TukuiConfigUILocalization.tooltiptalent = "Aktiviere die Talentspezialisierung im Tooltip"
