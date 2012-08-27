@@ -16,7 +16,6 @@
 	<Script file="modules\bags\bags.lua"/>
 	<Script file="modules\tooltip\tooltip.lua"/>
 	<Script file="modules\tooltip\talent.lua"/>
-	<Script file="modules\tooltip\reforge.lua"/>
 	<Script file="modules\panels\panels.lua"/>
 	<Script file="modules\panels\datapanels.lua"/>
 	<Script file="modules\map\minimap.lua"/>

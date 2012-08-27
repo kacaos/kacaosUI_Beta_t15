@@ -125,7 +125,6 @@ C.misc = {
 	infobottom = false,								-- show infopanel at the bottom of you screen
 	datapanels = true,								-- enable 5 datapanels in topleft
 	repbar = true,									-- enable reputationbar
-	click2cast = true,								-- enable click2cast
 }
 
 C.auras = {
@@ -145,7 +144,6 @@ C.skin = {
 C.tooltip = {
 	ilvl = false,									-- activate ilvl in tooltip
 	talent = true,									-- enable talent in tooltip
-	reforge = true,									-- show what is reforged in itemtooltip
 }
 
 C.nameplate = {
@@ -182,7 +180,7 @@ C.combattext = {
 	critprefix = "*",						-- Symbol that will be added before crit
 	critpostfix = "*",						-- Symbol that will be added after crit
 	icons = true,							-- Show outgoing damage icons
-	iconsize = 11,							-- Icon size of spells in outgoing damage frame, also has effect on dmg font size
+	iconsize = 14,							-- Icon size of spells in outgoing damage frame, also has effect on dmg font size
 	treshold = 1,							-- Minimum damage to show in damage frame
 	healtreshold = 1,						-- Minimum healing to show in incoming/outgoing healing messages
 	scrollable = false,						-- Allows you to scroll frame lines with mousewheel
@@ -190,7 +188,7 @@ C.combattext = {
 	timevisible = 3,						-- Time(seconds) a single message will be visible
 	stopvespam = false,						-- Automaticly turns off healing spam for priests in shadowform
 	dkrunes = true,							-- Show deathknight rune recharge
-	killingblow = true,						-- Tells you about your killingblows
+	killingblow = true,					-- Tells you about your killingblows
 	mergeaoespam = true,					-- Merges multiple aoe damage spam into single message
 	mergeaoespamtime = 3,					-- Time in seconds aoe spell will be merged into single message(works only with ["damage"] = true)
 	dispel = true,							-- Tells you about your dispels(works only with ["damage"] = true)
@@ -203,9 +201,9 @@ C.media = {
 	["uffont"] = [[Interface\Addons\Tukui\medias\fonts\normal_font.ttf]], 			-- general font of unitframes
 	["pixelfont"] = [[Interface\Addons\KacaosUI\media\font\HOOG0555.ttf]],			-- font of datatext uf etc.
 	["help"] = [[Interface\Addons\KacaosUI\media\font\normal_font.ttf]],			-- font for helpframe
-	["combattextfont"] = [[Interface\AddOns\KacaosUI\media\font\HOOG0555.ttf]],	-- font for combattext /xct
-	combattextfontsize = 11,														-- fontsize of combattext
-	["combattextfontstyle"] = "THINOUTLINE",											-- outline of combattextfont
+	["combattextfont"] = [[Interface\AddOns\Tukui\medias\fonts\combat_font.ttf]],	-- font for combattext /xct
+	combattextfontsize = 14,														-- fontsize of combattext
+	["combattextfontstyle"] = "OUTLINE",											-- outline of combattextfont
 	["combattextfontshadow"] = false,												-- enable shadow of combattextfont
 	normTex = [[Interface\Addons\kacaosUI\media\textures\normTex]],					-- texture for mana/health etc.
 	namealert = [[Interface\Addons\kacaosUI\media\sounds\namealert.mp3]],			-- sound for chatnamealert
