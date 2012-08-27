@@ -13,4 +13,6 @@
 	<Script file="raidcd.lua"/>
 	<Script file="mail.lua"/>
 	<Script file="markbar.lua"/>
+	<Script file="click2cast.lua"/>
+	<Script file="reforge.lua"/>
 </Ui>

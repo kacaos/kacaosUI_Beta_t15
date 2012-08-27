@@ -11,6 +11,9 @@ wmes:SetScript("OnEvent", function(self, event)
 end )
 
 if TukuiConfigUILocalization then
+		--------------------------------------------------------
+		-- Unitframes
+		--------------------------------------------------------
 		TukuiConfigUILocalization.unitframesmouseoverhighlight = "Activate mouseover higlight at raidframes layout2"
 		TukuiConfigUILocalization.unitframesstyle = "Unitframestyle choose 1 or 2"
 		TukuiConfigUILocalization.unitframestotshow = "Show Target of Target"
@@ -19,6 +22,9 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.unitframesshowdb = "Show debuffs on target (only layout2)"
 		TukuiConfigUILocalization.unitframeshealthBgColor = "Choose backgroundcolor of healtbars"
 		TukuiConfigUILocalization.unitframesclassicons = "Enable Classicons"
+		--------------------------------------------------------
+		-- Actionbars
+		--------------------------------------------------------
 		TukuiConfigUILocalization.actionbarstyle = "Actionbarlayout 1 or 2"
 		TukuiConfigUILocalization.actionbarbar4 = "Activate 2 bars at the bottom (only in actionbarlayout1)"
 		TukuiConfigUILocalization.actionbarb2bottom = "Activate 2 bars at the bottom (only useable with activated option Activate 2 bars at the bottom and Actionbarlayout1)"
@@ -28,6 +34,9 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.actionbarhpetbar = "Activate horizontal petbar"
 		TukuiConfigUILocalization.actionbarmicromenu = "Enable the micromenu"
 		TukuiConfigUILocalization.actionbarmicromenumouseover = "Micromenu on mouseover"
+		--------------------------------------------------------
+		-- Chat
+		--------------------------------------------------------
 		TukuiConfigUILocalization.chatchattab = "Show panel over the Chat"
 		TukuiConfigUILocalization.chatchatbackground = "Show Chatbackground"
 		TukuiConfigUILocalization.chatchattabshow = "Show Chattabs"
@@ -35,6 +44,9 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.chatchatbackgroundwidth = "Set chatbackground width"
 		TukuiConfigUILocalization.chatchatbackgroundheight = "Set chatbackground height"
 		TukuiConfigUILocalization.chatnamealert = "Play sound when an name is in chat"
+		--------------------------------------------------------
+		-- Misc
+		--------------------------------------------------------
 		TukuiConfigUILocalization.misc = "Misc"
 		TukuiConfigUILocalization.miscilvlr = "Show ilvl and durability in the Charakterframe"
 		TukuiConfigUILocalization.miscafkcam = "Activate Afk Spin Cam"
@@ -44,10 +56,21 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.mischyperlink = "Show itemlinks in chat on mouseover"
 		TukuiConfigUILocalization.miscinfobottom = "Activate the bottom panel"
 		TukuiConfigUILocalization.miscdatapanels = "Activate the 5 datapanels in the upper-right corner"
-		TukuiConfigUILocalization.miscrepbar = "Enable reputationbar"
+		TukuiConfigUILocalization.miscrepbar = "Enable the reputationbar"
+		TukuiConfigUILocalization.miscclick2cast = "Enable click2cast"
+		--------------------------------------------------------
+		-- Buffs
+		--------------------------------------------------------
 		TukuiConfigUILocalization.aurasbuffsfadeout = "Fadeout Playerbuffs infight"
+		--------------------------------------------------------
+		-- Tooltip
+		--------------------------------------------------------
 		TukuiConfigUILocalization.tooltipilvl = "Show ilvl in tooltip"
 		TukuiConfigUILocalization.tooltiptalent = "Enable specc in Tooltip"
+		TukuiConfigUILocalization.tooltipreforge = "Show what is reforged in itemtooltip"
+		--------------------------------------------------------
+		-- Filger
+		--------------------------------------------------------
 		TukuiConfigUILocalization.filger = "Filger"
 		TukuiConfigUILocalization.filgerenable = "Enable Filger"
 		TukuiConfigUILocalization.filgerfilgerconfig = "Enable configmode"
@@ -57,6 +80,9 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.filgerdebuffs = "Debuffdirection"
 		TukuiConfigUILocalization.filgercd = "CDdirection"
 		TukuiConfigUILocalization.filgerpet = "Petbuffdirection"
+		--------------------------------------------------------
+		-- Combattext
+		--------------------------------------------------------
 		TukuiConfigUILocalization.combattext = "xCT"
 		TukuiConfigUILocalization.combattextenable = "Enable Combat Text"
 		TukuiConfigUILocalization.combattextblizzheadnumbers = "Use blizzard damage/healing output (above mob/player head)"
@@ -85,6 +111,9 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.combattextdispel = "Tells you about your dispels"
 		TukuiConfigUILocalization.combattextinterrupt = "Tells you about your interrupts"
 		TukuiConfigUILocalization.combattextdirection = "Scrolling Direction('top'(goes down) or 'bottom'(goes up))"
+		--------------------------------------------------------
+		-- Classbars
+		--------------------------------------------------------
 		TukuiConfigUILocalization.classbar = "Classbars"
 		TukuiConfigUILocalization.classbarwarlock = "Enable Warlock Classbars"
 		TukuiConfigUILocalization.classbardeathknight = "Enable Deathknight Classbars"
@@ -98,8 +127,14 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.classbarheight = "Set Height of classbars"
 		TukuiConfigUILocalization.classbarwidth = "Set Width of classbars (shards/runes/mushrooms etc.)"
 		TukuiConfigUILocalization.classbarebwidth = "Set width for moonkins and monks"
+		--------------------------------------------------------
+		-- Merchant
+		--------------------------------------------------------
 		TukuiConfigUILocalization.merchantautorepair = "Auto repair (auto-Guildrepair need to be OFF!!!)"
 		TukuiConfigUILocalization.merchantautoguildrepair = "Auto guild-repair (auto-repair need to be OFF!!!)"
+		--------------------------------------------------------
+		-- Castbars
+		--------------------------------------------------------
 		TukuiConfigUILocalization.castbar = "Castbar-Sizes"
 		TukuiConfigUILocalization.castbarpcheight = "Set Player-Castbar Height"
 		TukuiConfigUILocalization.castbarpcwidth = "Set Player-Castbar Width"
@@ -109,6 +144,9 @@ if TukuiConfigUILocalization then
 		TukuiConfigUILocalization.castbarclasscolor = "Enable classcolored castbars"
 		TukuiConfigUILocalization.castbarcastbarcolor = "Classbarcolor if classcolored is disabled"
 		TukuiConfigUILocalization.castbarnointerruptcolor = "Color if spell cant interrupt"
+		--------------------------------------------------------
+		-- Skins
+		--------------------------------------------------------
 		TukuiConfigUILocalization.skin = "Skins"
 		TukuiConfigUILocalization.skinskadareskin = "TukUI skin for skada" 
 		TukuiConfigUILocalization.skinrecountreskin = "TukUI skin for recount" 
@@ -228,3 +266,4 @@ if TukuiConfigUILocalization then
 	L.Tooltip_ITEMID = "Item ID:"
 	
 	L.popupsettingsdbm = "Need to change the position of elements DBM."
+	L.MISCBINDEROPEN = "Keybinds"

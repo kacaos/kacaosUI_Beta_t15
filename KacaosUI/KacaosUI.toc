@@ -5,9 +5,9 @@
 ## Notes: Kacaos edit of Tukui.
 ## Author: Kacaos (Jâsparjones - EU-Blackmoore)
 ## SavedVariables: TukuiData
-## SavedVariablesPerCharacter: KacaosUISaved
+## SavedVariablesPerCharacter: KacaosUISaved, ClickCast
 ## RequiredDeps: KacaosUI_Config, Tukui
-## OptionalDeps: Blizzard_CombatText, !ClassColors, Clique, DBM-Core, Omen, Recount, Skada, TinyDPS
+## OptionalDeps: Blizzard_CombatText, !ClassColors, Clique, DBM-Core, Omen, Recount, Skada, TinyDPS, ReforgeLite, DocsDebugRunes, Ingela's Rapture, MonkEC
 ## X-oUF: oUFTukui
 
 KacaosUI.xml
